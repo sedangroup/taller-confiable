@@ -2,5 +2,7 @@
 {
     public class AuxiliarModel
     {
+
+        ///comentario de prueba 
     }
 }

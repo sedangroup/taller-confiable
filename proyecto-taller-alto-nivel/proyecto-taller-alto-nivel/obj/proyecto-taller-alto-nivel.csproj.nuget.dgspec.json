@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj": {}
+    "C:\\Users\\natha\\TallerAltoNivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj": {
+    "C:\\Users\\natha\\TallerAltoNivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
+        "projectUniqueName": "C:\\Users\\natha\\TallerAltoNivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
         "projectName": "proyecto-taller-alto-nivel",
-        "projectPath": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
-        "packagesPath": "C:\\Users\\usuar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\obj\\",
+        "projectPath": "C:\\Users\\natha\\TallerAltoNivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
+        "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\natha\\TallerAltoNivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\usuar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
