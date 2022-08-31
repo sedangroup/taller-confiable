@@ -1,3 +1,0 @@
-console.log("el planeta cambia")
-estamos en otra rama
-como el mundo lo dice no somos nadie para nadie
