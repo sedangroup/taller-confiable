@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuar\\Documents\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
+      "projectUniqueName": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
       "projectName": "proyecto-taller-alto-nivel",
-      "projectPath": "C:\\Users\\usuar\\Documents\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
+      "projectPath": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel.csproj",
       "packagesPath": "C:\\Users\\usuar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuar\\Documents\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\obj\\",
+      "outputPath": "C:\\Users\\usuar\\Desktop\\proyectos\\taller-confiable\\proyecto-taller-alto-nivel\\proyecto-taller-alto-nivel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\usuar\\AppData\\Roaming\\NuGet\\NuGet.Config",
