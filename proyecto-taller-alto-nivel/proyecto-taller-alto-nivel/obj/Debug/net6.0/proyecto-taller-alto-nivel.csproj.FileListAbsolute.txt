@@ -24,3 +24,4 @@ C:\Users\usuar\Desktop\proyectos\taller-confiable\proyecto-taller-alto-nivel\pro
 C:\Users\usuar\Desktop\proyectos\taller-confiable\proyecto-taller-alto-nivel\proyecto-taller-alto-nivel\obj\Debug\net6.0\proyecto-taller-alto-nivel.pdb
 C:\Users\usuar\Desktop\proyectos\taller-confiable\proyecto-taller-alto-nivel\proyecto-taller-alto-nivel\obj\Debug\net6.0\proyecto-taller-alto-nivel.genruntimeconfig.cache
 C:\Users\usuar\Desktop\proyectos\taller-confiable\proyecto-taller-alto-nivel\proyecto-taller-alto-nivel\obj\Debug\net6.0\ref\proyecto-taller-alto-nivel.dll
+C:\Users\usuar\Desktop\proyectos\taller-confiable\proyecto-taller-alto-nivel\proyecto-taller-alto-nivel\obj\Debug\net6.0\scopedcss\Views\Shared\auxiliar\_Layout.cshtml.rz.scp.css

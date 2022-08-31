@@ -7,4 +7,8 @@
     <RootNamespace>proyecto_taller_alto_nivel</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\auxiliar\" />
+  </ItemGroup>
+
 </Project>
