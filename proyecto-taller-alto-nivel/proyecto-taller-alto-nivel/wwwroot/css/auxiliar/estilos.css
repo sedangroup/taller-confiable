@@ -132,6 +132,7 @@
     padding-left:10px;
     box-sizing:border-box;
     font-weight:700;
+    border-radius:4px;
 }
 
 .contenedor {
@@ -146,16 +147,23 @@
 
 
 
-.btnClose{
-    width:210px;
-    text-align:center;
-    background:#8B1320;
-    padding:10px;
-    color:white;
-    text-decoration:none;
-    font-size:1.2rem;
-    box-sizing:border-box;
+.btnClose {
+    width: 210px;
+    text-align: center;
+    background: #8B1320;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight:500;
+    border-radius:6px;
 }
+.btnClose:hover {
+  opacity:0.9;
+ }
+
 
 .imgContacto {
     margin-right:6px;
