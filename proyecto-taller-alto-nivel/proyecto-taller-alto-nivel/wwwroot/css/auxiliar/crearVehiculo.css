@@ -1,0 +1,110 @@
+﻿.containerVehiculo {
+    width: 80%;
+    height: auto;
+    min-height: 70%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerTitleVehiculo {
+    background: #f80c4c;
+    display:grid;
+    justify-content:center;
+    align-content:center;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    font-size:1.3rem;
+}
+
+.formVehiculo {
+    background: transparent;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.containerInputsVehiculo {
+    display: grid;
+    grid-template-columns: repeat(3,33.4%);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.containerChildInputsVehiculo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+    .containerChildInputsVehiculo label{
+        font-size:1.2rem;
+        font-weight:500;
+    }
+
+    .containerChildInputsVehiculo input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f0ecec;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+    }
+    .containerChildInputsVehiculo select {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f0ecec;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+    }
+    .containerChildInputsVehiculo select option{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f0ecec;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+    }
+        .containerChildInputsVehiculo select:focus {
+            font-family: inherit;
+            font-size: inherit;
+            background-color: #f0ecec;
+            border: none;
+            color: #646464;
+            padding: 0.7rem 1rem;
+            border-radius: 4px;
+        }
+
+        .containerChildInputsVehiculo input:focus {
+            outline: none;
+            background-color: #f0eeee;
+        }
+
+.containerBtnForm {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnGuardarVehiculo{
+    width:90px;
+    background:#090623;
+    color:white;
+    text-align:center;
+    padding:7px;
+}
+.btnGuardarVehiculo:hover{
+    cursor:pointer;
+    font-weight:bold;
+}

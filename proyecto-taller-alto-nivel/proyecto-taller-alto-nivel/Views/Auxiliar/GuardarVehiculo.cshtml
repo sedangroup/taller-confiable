@@ -3,13 +3,60 @@
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
 
-<h2>Guardar Vehiculo</h2>
 
-<form>
-    <input placeholder="aqui va un texto"/>
-    <input placeholder="aqui va un texto" />
-    <input placeholder="aqui va un texto" />
-    <input placeholder="aqui va un texto" />
-    <input placeholder="aqui va un texto"/>
-    <button>submit</button>
-</form>
+<div class="containerVehiculo">
+
+    <div class="containerTitleVehiculo">
+        <p>Guardar Vehiculo</p>
+    </div>
+
+    <form class="formVehiculo">
+        <div class="containerInputsVehiculo">
+
+            <div class="containerChildInputsVehiculo">
+
+                <label>Placa</label>
+                <input />
+
+                <label>Pais de origen</label>
+                <input />
+
+                <label>Tipo</label>
+                <select>
+                    <option>Volvo</option>
+                    <option>Saab</option>
+                    <option>Opel</option>
+                    <option>Audi</option>
+                </select>
+
+            </div>
+
+            <div class="containerChildInputsVehiculo">
+
+                <label>Marca</label>
+                <input />
+
+                <label>Año de fabricacion</label>
+                <input />
+
+            </div>
+
+            <div class="containerChildInputsVehiculo">
+
+                <label>Modelo</label>
+                <input />
+
+                <label>Capacidad de pasajeros</label>
+                <input />
+
+            </div>
+
+        </div>
+
+        <div class="containerBtnForm">
+            <a class="btnGuardarVehiculo">CREAR</a>
+        </div>
+
+     </form>
+
+</div>
