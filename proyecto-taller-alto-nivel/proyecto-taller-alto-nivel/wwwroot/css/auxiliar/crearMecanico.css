@@ -1,0 +1,18 @@
+﻿.containerNewMecanico{
+    background:white;
+    height:80%;
+    width:70%;
+}
+
+.containerTitleMecanico{
+    background:#f80c4c;
+    text-align:center;
+    color:white;
+    font-weight:300;
+    height:10%;
+}
+
+.formMecanico{
+    background:grey;
+    height:90%;
+}

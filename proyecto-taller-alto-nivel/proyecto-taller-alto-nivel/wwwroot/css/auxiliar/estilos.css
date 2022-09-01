@@ -39,8 +39,13 @@
 
 .menu-lateral::-webkit-scrollbar{
     height:0px;
-    width:4px;
+    width:5px;
 }
+
+    .menu-lateral::-webkit-scrollbar-thumb {
+        background: #8B1320;
+        border-radius: 10px;
+    }
 
 .footer{
     background:black;
