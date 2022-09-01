@@ -1,0 +1,84 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.headerIndex {
+    width: 100%;
+    height: 120px;
+    background: #090623;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.imgLogo {
+    min-width: 260px;
+    width: 18%;
+    height: 80%;
+    border: 0px;
+}
+
+
+.btnLogin {
+    width: 210px;
+    text-align: center;
+    background: #8B1320;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+    .btnLogin:hover {
+        opacity: 0.9;
+    }
+
+.btnRegistro {
+    width: 210px;
+    text-align: center;
+    background: #A5A5A5;
+    padding: 10px;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+    .btnRegistro:hover {
+        opacity: 0.9;
+    }
+
+.containerBtns {
+    width: auto;
+    white-space: nowrap;
+}
+
+.footer {
+    height: 15vh;
+    width: 100%;
+    background: pink;
+}
+
+.containerMain {
+    background: white;
+    height:auto;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

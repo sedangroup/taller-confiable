@@ -1,0 +1,16 @@
+﻿.containerContenido{
+    width:100%;
+    height:auto;
+}
+
+.containerSlider {
+    width: 100%;
+    height: 35vh;
+    background: gray;
+}
+
+.ContainerServicios {
+    width: 100%;
+    background: black;
+    height: 60vh;
+}
