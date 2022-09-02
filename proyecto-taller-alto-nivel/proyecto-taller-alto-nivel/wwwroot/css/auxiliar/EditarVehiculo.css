@@ -1,10 +1,10 @@
 ﻿.containerBuscarPlaca {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
     padding: 5px;
-    
+    margin-top: 20px;
 }
 
 .containerAsignacion {
@@ -16,9 +16,75 @@
     padding: 5px;
 }
 
+.containerPropietario {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+.containerAsignacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.botonBuscar {
+    background-color: #f80c4c;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.botonGuardar {
+    background-color: #f80c4c;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.cajaTexto {
+    font-family: sans-serif;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #ebf0f4;
+    border: 0px;
+    margin-right: 40px;
+}
+
+.cajaTexto2 {
+    font-family: sans-serif;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #A5A5A5;
+    border: 0px;
+    margin-left: 50px;
+}
+
 .tablaVehiculo {
-    border-collapse: collapse;
-    margin: 25px 0;
+    border-collapse: separate;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 60px;
     font-size: 1em;
     font-family: sans-serif;
     min-width: 450px;
@@ -31,9 +97,9 @@
         text-align: center;
     }
 
-    .tablaVehiculo th, .styled-table td {
-        padding: 12px 15px;
 
+    .tablaVehiculo th, .styled-table td {
+        padding: 12px 50px;
     }
 
     .tablaVehiculo tbody tr {
@@ -46,8 +112,8 @@
         }
 
 .tablaSoat {
-    border-collapse: collapse;
-    margin: 25px 0;
+    border-collapse: separate;
+    margin: 100px 0;
     font-size: 1em;
     font-family: sans-serif;
     min-width: 450px;
@@ -61,13 +127,14 @@
     }
 
     .tablaSoat th, .styled-table td {
-        padding: 12px 15px;
+        padding: 8px 30px;
     }
 
     .tablaSoat tbody tr {
         border-bottom: 1px solid #dddddd;
+        text-align: center;
     }
 
         .tablaSoat tbody tr:nth-of-type(even) {
             background-color: #f3f3f3;
-        } 
+        }

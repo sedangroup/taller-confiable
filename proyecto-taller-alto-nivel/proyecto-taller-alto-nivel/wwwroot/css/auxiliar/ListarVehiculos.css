@@ -1,0 +1,38 @@
+﻿.TituloListarVehiculos {
+    font-size: 15px;
+    margin-right: 60%;
+    min-height: 10%;
+}
+
+.listaVehiculos {
+    border-collapse: separate;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 60px;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 450px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.listaVehiculos thead tr {
+    background-color: #090623;
+    color: #ffffff;
+    text-align: center;       
+}
+
+
+.listaVehiculos th, .styled-table td {
+     padding: 6px 26px;
+     
+ }
+
+    .listaVehiculos tbody tr {
+        border-bottom: 1px solid #dddddd;
+        text-align: center;
+        
+    }
+
+.listaVehiculos tbody tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
