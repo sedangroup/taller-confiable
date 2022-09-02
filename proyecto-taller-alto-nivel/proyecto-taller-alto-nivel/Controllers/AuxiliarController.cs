@@ -23,5 +23,9 @@ namespace proyecto_taller_alto_nivel.Controllers
         {
             return View();
         }
+        public IActionResult ListarVehiculo()
+        {
+            return View();
+        }
     }
 }

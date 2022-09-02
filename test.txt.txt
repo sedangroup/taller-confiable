@@ -1,4 +1,9 @@
 test01 conexion
 test02 hora 12:37 pm 31/08/2022
 test03 hora 1:32 pm 31/08/2022
+<<<<<<< HEAD
 test04 Commit de prueba Daniel
+=======
+
+test05 Commit prueba san
+>>>>>>> 1627598f3854bea2f692da8215db9d8e4a4f0ec0
