@@ -1,15 +1,16 @@
 ﻿.TituloListarVehiculos {
     font-size: 15px;
-    margin-right: 60%;
+    margin-right: 56%;
     min-height: 10%;
 }
 
 .listaVehiculos {
+    height:80%;
     border-collapse: separate;
+    margin-top: 60px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin-top: 60px;
-    font-size: 1em;
+    font-size: 90%;
     font-family: sans-serif;
     min-width: 450px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
@@ -18,7 +19,8 @@
 .listaVehiculos thead tr {
     background-color: #090623;
     color: #ffffff;
-    text-align: center;       
+    text-align: center;  
+   
 }
 
 

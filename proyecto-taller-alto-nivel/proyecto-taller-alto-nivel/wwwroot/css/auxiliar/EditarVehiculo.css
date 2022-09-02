@@ -7,15 +7,33 @@
     margin-top: 20px;
 }
 
-.cajaTextoPlaca {
-    font-family: sans-serif;
+.containerAsignacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
     padding: 5px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #A5A5A5;
-    border: 0px;
-    margin-left: 20px;
-    text-align: center;
+}
+
+.containerPropietario {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+.containerAsignacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .botonBuscar {
@@ -30,9 +48,41 @@
     margin-top: 10px;
 }
 
+.botonGuardar {
+    background-color: #f80c4c;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.cajaTexto {
+    font-family: sans-serif;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #ebf0f4;
+    border: 0px;
+    margin-right: 40px;
+}
+
+.cajaTexto2 {
+    font-family: sans-serif;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #A5A5A5;
+    border: 0px;
+    margin-left: 50px;
+}
+
 .tablaVehiculo {
     border-collapse: separate;
-   
+    
     margin-top: 60px;
     font-size: 1em;
     font-family: sans-serif;
@@ -62,75 +112,9 @@
             background-color: #f3f3f3;
         }
 
-.containerPropietario {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 5px;
-    margin-top: 30px;
-    margin-left: 0px;
-}
-
-.cajaTextoProp {
-    font-family: sans-serif;
-    padding: 5px 40px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #A5A5A5;
-    border: 0px;
-    margin-left: 20px;
-    min-width: 40px;
-}
-
-.containerAsignacion {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    box-sizing: border-box;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.cajaTextoOwner {
-    font-family: sans-serif;
-    padding: 5px 29px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #ebf0f4;
-    border: 0px;
-    margin-left: 25px;
-}
-
-.botonGuardar {
-    background-color: #f80c4c;
-    border: none;
-    color: white;
-    padding: 5px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-
-.cajaTextoSelect {
-    font-family: sans-serif;
-    padding: 5px 60px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #ebf0f4;
-    border: 0px;
-    margin-left: 4px;
-    min-width: 50px;
-}
-
 .tablaSoat {
     border-collapse: separate;
-    margin: 30px 0;
+    margin: 100px 0;
     font-size: 1em;
     font-family: sans-serif;
     min-width: 450px;
@@ -155,10 +139,3 @@
         .tablaSoat tbody tr:nth-of-type(even) {
             background-color: #f3f3f3;
         }
-
-.nav a {
-    width: 100px;
-    height: 50px;
-    display: inline-block;
-    color: darkred;
-}
