@@ -1,0 +1,73 @@
+﻿.containerBuscarPlaca {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+
+.containerAsignacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.tablaVehiculo {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .tablaVehiculo thead tr {
+        background-color: #090623;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .tablaVehiculo th, .styled-table td {
+        padding: 12px 15px;
+
+    }
+
+    .tablaVehiculo tbody tr {
+        border-bottom: 1px solid #dddddd;
+        text-align: center;
+    }
+
+        .tablaVehiculo tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+.tablaSoat {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .tablaSoat thead tr {
+        background-color: #090623;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .tablaSoat th, .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .tablaSoat tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+        .tablaSoat tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        } 

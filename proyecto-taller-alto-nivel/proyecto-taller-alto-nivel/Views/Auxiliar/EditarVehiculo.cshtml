@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "Editar Vehiculo";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="containerEditar">
+
+    <div class="ContainerDatosPlaca">
+        <form class="formEditarVehiculo">
+        
+            <div class="containerBuscarPlaca">
+
+                <label for="License">
+                    Ingrese Placa: 
+                    <input type="text" id="License" name="License">
+                    <input type="button" value="Buscar">
+                
+                </label>
+            </div>
+        
+        </form>
+    </div>
+
+    <div class=ContainerTablaDatosVehiculo>
+        <table class="tablaVehiculo">
+  
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Tipo</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>capacidad</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ContainerPropietarioVehiculo">
+        <form class="formPropietario">
+
+            <div class="containerPropietario">
+
+                <label for="License">
+                    Propietrario del Vehiculo:
+                    <input type="text" id="Id_Owner" name="Owner">
+                
+                </label>
+            </div>
+
+        </form>
+    </div>
+    <div class="ContainerAsignacionesVehiculo">
+        <form class="formEditarVehiculo">
+
+            <div class="containerAsignacion">
+
+                <label for="License">
+                    Asignar Dueño:
+                    <input type="text" id="License" name="License">
+                    <input type="button" value="Buscar">
+
+                </label>
+            </div>
+
+            <div class="containerAsignacion">
+
+                <label for="License">
+                    Asignar Mecanico:
+                    <input type="text" id="License" name="License">
+                    <input type="button" value="Buscar">
+
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <div class="containerTablaSoat">
+        <table class="tablaSoat">
+
+            <thead>
+                <tr>
+                    <th># Poliza</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>Historial</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>12234567899</td>
+                    <td>13/enero/2020</td>
+                    <td>12/enero/2021</td>
+                    <td>00</td>
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
