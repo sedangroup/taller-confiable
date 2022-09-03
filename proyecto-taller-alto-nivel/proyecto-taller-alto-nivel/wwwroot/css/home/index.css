@@ -114,7 +114,7 @@
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    border: 1px solid #888;
+    border:0px;
     width: 100%;
     height: 90%;
     border-radius: 14px;
@@ -170,20 +170,33 @@
 
 
 .close2 {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 150ms;
+    font-weight: 500;
+    color: red;
+    font-size: 1rem;
 }
 
     .close2:hover,
     .close2:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+        transform: rotateZ(20deg);
+        background: hsl(216, 100, 40);
+        font-size: 1.1rem;
+        font-weight: bold;
     }
 .containerInputs{
-    width:100%;
+    width:50%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -191,12 +204,43 @@
     gap:8px;
 }
 .input {
-    max-width: 190px;
-    height: 44px;
+    width: 100%;
+    height: 50px;
     background-color: #05060f0a;
     border-radius: .5rem;
     padding: 0 1rem;
     border: 2px solid transparent;
     font-size: 1rem;
     transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    border:solid 1.5px grey;
+    color:white;
+}
+
+
+.btnLogin2 {
+   box-sizing: border-box;
+   width:60%;
+   height:40px;
+   padding:5px;
+   background:#404040;
+   font-size:1.1rem;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   text-decoration:none;
+   color:white;
+   font-weight:bold;
+   border-radius:10px
+}
+
+    .btnLogin2:hover {
+        background-color: #ebf0f4;
+        color: #404040;
+        transition-delay: 0.120s;
+    }
+
+.subMsg{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#ebf0f4;
+    font-size:0.95rem;
 }

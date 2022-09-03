@@ -1,16 +1,78 @@
-﻿.containerContenido{
-    width:100%;
-    height:auto;
+﻿.containerContenido {
+    width: 100%;
+    height: auto;
 }
 
 .containerSlider {
     width: 100%;
     height: 35vh;
-    background: gray;
+    background:gray;
 }
 
 .ContainerServicios {
     width: 100%;
-    background: black;
-    height: 60vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(15,13,13);
+    background: linear-gradient(6deg, rgba(15,13,13,1) 0%, rgba(9,6,35,1) 21%, rgba(40,9,34,1) 35%, rgba(139,19,32,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    gap: 10px;
+}
+
+.containerCards {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 30%;
+    max-width: 450px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerImg {
+    width: 100%;
+    height: 80%;
+}
+
+
+.containerTextService {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.containerTextService:hover{
+    font-weight:bold;
+}
+
+.blue {
+    background: rgba(9,6,35,1);
+}
+
+.red {
+    background: #8b1320;
+}
+
+.grey {
+    background: #404040
+}
+
+.imgService {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
 }

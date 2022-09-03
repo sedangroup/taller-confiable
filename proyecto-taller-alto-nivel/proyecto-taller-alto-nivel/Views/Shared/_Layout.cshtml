@@ -34,10 +34,11 @@
                 <div class="containerInputs">
                     <input type="text" placeholder="Usuario" class="input"/>
                     <input type="text" placeholder="Contraseña" class="input"/>
-                </div>
-                <div>
-                    <button>INGRESAR</button>
-                </div>
+                    <a asp-action="GuardarMecanico" asp-controller="Auxiliar" class="btnLogin2">
+                        INGRESAR
+                    </a>
+                    <p class="subMsg">¿Eres nuevo? Registrate</p>
+                </div>           
             </div>
         </div>
 
@@ -47,11 +48,22 @@
     <div id="myModal2" class="modal">
         <div class="containerChildModal">
             <div class="containerClose">
-                <div class="close2">&times;</div>
+                <button type="button" class="close2">
+                    <span class="visually-hidden">X</span>
+                </button>
             </div>
 
             <div class="modal-content">
-                <p>Some text in the Modal..</p>
+                <h2>CREAR CUENTA</h2>
+                <div class="containerInputs">
+                    <input type="text" placeholder="Nombre" class="input" />
+                    <input type="text" placeholder="Apellido" class="input" />
+                    <input type="text" placeholder="Telefono" class="input" />
+                    <input type="text" placeholder="Correo" class="input" />
+                    <a asp-action="Index" asp-controller="Home" class="btnLogin2">
+                        Registrarse
+                    </a>
+                </div>
             </div>
         </div>
     </div>
