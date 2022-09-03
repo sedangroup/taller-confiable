@@ -6,24 +6,22 @@
 <div class="containerEditar">
 
     <div class="ContainerDatos">
+
         <form class="formEditarVehiculo">
 
             <div class="containerBuscarPlaca">
-
                 <label for="License">
                     Ingrese Placa:
-                    <input type="text" id="License" name="License" class="cajaTexto2">
+                    <input type="text" id="License" name="License" class="cajaTextoPlaca" value="XXX000">
                     <input type="button" value="BUSCAR" class="botonBuscar">
-
                 </label>
             </div>
 
             <div class=ContainerTablaDatosVehiculo>
                 <table class="tablaVehiculo">
-
                     <thead>
                         <tr>
-                            <th class="cabeceroIzq">Placa</th>
+                            <th>Placa</th>
                             <th>Tipo</th>
                             <th>Marca</th>
                             <th>Modelo</th>
@@ -33,56 +31,48 @@
 
                     <tbody>
                         <tr>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
+                            <td>DFG678</td>
+                            <td>Camioneta</td>
+                            <td>BMW</td>
+                            <td>"2022"</td>
+                            <td>5 Pasajeros</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="ContainerPropietarioVehiculo">
-
-
                 <div class="containerPropietario">
-
                     <label for="License">
                         Propietrario del Vehiculo:
-                        <input type="text" id="Id_Owner" name="Owner" class="cajaTexto2">
-
+                        <input type="text" id="Id_Owner" name="Owner" class="cajaTextoProp">
                     </label>
                 </div>
-
-
             </div>
 
             <div class="ContainerAsignacionesVehiculo">
-
-
                 <div class="containerAsignacion">
-
                     <label for="Owner">
                         Asignar Dueño:
-                        <input type="text" id="Owner" name="Owner" class="cajaTexto">
+                        <input type="text" id="Owner" name="Owner" class="cajaTextoOwner">
                         <input type="button" value="GUARDAR" class="botonGuardar">
-
                     </label>
-
                     <label for="Mechanic">
                         Asignar Mecanico:
-                        <input type="text" id="Mechanic" name="Mechanic" class="cajaTexto">
+                        <select class="cajaTextoSelect">
+                            <option>Seleccione...</option>
+                            <option>Mecanico 1</option>
+                            <option>Mecanico 2</option>
+                            <option>Mecanico 3</option>
+                            <option>Mecanico 4</option>
+                        </select>
                         <input type="button" value="GUARDAR" class="botonGuardar">
-
                     </label>
                 </div>
-
             </div>
 
             <div class="containerTablaSoat">
                 <table class="tablaSoat">
-
                     <thead>
                         <tr>
                             <th>Num Poliza</th>
@@ -94,11 +84,11 @@
 
                     <tbody>
                         <tr>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                            <td>*</td>
-                        </tr>
+                            <td>012757634215</td>
+                            <td>13/dic&2021</td>
+                            <td>12/dic&2022</td>
+                            <td class="nav"><a href="#">Ver</a></td>
+                            </tr>
                     </tbody>
                 </table>
             </div>
