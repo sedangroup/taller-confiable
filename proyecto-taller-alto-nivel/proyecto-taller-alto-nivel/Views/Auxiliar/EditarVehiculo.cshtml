@@ -5,15 +5,15 @@
 
 <div class="containerEditar">
 
-    <div class="ContainerDatos">
+    <div class="ContainerDatosVehiculo">
 
         <form class="formEditarVehiculo">
 
             <div class="containerBuscarPlaca">
                 <label for="License">
                     Ingrese Placa:
-                    <input type="text" id="License" name="License" class="cajaTextoPlaca" value="XXX000">
-                    <input type="button" value="BUSCAR" class="botonBuscar">
+                    <input type="text" id="License" name="License" class="containerInputsBuscarPlaca" value="XXX000">
+                    <input type="button" value="BUSCAR" class="btnBuscarPlaca">
                 </label>
             </div>
 
@@ -45,7 +45,7 @@
                 <div class="containerPropietario">
                     <label for="License">
                         Propietrario del Vehiculo:
-                        <input type="text" id="Id_Owner" name="Owner" class="cajaTextoProp">
+                        <input type="text" id="Id_Owner" name="Owner" class="containerInputsProp">
                     </label>
                 </div>
             </div>
@@ -53,20 +53,20 @@
             <div class="ContainerAsignacionesVehiculo">
                 <div class="containerAsignacion">
                     <label for="Owner">
-                        Asignar Dueño:
-                        <input type="text" id="Owner" name="Owner" class="cajaTextoOwner">
-                        <input type="button" value="GUARDAR" class="botonGuardar">
+                        Asignar Nuevo Dueño:
+                        <input type="text" id="Owner" name="Owner" class="containerInputsOwner">
+                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
                     </label>
                     <label for="Mechanic">
                         Asignar Mecanico:
-                        <select class="cajaTextoSelect">
+                        <select class="containerInputsSelect">
                             <option>Seleccione...</option>
                             <option>Mecanico 1</option>
                             <option>Mecanico 2</option>
                             <option>Mecanico 3</option>
                             <option>Mecanico 4</option>
                         </select>
-                        <input type="button" value="GUARDAR" class="botonGuardar">
+                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
                     </label>
                 </div>
             </div>
@@ -85,8 +85,8 @@
                     <tbody>
                         <tr>
                             <td>012757634215</td>
-                            <td>13/dic&2021</td>
-                            <td>12/dic&2022</td>
+                            <td>13/dic/2021</td>
+                            <td>12/dic/2022</td>
                             <td class="nav"><a href="#">Ver</a></td>
                             </tr>
                     </tbody>
