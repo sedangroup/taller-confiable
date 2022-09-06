@@ -1,4 +1,6 @@
-﻿namespace proyecto_taller_alto_nivel.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace proyecto_taller_alto_nivel.Models
 {
     public class PropietarioModel
     {
