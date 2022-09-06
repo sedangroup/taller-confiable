@@ -2,7 +2,7 @@
 {
     public class AuxiliarModel
     {
-
+        //comentario de sedan group
         ///comentario de prueba 
     }
 }

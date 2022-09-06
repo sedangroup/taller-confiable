@@ -5,24 +5,25 @@
 }
 
 
-.header-auxiliar{
-    width:100%;
-    height:120px;
-    background:#090623;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px; 
-    box-sizing:border-box;
+.header-auxiliar {
+    width: 100%;
+    height: 120px;
+    background: #090623;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
 }
+
 .container-main {
     width: 100%;
     height: 80vh;
-    display:grid;
-    grid-template-columns:340px auto;
-    padding:0px;
-    margin:0px;
+    display: grid;
+    grid-template-columns: 340px auto;
+    padding: 0px;
+    margin: 0px;
 }
 
 .menu-lateral {
@@ -34,54 +35,53 @@
     background: black;
     background: rgb(13,13,13);
     background: linear-gradient(75deg, rgba(13,13,13,1) 65%, rgba(139,19,32,1) 100%);
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
-.menu-lateral::-webkit-scrollbar{
-    height:0px;
-    width:8px;
-}
+    .menu-lateral::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+    }
 
     .menu-lateral::-webkit-scrollbar-thumb {
         background: #f80c4c;
         border-radius: 10px;
     }
 
-.footer{
-    background:black;
-    height:10vh;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
+.footer {
+    background: black;
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.containerUserInfo{
-    width:100%;
-    height:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-    box-sizing:border-box;
-    border-bottom:1px solid white;
-    color:white;
-    font-size:1rem;
-    
+.containerUserInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 1rem;
 }
 
-.imgUser{
-    margin-right:5px;
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    background:grey;
-    border:0px;
+.imgUser {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: grey;
+    border: 0px;
 }
 
 .imgLogo {
-    min-width:260px;
+    min-width: 260px;
     width: 18%;
     height: 80%;
     border: 0px;
@@ -91,8 +91,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
-    gap:20px;
+    flex-direction: column;
+    gap: 20px;
     box-sizing: border-box;
 }
 
@@ -100,36 +100,37 @@
     width: 80%;
     background: #A5A5A5;
     height: auto;
-    padding:10px;
-    box-sizing:border-box;
-    border-radius:8px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
 
 
 
-.singleMenu   li{
-    padding:6px;
-    border-bottom:1px solid #404040;
-}
-
-.singleMenu li a{
-    text-decoration:none;
-    color:#0d0d0d;
-}
-
-
-    .singleMenu li:hover {
-        border-bottom: 1px solid #090623;
-        font-weight:500;
+    .singleMenu li {
+        padding: 6px;
+        border-bottom: 1px solid #404040;
     }
+
+        .singleMenu li a {
+            text-decoration: none;
+            color: #0d0d0d;
+        }
+
+
+        .singleMenu li:hover {
+            border-bottom: 1px solid #090623;
+            font-weight: 500;
+        }
+
 .menuTitle {
     background: white;
-    width:100%;
-    color:black;
-    padding-left:10px;
-    box-sizing:border-box;
-    font-weight:700;
-    border-radius:4px;
+    width: 100%;
+    color: black;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-weight: 700;
+    border-radius: 4px;
 }
 
 .contenedor {
@@ -154,16 +155,17 @@
     font-size: 1.2rem;
     box-sizing: border-box;
     white-space: nowrap;
-    font-weight:500;
-    border-radius:6px;
+    font-weight: 500;
+    border-radius: 6px;
 }
-.btnClose:hover {
-  opacity:0.9;
- }
+
+    .btnClose:hover {
+        opacity: 0.9;
+    }
 
 
 .imgContacto {
-    margin-right:6px;
+    margin-right: 6px;
 }
 
 
@@ -181,13 +183,13 @@
     opacity: 0.5;
 }
 
-.labelCollap  {
+.labelCollap {
     display: block;
     background: #f0ecec;
     padding: 10px;
     color: black;
     cursor: pointer;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .inputCollap[type="checkbox"] {
@@ -204,7 +206,6 @@
     position: relative;
     right: calc(-160px);
     opacity: 1;
-
 }
 
 #collapse2:checked ~ li {
@@ -227,4 +228,8 @@
     position: relative;
     right: calc(-160px);
     opacity: 1;
+}
+
+.gitignore {
+    display: flex;
 }
