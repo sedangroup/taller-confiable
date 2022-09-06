@@ -2,19 +2,11 @@
 
 namespace proyecto_taller_alto_nivel.Models
 {
-    public class EmpleadoModel
+    public class EmpleadoModel : PersonaModel
     {
-        public int Id_Persona { get; set; }
+        public int Id_Empleado { get; set; }
 
-        public string? Nombre { get; set; }
-       
-        public string? Apellido { get; set; }
-
-        public string? Identificacion { get; set; }
-
-        public string? Nacimiento { get; set; }
-
-        public string? Phone { get; set; }
+        public string Phone { get; set; }
 
     }
 }
