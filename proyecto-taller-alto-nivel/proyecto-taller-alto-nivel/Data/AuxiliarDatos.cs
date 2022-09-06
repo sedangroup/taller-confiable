@@ -3,21 +3,20 @@ using System.Data.SqlClient;
 using System.Data;
 using proyecto_taller_alto_nivel.Data;
 
-
 namespace proyecto_taller_alto_nivel.Data
 {
-    public class PersonaDatos
+    public class AuxiliarDatos
     {
-        public List<PersonaModel> Listar()
+        public List<AuxiliarModel> ListarAuxiliar()
         {
-            var oLista = new List<PersonaModel>();
+            var oLista = new List<AuxiliarModel>();
 
             var cn = new Conexion();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_Listar", conexion);
+                SqlCommand cmd = new SqlCommand("sp_Listar", conexion);///cambiar nombre procedimiento para auxiliar
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
@@ -25,29 +24,30 @@ namespace proyecto_taller_alto_nivel.Data
 
                     while (dr.Read())
                     {
-                        oLista.Add(new PersonaModel()
+                        oLista.Add(new AuxiliarModel()
                         {
                             id_Persona = Convert.ToInt32(dr["id_Persona"]),
                             Identificacion = dr["Identificacion"].ToString(),
                             Nombre = dr["Nombre"].ToString(),
                             Apellido = dr["Apellido"].ToString(),
                             Nacimiento = dr["Nacimiento"].ToString(),
+                            Telefono = dr["Telefono"].ToString()
                         });
                     }
                 }
             }
             return oLista;
         }
-        public PersonaModel Obtener(int id_Persona)
+        public AuxiliarModel ObtenerAuxiliar(int id_Persona)
         {
-            var oPersona = new PersonaModel();
+            var oAuxiliar = new AuxiliarModel();
 
             var cn = new Conexion();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_Obtener", conexion);
+                SqlCommand cmd = new SqlCommand("sp_Obtener", conexion);          ///cambiar nombre procedimiento para auxiliar
                 cmd.Parameters.AddWithValue("id_Persona", id_Persona);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -55,17 +55,18 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     while (dr.Read())
                     {
-                        oPersona.id_Persona = Convert.ToInt32(dr["id_Persona"]);
-                        oPersona.Identificacion = dr["Identificacion"].ToString();
-                        oPersona.Nombre = dr["Nombre"].ToString();
-                        oPersona.Apellido = dr["Apellido"].ToString();
-                        oPersona.Nacimiento = dr["Nacimiento"].ToString();
+                        oAuxiliar.id_Persona = Convert.ToInt32(dr["id_Persona"]);
+                        oAuxiliar.Identificacion = dr["Identificacion"].ToString();
+                        oAuxiliar.Nombre = dr["Nombre"].ToString();
+                        oAuxiliar.Apellido = dr["Apellido"].ToString();
+                        oAuxiliar.Nacimiento = dr["Nacimiento"].ToString();
+                        oAuxiliar.Telefono = dr["Telefono"].ToString();
                     }
                 }
             }
-            return oPersona;
+            return oAuxiliar;
         }
-        public bool Guardar(PersonaModel oPersona)
+        public bool GuardarAuxiliar(AuxiliarModel oAuxiliar)
         {
             bool rpta;
 
@@ -76,11 +77,12 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);
-                    cmd.Parameters.AddWithValue("Identificacion", oPersona.Identificacion);
-                    cmd.Parameters.AddWithValue("Nombre", oPersona.Nombre);
-                    cmd.Parameters.AddWithValue("Apellido", oPersona.Apellido);
-                    cmd.Parameters.AddWithValue("Nacimiento", oPersona.Nacimiento);
+                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);         ///cambiar nombre procedimiento para auxiliar
+                    cmd.Parameters.AddWithValue("Identificacion", oAuxiliar.Identificacion);
+                    cmd.Parameters.AddWithValue("Nombre", oAuxiliar.Nombre);
+                    cmd.Parameters.AddWithValue("Apellido", oAuxiliar.Apellido);
+                    cmd.Parameters.AddWithValue("Nacimiento", oAuxiliar.Nacimiento);
+                    cmd.Parameters.AddWithValue("Telefono", oAuxiliar.Telefono);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
@@ -93,7 +95,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return rpta;
         }
-        public bool Editar(PersonaModel opersona)
+        public bool EditarAuxiliar(AuxiliarModel oAuxiliar)
         {
             bool rpta;
 
@@ -104,12 +106,13 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Editar", conexion);
-                    cmd.Parameters.AddWithValue("id_Persona", opersona.id_Persona);
-                    cmd.Parameters.AddWithValue("Identificacion", opersona.Identificacion);
-                    cmd.Parameters.AddWithValue("Nombre", opersona.Nombre);
-                    cmd.Parameters.AddWithValue("Apellido", opersona.Apellido);
-                    cmd.Parameters.AddWithValue("Nacimiento", opersona.Nacimiento);
+                    SqlCommand cmd = new SqlCommand("sp_Editar", conexion);           ///cambiar nombre procedimiento para auxiliar
+                    cmd.Parameters.AddWithValue("id_Persona", oAuxiliar.id_Persona);
+                    cmd.Parameters.AddWithValue("Identificacion", oAuxiliar.Identificacion);
+                    cmd.Parameters.AddWithValue("Nombre", oAuxiliar.Nombre);
+                    cmd.Parameters.AddWithValue("Apellido", oAuxiliar.Apellido);
+                    cmd.Parameters.AddWithValue("Nacimiento", oAuxiliar.Nacimiento);
+                    cmd.Parameters.AddWithValue("Telefono", oAuxiliar.Telefono);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
@@ -122,7 +125,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return rpta;
         }
-        public bool Eliminar(int id_Persona)
+        public bool EliminarAuxiliar(int id_Persona)
         {
             bool rpta;
 
@@ -133,7 +136,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
+                    SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);         ///cambiar nombre procedimiento para auxiliar
                     cmd.Parameters.AddWithValue("id_Persona", id_Persona);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

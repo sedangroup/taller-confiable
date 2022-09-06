@@ -4,7 +4,7 @@ namespace proyecto_taller_alto_nivel.Models
 {
     public class PersonaModel
     {
-        public int Id_Persona { get; set; }
+        public int id_Persona { get; set; }
 
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Identificacion { get; set; }

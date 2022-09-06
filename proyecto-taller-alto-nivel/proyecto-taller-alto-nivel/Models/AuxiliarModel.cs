@@ -4,7 +4,7 @@ namespace proyecto_taller_alto_nivel.Models
 {
     public class AuxiliarModel
     {
-        public int Id_Persona { get; set; }
+        public int id_Persona { get; set; }
 
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Identificacion { get; set; }
@@ -14,6 +14,6 @@ namespace proyecto_taller_alto_nivel.Models
         public string? Apellido { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Nacimiento { get; set; }
-        public string? Phone { get; set; }
+        public string? Telefono { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using proyecto_taller_alto_nivel.Datos;
+using proyecto_taller_alto_nivel.Data;
 using proyecto_taller_alto_nivel.Models;
 
 namespace proyecto_taller_alto_nivel.Controllers
@@ -31,9 +31,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
-        public IActionResult Editar(int IdPersona)
+        public IActionResult Editar(int id_Persona)
         {
-            var oPersona = Persona_Datos.Obtener(IdPersona);
+            var oPersona = Persona_Datos.Obtener(id_Persona);
             return View(oPersona);
         }
 
@@ -52,17 +52,17 @@ namespace proyecto_taller_alto_nivel.Controllers
                 return View();
         }
 
-        public IActionResult Eliminar(int IdPersona)
+        public IActionResult Eliminar(int id_Persona)
         {
 
-            var opersona = Persona_Datos.Obtener(IdPersona);
+            var opersona = Persona_Datos.Obtener(id_Persona);
             return View(opersona);
         }
 
         [HttpPost]
         public IActionResult Eliminar(PersonaModel oPersona)
         {
-            var respuesta = Persona_Datos.Eliminar(oPersona.Id_Persona);
+            var respuesta = Persona_Datos.Eliminar(oPersona.id_Persona);
 
             if (respuesta)
                 return RedirectToAction("Listar");
