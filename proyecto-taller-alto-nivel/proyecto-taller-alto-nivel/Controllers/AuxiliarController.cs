@@ -59,6 +59,20 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult GuardarVehiculo(VehiculoModel vehiculo)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = Vehiculo_Datos.Guardar(vehiculo);
+
+            if (respuesta)
+                return RedirectToAction("Listar");
+            else
+                return View();
+        }
+
         public IActionResult EditarVehiculo()
         {
             return View();

@@ -70,7 +70,13 @@
 .footer {
     height: 15vh;
     width: 100%;
-    background: pink;
+    background: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    font-size:0.9rem;
 }
 
 .containerMain {

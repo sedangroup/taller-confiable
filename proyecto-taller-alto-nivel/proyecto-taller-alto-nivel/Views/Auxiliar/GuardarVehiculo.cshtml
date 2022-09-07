@@ -1,4 +1,6 @@
-﻿@{
+﻿@model VehiculoModel
+
+@{
     ViewData["Title"] = "Nuevo Vehiculo";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
@@ -10,23 +12,23 @@
         <p>Guardar Vehiculo</p>
     </div>
 
-    <form class="formVehiculo">
+    <form class="formVehiculo" asp-action="GuardarVehiculo" asp-controller="Auxiliar" method="post">
         <div class="containerInputsVehiculo">
 
             <div class="containerChildInputsVehiculo">
 
                 <label>Placa</label>
-                <input />
+                <input asp-for="Liciencia"/>
 
                 <label>Pais de origen</label>
-                <input />
+                <input asp-for="PaisOrigen"/>
 
                 <label>Tipo</label>
-                <select>
-                    <option>Volvo</option>
-                    <option>Saab</option>
-                    <option>Opel</option>
-                    <option>Audi</option>
+                <select asp-for="Tipo">
+                    <option>Campero</option>
+                    <option>Camioneta</option>
+                    <option>Deportivo</option>
+                    <option>Taxi</option>
                 </select>
 
             </div>
@@ -34,27 +36,33 @@
             <div class="containerChildInputsVehiculo">
 
                 <label>Marca</label>
-                <input />
+                <input asp-for="Marca"/>
 
-                <label>Año de fabricacion</label>
-                <input />
+                <label>Desplazamiento</label>
+                <input asp-for="Desplazamiento"/>
+
+                <label>Id propietario</label>
+                <input asp-for="Id_Propietario" />
 
             </div>
 
             <div class="containerChildInputsVehiculo">
 
                 <label>Modelo</label>
-                <input />
+                <input asp-for="Modelo"/>
 
                 <label>Capacidad de pasajeros</label>
-                <input />
+                <input asp-for="Capacidad" />
+
+                <label>Descripcion</label>
+                <input asp-for="Descripcion"/>
 
             </div>
 
         </div>
 
         <div class="containerBtnForm">
-            <a class="btnGuardarVehiculo">CREAR</a>
+            <button class="btnGuardarVehiculo" type="submit">CREAR</button>
         </div>
 
      </form>
