@@ -1,13 +1,12 @@
 ﻿using proyecto_taller_alto_nivel.Models;
 using System.Data.SqlClient;
 using System.Data;
-using proyecto_taller_alto_nivel.Data;
 
 namespace proyecto_taller_alto_nivel.Data
 {
     public class AuxiliarDatos
     {
-        public List<AuxiliarModel> ListarAuxiliar()
+        public List<AuxiliarModel> Listar()
         {
             var oLista = new List<AuxiliarModel>();
 
@@ -16,7 +15,7 @@ namespace proyecto_taller_alto_nivel.Data
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_Listar", conexion);///cambiar nombre procedimiento para auxiliar
+                SqlCommand cmd = new SqlCommand("sp_ListarAuxiliar", conexion);///cambiar nombre procedimiento para auxiliar
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
@@ -38,7 +37,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oLista;
         }
-        public AuxiliarModel ObtenerAuxiliar(int id_Persona)
+        public AuxiliarModel Obtener(int id_Persona)
         {
             var oAuxiliar = new AuxiliarModel();
 
@@ -47,7 +46,7 @@ namespace proyecto_taller_alto_nivel.Data
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_Obtener", conexion);          ///cambiar nombre procedimiento para auxiliar
+                SqlCommand cmd = new SqlCommand("sp_ObtenerAuxiliar", conexion);          ///cambiar nombre procedimiento para auxiliar
                 cmd.Parameters.AddWithValue("id_Persona", id_Persona);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -66,7 +65,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oAuxiliar;
         }
-        public bool GuardarAuxiliar(AuxiliarModel oAuxiliar)
+        public bool Guardar(AuxiliarModel oAuxiliar)
         {
             bool rpta;
 
@@ -77,7 +76,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);         ///cambiar nombre procedimiento para auxiliar
+                    SqlCommand cmd = new SqlCommand("sp_GuardarAuxiliar", conexion);         ///cambiar nombre procedimiento para auxiliar
                     cmd.Parameters.AddWithValue("Identificacion", oAuxiliar.Identificacion);
                     cmd.Parameters.AddWithValue("Nombre", oAuxiliar.Nombre);
                     cmd.Parameters.AddWithValue("Apellido", oAuxiliar.Apellido);
@@ -95,7 +94,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return rpta;
         }
-        public bool EditarAuxiliar(AuxiliarModel oAuxiliar)
+        public bool Editar(AuxiliarModel oAuxiliar)
         {
             bool rpta;
 
@@ -125,7 +124,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return rpta;
         }
-        public bool EliminarAuxiliar(int id_Persona)
+        public bool Eliminar(int id_Persona)
         {
             bool rpta;
 
@@ -136,7 +135,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);         ///cambiar nombre procedimiento para auxiliar
+                    SqlCommand cmd = new SqlCommand("sp_EliminarAuxiliar", conexion);         ///cambiar nombre procedimiento para auxiliar
                     cmd.Parameters.AddWithValue("id_Persona", id_Persona);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
