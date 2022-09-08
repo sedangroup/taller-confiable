@@ -1,6 +1,7 @@
 ﻿using proyecto_taller_alto_nivel.Models;
 using System.Data.SqlClient;
 using System.Data;
+using proyecto_taller_alto_nivel.Data;
 
 namespace proyecto_taller_alto_nivel.Data
 {
@@ -18,8 +19,8 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_GuardarVehiculo", conexion);
-                    cmd.Parameters.AddWithValue("Id_Propietario", vehiculo.Id_Propietario);
-                    cmd.Parameters.AddWithValue("Liciencia", vehiculo.Liciencia);
+                    cmd.Parameters.AddWithValue("id_propietario", vehiculo.Id_Propietario);
+                    cmd.Parameters.AddWithValue("Licencia", vehiculo.Liciencia);
                     cmd.Parameters.AddWithValue("Tipo", vehiculo.Tipo);
                     cmd.Parameters.AddWithValue("Marca", vehiculo.Marca);
                     cmd.Parameters.AddWithValue("Modelo", vehiculo.Modelo);
@@ -39,5 +40,37 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return rpta;
         }
+
+
+        public List<VehiculoModel> Listar()
+        {
+            var oLista = new List<VehiculoModel>();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("SELECT*FROM Tbl_Vehiculo", conexion);///cambiar nombre procedimiento para auxiliar
+
+
+                using (var dr = cmd.ExecuteReader())
+                {
+
+                    while (dr.Read())
+                    {
+                        oLista.Add(new VehiculoModel()
+                        {
+                            Liciencia = dr.GetValue(1).ToString(),
+                            Modelo = dr.GetValue(2).ToString(),
+                        });
+                    }
+                }
+            }
+            return oLista;
+        }
+
+
+
     }
 }

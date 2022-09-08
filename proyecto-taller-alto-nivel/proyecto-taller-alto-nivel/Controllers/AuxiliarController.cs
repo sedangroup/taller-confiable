@@ -52,7 +52,8 @@ namespace proyecto_taller_alto_nivel.Controllers
 
         public IActionResult ListarVehiculo()
         {
-            return View();
+            var innerQuey = Vehiculo_Datos.Listar();
+            return View(innerQuey);
         }
         public IActionResult GuardarVehiculo()
         {
@@ -68,7 +69,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             var respuesta = Vehiculo_Datos.Guardar(vehiculo);
 
             if (respuesta)
-                return RedirectToAction("Listar");
+                return RedirectToAction("ListarVehiculo");
             else
                 return View();
         }

@@ -6,7 +6,7 @@ namespace proyecto_taller_alto_nivel.Models
     {
         public int Id_Vehiculo { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public int? Id_Propietario { get; set; }
+        public int Id_Propietario { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Liciencia { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]

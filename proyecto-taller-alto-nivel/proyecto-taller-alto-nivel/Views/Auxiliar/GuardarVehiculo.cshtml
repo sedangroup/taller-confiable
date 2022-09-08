@@ -16,20 +16,18 @@
         <div class="containerInputsVehiculo">
 
             <div class="containerChildInputsVehiculo">
+              
+                <label>Id propietario</label>
+                <input asp-for="Id_Propietario" />
+                <span asp-validation-for="Id_Propietario" style="color:red"></span>
 
                 <label>Placa</label>
                 <input asp-for="Liciencia"/>
-
-                <label>Pais de origen</label>
-                <input asp-for="PaisOrigen"/>
+                <span asp-validation-for="Liciencia" style="color:red"></span>
 
                 <label>Tipo</label>
-                <select asp-for="Tipo">
-                    <option>Campero</option>
-                    <option>Camioneta</option>
-                    <option>Deportivo</option>
-                    <option>Taxi</option>
-                </select>
+                <input asp-for="Tipo" />
+                <span asp-validation-for="Tipo" style="color:red"></span>
 
             </div>
 
@@ -37,25 +35,32 @@
 
                 <label>Marca</label>
                 <input asp-for="Marca"/>
+                <span asp-validation-for="Marca" style="color:red"></span>
 
-                <label>Desplazamiento</label>
-                <input asp-for="Desplazamiento"/>
+                <label>Modelo</label>
+                <input asp-for="Modelo" />
+                <span asp-validation-for="Modelo" style="color:red"></span>
 
-                <label>Id propietario</label>
-                <input asp-for="Id_Propietario" />
+                <label>Capacidad de pasajeros</label>
+                <input asp-for="Capacidad" />
+                <span asp-validation-for="Capacidad" style="color:red"></span>
+                
 
             </div>
 
             <div class="containerChildInputsVehiculo">
 
-                <label>Modelo</label>
-                <input asp-for="Modelo"/>
+                <label>Desplazamiento</label>
+                <input asp-for="Desplazamiento" />
+                <span asp-validation-for="Desplazamiento" style="color:red"></span>
 
-                <label>Capacidad de pasajeros</label>
-                <input asp-for="Capacidad" />
+                <label>Pais de origen</label>
+                <input asp-for="PaisOrigen" />
+                <span asp-validation-for="PaisOrigen" style="color:red"></span>
 
                 <label>Descripcion</label>
                 <input asp-for="Descripcion"/>
+                <span asp-validation-for="Descripcion" style="color:red"></span>
 
             </div>
 
