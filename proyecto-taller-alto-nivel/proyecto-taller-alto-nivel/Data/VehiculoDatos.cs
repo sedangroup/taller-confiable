@@ -51,8 +51,8 @@ namespace proyecto_taller_alto_nivel.Data
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("SELECT*FROM Tbl_Vehiculo", conexion);///cambiar nombre procedimiento para auxiliar
-
+                SqlCommand cmd = new SqlCommand("sp_ListarVehiculo", conexion);///cambiar nombre procedimiento para auxiliar
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
                 {
@@ -61,8 +61,17 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new VehiculoModel()
                         {
-                            Liciencia = dr.GetValue(1).ToString(),
-                            Modelo = dr.GetValue(2).ToString(),
+                            Id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
+                            Id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
+                            Liciencia = dr["Licencia"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Modelo = dr["Modelo"].ToString(),
+                            Capacidad = dr["Capacidad"].ToString(),
+                            Desplazamiento = dr["Desplazamiento"].ToString(),
+                            PaisOrigen = dr["PaisOrigen"].ToString(),
+                            Descripcion = dr["Descripcion"].ToString()
+
                         });
                     }
                 }
