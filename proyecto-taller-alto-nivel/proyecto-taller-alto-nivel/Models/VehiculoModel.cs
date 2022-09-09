@@ -4,11 +4,11 @@ namespace proyecto_taller_alto_nivel.Models
 {
     public class VehiculoModel
     {
-        public int Id_Vehiculo { get; set; }
+        public int id_Vehiculo { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public int Id_Propietario { get; set; }
+        public int id_Propietario { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Liciencia { get; set; }
+        public string? Licencia { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Tipo { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]

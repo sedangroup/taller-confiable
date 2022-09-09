@@ -19,8 +19,8 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_GuardarVehiculo", conexion);
-                    cmd.Parameters.AddWithValue("id_propietario", vehiculo.Id_Propietario);
-                    cmd.Parameters.AddWithValue("Licencia", vehiculo.Liciencia);
+                    cmd.Parameters.AddWithValue("id_propietario", vehiculo.id_Propietario);
+                    cmd.Parameters.AddWithValue("Licencia", vehiculo.Licencia);
                     cmd.Parameters.AddWithValue("Tipo", vehiculo.Tipo);
                     cmd.Parameters.AddWithValue("Marca", vehiculo.Marca);
                     cmd.Parameters.AddWithValue("Modelo", vehiculo.Modelo);
@@ -61,9 +61,9 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new VehiculoModel()
                         {
-                            Id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
-                            Id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
-                            Liciencia = dr["Licencia"].ToString(),
+                            id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
+                            id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
+                            Licencia = dr["Licencia"].ToString(),
                             Tipo = dr["Tipo"].ToString(),
                             Marca = dr["Marca"].ToString(),
                             Modelo = dr["Modelo"].ToString(),

@@ -18,12 +18,12 @@
             <div class="containerChildInputsVehiculo">
               
                 <label>Id propietario</label>
-                <input asp-for="Id_Propietario" />
-                <span asp-validation-for="Id_Propietario" style="color:red"></span>
+                <input asp-for="id_Propietario" />
+                <span asp-validation-for="id_Propietario" style="color:red"></span>
 
                 <label>Placa</label>
-                <input asp-for="Liciencia"/>
-                <span asp-validation-for="Liciencia" style="color:red"></span>
+                <input asp-for="Licencia"/>
+                <span asp-validation-for="Licencia" style="color:red"></span>
 
                 <label>Tipo</label>
                 <input asp-for="Tipo" />
@@ -68,6 +68,7 @@
 
         <div class="containerBtnForm">
             <button class="btnGuardarVehiculo" type="submit">CREAR</button>
+            <a asp-action="ListarVehiculo" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
         </div>
 
      </form>
