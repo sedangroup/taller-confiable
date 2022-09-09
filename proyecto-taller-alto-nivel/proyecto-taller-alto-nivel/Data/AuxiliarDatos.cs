@@ -105,7 +105,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Editar", conexion);           ///cambiar nombre procedimiento para auxiliar
+                    SqlCommand cmd = new SqlCommand("sp_EditarAuxiliar", conexion);           ///cambiar nombre procedimiento para auxiliar
                     cmd.Parameters.AddWithValue("id_Persona", oAuxiliar.id_Persona);
                     cmd.Parameters.AddWithValue("Identificacion", oAuxiliar.Identificacion);
                     cmd.Parameters.AddWithValue("Nombre", oAuxiliar.Nombre);
