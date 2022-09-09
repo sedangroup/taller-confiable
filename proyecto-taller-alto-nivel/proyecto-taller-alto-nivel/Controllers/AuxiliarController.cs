@@ -14,42 +14,129 @@ namespace proyecto_taller_alto_nivel.Controllers
 
         public IActionResult ListarPropietario()
         {
-            return View();
+            var oLista = Propietario_Datos.Listar();
+            return View(oLista);
         }
         public IActionResult GuardarPropietario()
         {
             return View();
         }
 
-        public IActionResult EditarPropietario()
+        [HttpPost]
+        public IActionResult GuardarPropietario(PropietarioModel oPropietario)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View();
+
+        var respuesta = Propietario_Datos.Guardar(oPropietario);
+
+            if (respuesta)
+                return RedirectToAction("ListarPropietario");
+            else
+                return View();
+    }
+
+        public IActionResult EditarPropietario(int id_Persona)
+        {
+            var oPropietario = Propietario_Datos.Obtener(id_Persona);
+            return View(oPropietario);
         }
 
-        public IActionResult EliminarPropietario()
+        [HttpPost]
+        public IActionResult EditarPropietario(PropietarioModel oPropietario)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View();
+
+
+            var respuesta = Propietario_Datos.Editar(oPropietario);
+
+            if (respuesta)
+                return RedirectToAction("ListarPropietario");
+            else
+                return View();
         }
 
+        public IActionResult EliminarPropietario(int id_Persona)
+        {
+            var opersona = Propietario_Datos.Obtener(id_Persona);
+            return View(opersona);
+        }
+
+        [HttpPost]
+        public IActionResult EliminarPropietario(PropietarioModel oPropietario)
+        {
+            var respuesta = Propietario_Datos.Eliminar(oPropietario.id_Persona);
+            
+            if (respuesta)
+                return RedirectToAction("ListarPropietario");
+            else
+                return View();
+        }
+        /// -----------------------------------------------------
         public IActionResult ListarMecanico()
         {
-            return View();
+            var oLista = Mecanico_Datos.Listar();
+            return View(oLista);
         }
         public IActionResult GuardarMecanico()
         {
             return View();
         }
 
-        public IActionResult EditarMecanico()
+        [HttpPost]
+        public IActionResult GuardarMecanico(MecanicoModel oMecanico)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = Mecanico_Datos.Guardar(oMecanico);
+
+            if (respuesta)
+                return RedirectToAction("ListarMecanico");
+            else
+                return View();
         }
 
-        public IActionResult EliminarMecanico()
+        public IActionResult EditarMecanico(int id_Persona)
         {
-            return View();
+            var oMecanico = Mecanico_Datos.Obtener(id_Persona);
+            return View(oMecanico);
         }
 
+        [HttpPost]
+        public IActionResult EditarMecanico(MecanicoModel oMecanico)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+
+            var respuesta = Mecanico_Datos.Editar(oMecanico);
+
+            if (respuesta)
+                return RedirectToAction("ListarMecanico");
+            else
+                return View();
+        }
+
+        public IActionResult EliminarMecanico(int id_Persona)
+        {
+
+            var oMecanico = Mecanico_Datos.Obtener(id_Persona);
+            return View(oMecanico);
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(PersonaModel oMecanico)
+        {
+            var respuesta = Mecanico_Datos.Eliminar(oMecanico.id_Persona);
+
+            if (respuesta)
+                return RedirectToAction("ListarMecanico");
+            else
+                return View();
+        }
+        /// -----------------------------------------------------
         public IActionResult ListarVehiculo()
         {
             var innerQuey = Vehiculo_Datos.Listar();
