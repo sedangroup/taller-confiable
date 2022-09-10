@@ -173,7 +173,6 @@ namespace proyecto_taller_alto_nivel.Controllers
             if (!ModelState.IsValid)
                 return View();
              
-
             var respuesta = Vehiculo_Datos.Editar(oLicencia);
 
             if (respuesta)

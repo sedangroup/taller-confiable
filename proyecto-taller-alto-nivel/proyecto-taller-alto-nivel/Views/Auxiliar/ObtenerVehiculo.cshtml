@@ -7,21 +7,22 @@
 <div class="containerEditar">
 
     <div class="ContainerDatosVehiculo">
+        <form asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
 
-        <form asp-action="EditarVehiculo" asp-controller="Auxiliar" method="post">
-
-            <input asp-for="id_Vehiculo" type="hidden" class="form-control">
+            <input asp-for="Licencia" type="hidden" class="form-control">
+        
 
             <div class="containerBuscarPlaca">
 
                 <label>
                     Ingrese Placa:
                     <input asp-for="Licencia" class="containerInputsBuscarPlaca"/>
-                    <span asp-validation-for="Licencia"></span>
-                    <a asp-action="ObtenerVehiculo" asp-controller="Auxiliar" class="btnBuscarPlaca" asp-route-Licencia="Licencia">BUSCAR</a>
+                    <span asp-validation-for="Licencia" style="color:red"></span>
+                    <button class="btnBuscarPlaca" type="submit">Buscar</button>
                 </label>
             </div>
-        
+
+
             <div class="containerDatosVehiculo">
                 <div class="mb-3">
                     <label class="form-label">Placa</label>
