@@ -14,7 +14,6 @@
                 <table class="listaVehiculos">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Placa</th>
                             <th>Tipo</th>
                             <th>Marca</th>
@@ -25,6 +24,7 @@
                             <th>Revision</th>
                             <th>Estado</th>
                             <th></th>
+                            <th></th>
                          </tr>
                     </thead>
    
@@ -32,7 +32,6 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.id_Vehiculo</td>
                                 <td>@item.Licencia</td>
                                 <td>@item.Tipo</td>
                                 <td>@item.Marca</td>
@@ -41,13 +40,14 @@
                                 <td>SOAT 2021</td>
                                 <td>@item.id_Propietario</td>
                                 <td>Jorge Rodriguez</td>
-                                <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Ver</a></td>
+                                <td><a asp-action="ObtenerVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-Licencia="@item.Licencia">Ver</a></td>
+                                <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Editar</a></td>
                                 <td><a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Eliminar</a></td>
                             </tr>
                         }
                     </tbody>
                 </table>
-        <a asp-action="GuardarVehiculo" asp-controller="Auxiliar" class="btnCrearNuevo"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+        <a asp-action="GuardarVehiculo" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
         </div>      
 
 </div>

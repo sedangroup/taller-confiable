@@ -22,7 +22,6 @@ namespace proyecto_taller_alto_nivel.Data
 
                 using (var dr = cmd.ExecuteReader())
                 {
-
                     while (dr.Read())
                     {
                         oLista.Add(new VehiculoModel()
@@ -37,7 +36,6 @@ namespace proyecto_taller_alto_nivel.Data
                             Desplazamiento = dr["Desplazamiento"].ToString(),
                             PaisOrigen = dr["PaisOrigen"].ToString(),
                             Descripcion = dr["Descripcion"].ToString()
-
                         });
                     }
                 }

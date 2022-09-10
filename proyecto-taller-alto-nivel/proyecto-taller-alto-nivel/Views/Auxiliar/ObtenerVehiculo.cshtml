@@ -7,52 +7,40 @@
 <div class="containerEditar">
 
     <div class="ContainerDatosVehiculo">
-        <form asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
 
-            <input asp-for="Licencia" type="hidden" class="form-control">
-        
+        <form class="formEditarVehiculo" asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
+
+            <input asp-for="id_Vehiculo" type="hidden" class="form-control">
 
             <div class="containerBuscarPlaca">
-
-                <label>
+                <label for="License">
                     Ingrese Placa:
-                    <input asp-for="Licencia" class="containerInputsBuscarPlaca"/>
-                    <span asp-validation-for="Licencia" style="color:red"></span>
-                    <button class="btnBuscarPlaca" type="submit">Buscar</button>
+                    <input type="text" id="License" name="License" class="containerInputsBuscarPlaca" value="XXX000">
+                    <input type="button" value="BUSCAR" class="btnBuscarPlaca">
                 </label>
             </div>
 
+            <div class=ContainerTablaDatosVehiculo>
+                
+                <label>Placa</label>
+                <input asp-for="Licencia" type="text" class="form-control" />
+                <span asp-validation-for="Licencia" style="color:red"></span>
 
-            <div class="containerDatosVehiculo">
-                <div class="mb-3">
-                    <label class="form-label">Placa</label>
-                    <input asp-for="Licencia" type="text" class="form-control">
-                    <span asp-validation-for="Licencia" class="text-danger"></span>
-                </div>
+                <label>Tipo</label>
+                <input asp-for="Tipo" type="text" class="form-control" />
+                <span asp-validation-for="Tipo" style="color:red"></span>
 
-                <div class="mb-3">
-                    <label class="form-label">Tipo</label>
-                    <input asp-for="Tipo" type="text" class="form-control">
-                    <span asp-validation-for="Tipo" class="text-danger"></span>
-                </div>
+                <label>Marca</label>
+                <input asp-for="Marca" type="text" class="form-control" />
+                <span asp-validation-for="Marca" style="color:red"></span>
 
-                <div class="mb-3">
-                    <label class="form-label">Marca</label>
-                    <input asp-for="Marca" type="text" class="form-control">
-                    <span asp-validation-for="Marca" class="text-danger"></span>
-                </div>
+                <label>Modelo</label>
+                <input asp-for="Modelo" type="text" class="form-control" />
+                <span asp-validation-for="Modelo" style="color:red"></span>
 
-                <div class="mb-3">
-                    <label class="form-label">Modelo</label>
-                    <input asp-for="Modelo" type="text" class="form-control">
-                    <span asp-validation-for="Modelo" class="text-danger"></span>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Capacidad</label>
-                    <input asp-for="Capacidad" type="text" class="form-control">
-                    <span asp-validation-for="Capacidad" class="text-danger"></span>
-                </div>
+                <label>Capacidad</label>
+                <input asp-for="Capacidad" type="text" class="form-control" />
+                <span asp-validation-for="Capacidad" style="color:red"></span>
             </div>
 
             <div class="ContainerPropietarioVehiculo">

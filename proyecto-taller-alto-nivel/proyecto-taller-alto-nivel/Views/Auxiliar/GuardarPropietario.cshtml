@@ -1,4 +1,5 @@
-﻿@{
+﻿@model PropietarioModel
+@{
     ViewData["Title"] = "Nuevo Propietario";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
@@ -7,47 +8,52 @@
 <div class="containerPropietario">
 
     <div class="containerTitlePropietario">
-        <p>Ingreso de Nuevo Propietario de Vehiculo</p>
+        <p>Crear Nuevo Propietario</p>
     </div>
 
-    <form class="formVPropietario">
+    <form class="formVPropietario" asp-action="GuardarPropietario" asp-controller="Auxiliar" method="post">
         <div class="containerInputsPropietario">
 
             <div class="containerChildInputsPropietario">
 
+                <label>Identificacion</label>
+                <input asp-for="Identificacion" />
+                <span asp-validation-for="Identificacion" style="color:red"></span>
+
+                <label>Nacimiento</label>
+                <input asp-for="Nacimiento" />
+                <span asp-validation-for="Nacimiento" style="color:red"></span>
+
+            </div>
+
+            <div class="containerChildInputsPropietario">
+
                 <label>Nombre</label>
-                <input />
+                <input asp-for="Nombre" />
+                <span asp-validation-for="Nombre" style="color:red"></span>
 
                 <label>Ciudad</label>
-                <input />
-
-                            
-
-            </div>
-
-            <div class="containerChildInputsPropietario">
-
-                <label>Apellidos</label>
-                <input />
-
-                <label>Dirección</label>
-                <input />
+                <input asp-for="Ciudad" />
+                <span asp-validation-for="Ciudad" style="color:red"></span>
 
             </div>
 
             <div class="containerChildInputsPropietario">
 
-                <label>Telefono</label>
-                <input />
+                <label>Apellido</label>
+                <input asp-for="Apellido" />
+                <span asp-validation-for="Apellido" style="color:red"></span>
 
-                
+                <label>Correo</label>
+                <input asp-for="Correo" />
+                <span asp-validation-for="Correo" style="color:red"></span>
 
             </div>
 
         </div>
 
         <div class="containerBtnForm">
-            <a class="btnGuardarPropietario">CREAR</a>
+            <button class="btnGuardarPropietario" type="submit">CREAR</button>
         </div>
 
     </form>

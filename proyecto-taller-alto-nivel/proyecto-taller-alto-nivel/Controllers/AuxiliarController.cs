@@ -160,6 +160,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
+
         //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         public IActionResult ObtenerVehiculo(string Licencia)
         {
