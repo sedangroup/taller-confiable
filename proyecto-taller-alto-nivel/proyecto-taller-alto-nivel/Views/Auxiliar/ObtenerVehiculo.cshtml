@@ -1,0 +1,110 @@
+﻿@model VehiculoModel
+@{
+    ViewData["Title"] = "Obtener Vehiculo";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="containerEditar">
+
+    <div class="ContainerDatosVehiculo">
+
+        <form asp-action="EditarVehiculo" asp-controller="Auxiliar" method="post">
+
+            <input asp-for="id_Vehiculo" type="hidden" class="form-control">
+
+            <div class="containerBuscarPlaca">
+
+                <label>
+                    Ingrese Placa:
+                    <input asp-for="Licencia" class="containerInputsBuscarPlaca"/>
+                    <span asp-validation-for="Licencia"></span>
+                    <a asp-action="ObtenerVehiculo" asp-controller="Auxiliar" class="btnBuscarPlaca" asp-route-Licencia="Licencia">BUSCAR</a>
+                </label>
+            </div>
+        
+            <div class="containerDatosVehiculo">
+                <div class="mb-3">
+                    <label class="form-label">Placa</label>
+                    <input asp-for="Licencia" type="text" class="form-control">
+                    <span asp-validation-for="Licencia" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo</label>
+                    <input asp-for="Tipo" type="text" class="form-control">
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Marca</label>
+                    <input asp-for="Marca" type="text" class="form-control">
+                    <span asp-validation-for="Marca" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Modelo</label>
+                    <input asp-for="Modelo" type="text" class="form-control">
+                    <span asp-validation-for="Modelo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Capacidad</label>
+                    <input asp-for="Capacidad" type="text" class="form-control">
+                    <span asp-validation-for="Capacidad" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="ContainerPropietarioVehiculo">
+                <div class="containerPropietario">
+                    <label for="License">
+                        Propietrario del Vehiculo:
+                        <input type="text" id="Id_Owner" name="Owner" class="containerInputsProp">
+                    </label>
+                </div>
+            </div>
+
+            <div class="ContainerAsignacionesVehiculo">
+                <div class="containerAsignacion">
+                    <label for="Owner">
+                        Asignar Nuevo Dueño:
+                        <input type="text" id="Owner" name="Owner" class="containerInputsOwner">
+                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
+                    </label>
+                    <label for="Mechanic">
+                        Asignar Mecanico:
+                        <select class="containerInputsSelect">
+                            <option>Seleccione...</option>
+                            <option>Mecanico 1</option>
+                            <option>Mecanico 2</option>
+                            <option>Mecanico 3</option>
+                            <option>Mecanico 4</option>
+                        </select>
+                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
+                    </label>
+                </div>
+            </div>
+
+            <div class="containerTablaSoat">
+                <table class="tablaSoat">
+                    <thead>
+                        <tr>
+                            <th>Num Poliza</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Final</th>
+                            <th>Historial</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>012757634215</td>
+                            <td>13/dic/2021</td>
+                            <td>12/dic/2022</td>
+                            <td class="nav"><a href="#">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>

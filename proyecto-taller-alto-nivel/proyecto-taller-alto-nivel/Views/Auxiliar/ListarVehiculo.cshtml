@@ -14,6 +14,7 @@
                 <table class="listaVehiculos">
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Placa</th>
                             <th>Tipo</th>
                             <th>Marca</th>
@@ -31,6 +32,7 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td>@item.id_Vehiculo</td>
                                 <td>@item.Licencia</td>
                                 <td>@item.Tipo</td>
                                 <td>@item.Marca</td>
@@ -39,7 +41,7 @@
                                 <td>SOAT 2021</td>
                                 <td>@item.id_Propietario</td>
                                 <td>Jorge Rodriguez</td>
-                                <td><a asp-action="ObtenerVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-IdPersona="@item.id_Vehiculo">Ver</a></td>
+                                <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-IdPersona="@item.id_Vehiculo">Ver</a></td>
                                 <td><a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-IdPersona="@item.id_Vehiculo">Eliminar</a></td>
                             </tr>
                         }

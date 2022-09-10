@@ -127,7 +127,7 @@ namespace proyecto_taller_alto_nivel.Controllers
         }
 
         [HttpPost]
-        public IActionResult Eliminar(PersonaModel oMecanico)
+        public IActionResult EliminarMecanico(MecanicoModel oMecanico)
         {
             var respuesta = Mecanico_Datos.Eliminar(oMecanico.id_Persona);
 
@@ -160,35 +160,68 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
-
-        public IActionResult EditarVehiculo()
+        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        public IActionResult ObtenerVehiculo(string Licencia)
         {
-            return View();
+            var oLicencia = Vehiculo_Datos.ObtenerPlaca(Licencia);
+            return View(oLicencia);
         }
 
-        public IActionResult EliminarVehiculo()
+        [HttpPost]
+        public IActionResult ObtenerVehiculo(VehiculoModel oLicencia)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View();
+             
+
+            var respuesta = Vehiculo_Datos.Editar(oLicencia);
+
+            if (respuesta)
+                return RedirectToAction("ListarVehiculo");
+            else
+                return View();
+        }
+        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+        public IActionResult EditarVehiculo(int id_Vehiculo)
+        {
+            var oVehiculo = Vehiculo_Datos.Obtener(id_Vehiculo);
+            return View(oVehiculo);
         }
 
-        public IActionResult AsignarPropietario()
+        [HttpPost]
+        public IActionResult EditarVehiculo(VehiculoModel oVehiculo)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View();
+
+
+            var respuesta = Vehiculo_Datos.Editar(oVehiculo);
+
+            if (respuesta)
+                return RedirectToAction("ListarVehiculo");
+            else
+                return View();
         }
 
-        public IActionResult AsignarMecanico()
+        public IActionResult EliminarVehiculo(int id_Vehiculo)
         {
-            return View();
+
+            var oVehiculo = Vehiculo_Datos.Obtener(id_Vehiculo);
+            return View(oVehiculo);
         }
 
-        public IActionResult ListarServicios()
+        [HttpPost]
+        public IActionResult EliminarVehiculo(VehiculoModel oVehiculo)
         {
-            return View();
-        }
+            var respuesta = Vehiculo_Datos.Eliminar(oVehiculo.id_Vehiculo);
 
-        public IActionResult ObtenerServicios()
-        {
-            return View();
+            if (respuesta)
+                return RedirectToAction("ListarVehiculo");
+            else
+                return View();
         }
+            /// -----------------------------------------------------
+        
     }
 }

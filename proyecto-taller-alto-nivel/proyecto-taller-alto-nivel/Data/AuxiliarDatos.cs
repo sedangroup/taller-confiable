@@ -135,7 +135,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EliminarAuxiliar", conexion);         ///cambiar nombre procedimiento para auxiliar
+                    SqlCommand cmd = new SqlCommand("sp_EliminarAuxiliar", conexion);         
                     cmd.Parameters.AddWithValue("id_Persona", id_Persona);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

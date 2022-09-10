@@ -1,0 +1,30 @@
+﻿@model VehiculoModel
+@{
+    ViewData["Title"] = "EliminarVehiculo";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        
+    </div>
+    <div class="card-body">
+
+        <form asp-action="EliminarVehiculo" asp-controller="Auxiliar" method="post">
+
+            <input asp-for="id_Vehiculo" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar el Vehiculo @Html.DisplayTextFor(m => m.Licencia)?
+            </div>
+
+            <div class="containerBtnForm">
+            <button type="submit" class="btnBuscarPlaca">ELIMINAR</button>
+            </div>
+            <div class="containerBtnForm">
+                <a asp-action="ListarVehiculo" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
+            </div>
+            
+        </form>
+    </div>
+</div>
