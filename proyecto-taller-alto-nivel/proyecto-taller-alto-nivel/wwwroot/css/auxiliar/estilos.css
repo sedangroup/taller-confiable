@@ -141,6 +141,9 @@
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    box-sizing:border-box;
 }
 
 

@@ -12,10 +12,11 @@
         <p>Guardar Mecánico</p>
     </div>
 
-    <form class="formVehiculo" asp-action="GuardarMecanico" asp-controller="Auxiliar" method="post">
+    <form class="formVehiculo" asp-action="EditarMecanico" asp-controller="Auxiliar" method="post">
         <div class="containerInputsMecanico">
 
             <div class="containerChildInputsMecanico">
+                <input asp-for="id_Persona"  hidden/> 
 
                 <label>Nombre</label>
                 <input asp-for="Nombre" />
@@ -34,11 +35,11 @@
             <div class="containerChildInputsMecanico">
 
                 <label>Nacimiento</label>
-                <input asp-for="Nacimiento"/>
+                <input asp-for="Nacimiento" />
                 <span asp-validation-for="Nacimiento" style="color:red"></span>
 
                 <label>Dirección</label>
-                <input asp-for="Direccion"/>
+                <input asp-for="Direccion" />
                 <span asp-validation-for="Direccion" style="color:red"></span>
             </div>
 
@@ -56,7 +57,7 @@
         </div>
 
         <div class="containerBtnForm">
-            <button class="btnGuardarMecanico" type="submit">CREAR</button>
+            <button class="btnGuardarMecanico" type="submit">Finalizar</button>
         </div>
 
     </form>
