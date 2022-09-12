@@ -161,27 +161,17 @@ namespace proyecto_taller_alto_nivel.Controllers
                 return View();
         }
 
-        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         public IActionResult ObtenerVehiculo(string Licencia)
         {
             var oLicencia = Vehiculo_Datos.ObtenerPlaca(Licencia);
             return View(oLicencia);
         }
 
-        [HttpPost]
-        public IActionResult ObtenerVehiculo(VehiculoModel oLicencia)
-        {
-            if (!ModelState.IsValid)
-                return View();
-             
-            var respuesta = Vehiculo_Datos.Editar(oLicencia);
-
-            if (respuesta)
-                return RedirectToAction("ListarVehiculo");
-            else
-                return View();
+        public IActionResult ObtenerPlaca(int id_Vehiculo)
+        { 
+            var oLicencia = Vehiculo_Datos.Obtener(id_Vehiculo);
+            return View(oLicencia);
         }
-        //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
         public IActionResult EditarVehiculo(int id_Vehiculo)
         {
