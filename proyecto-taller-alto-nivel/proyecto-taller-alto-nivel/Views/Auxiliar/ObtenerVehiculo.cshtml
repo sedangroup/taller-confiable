@@ -1,6 +1,6 @@
 ﻿@model VehiculoModel
 @{
-    ViewData["Title"] = "Obtener Vehiculo";
+    ViewData["Title"] = "ObtenerVehiculo";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
 
@@ -10,90 +10,61 @@
 
         <form class="formEditarVehiculo" asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
 
-            <input asp-for="id_Vehiculo" type="hidden" class="form-control">
-
             <div class="containerBuscarPlaca">
-                <label for="License">
-                    Ingrese Placa:
-                    <input type="text" id="License" name="License" class="containerInputsBuscarPlaca" value="XXX000">
-                    <input type="button" value="BUSCAR" class="btnBuscarPlaca">
-                </label>
+
+                <p>Detalle del Vehiculo</p>
             </div>
+            <div class="containerInputsVehiculo">
+                <div class=containerChildInputsVehiculo>
 
-            <div class=ContainerTablaDatosVehiculo>
-                
-                <label>Placa</label>
-                <input asp-for="Licencia" type="text" class="form-control" />
-                <span asp-validation-for="Licencia" style="color:red"></span>
+                    <label>Id vehiculo</label>
+                    <input asp-for="id_Vehiculo" type="text" class="form-control" />
 
-                <label>Tipo</label>
-                <input asp-for="Tipo" type="text" class="form-control" />
-                <span asp-validation-for="Tipo" style="color:red"></span>
+                    <label>Placa</label>
+                    <input asp-for="Licencia" type="text" class="form-control" />
 
-                <label>Marca</label>
-                <input asp-for="Marca" type="text" class="form-control" />
-                <span asp-validation-for="Marca" style="color:red"></span>
+                    <label>Tipo</label>
+                    <input asp-for="Tipo" type="text" class="form-control" />
 
-                <label>Modelo</label>
-                <input asp-for="Modelo" type="text" class="form-control" />
-                <span asp-validation-for="Modelo" style="color:red"></span>
+                </div>
 
-                <label>Capacidad</label>
-                <input asp-for="Capacidad" type="text" class="form-control" />
-                <span asp-validation-for="Capacidad" style="color:red"></span>
-            </div>
+                <div class=containerChildInputsVehiculo>
 
-            <div class="ContainerPropietarioVehiculo">
-                <div class="containerPropietario">
-                    <label for="License">
-                        Propietrario del Vehiculo:
-                        <input type="text" id="Id_Owner" name="Owner" class="containerInputsProp">
-                    </label>
+                    <label>Marca</label>
+                    <input asp-for="Marca" type="text" class="form-control" />
+
+                    <label>Modelo</label>
+                    <input asp-for="Modelo" type="text" class="form-control" />
+
+                    <label>Capacidad</label>
+                    <input asp-for="Capacidad" type="text" class="form-control" />
+
+                </div>
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Cilindraje</label>
+                    <input asp-for="Desplazamiento" type="text" class="form-control" />
+
+                    <label>Pais de Origen</label>
+                    <input asp-for="PaisOrigen" type="text" class="form-control" />
+
+                    <label>Descripcion</label>
+                    <input asp-for="Descripcion" type="text" class="form-control" />
+
                 </div>
             </div>
+            <div class="containerBuscarPlaca">
 
-            <div class="ContainerAsignacionesVehiculo">
-                <div class="containerAsignacion">
-                    <label for="Owner">
-                        Asignar Nuevo Dueño:
-                        <input type="text" id="Owner" name="Owner" class="containerInputsOwner">
-                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
-                    </label>
-                    <label for="Mechanic">
-                        Asignar Mecanico:
-                        <select class="containerInputsSelect">
-                            <option>Seleccione...</option>
-                            <option>Mecanico 1</option>
-                            <option>Mecanico 2</option>
-                            <option>Mecanico 3</option>
-                            <option>Mecanico 4</option>
-                        </select>
-                        <input type="button" value="GUARDAR" class="btnGuardarAsignacion">
-                    </label>
-                </div>
+                <a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="id_Vehiculo">Editar</a>
+                <a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-Licencia="licencia">Eliminar</a>
+
             </div>
 
-            <div class="containerTablaSoat">
-                <table class="tablaSoat">
-                    <thead>
-                        <tr>
-                            <th>Num Poliza</th>
-                            <th>Fecha Inicio</th>
-                            <th>Fecha Final</th>
-                            <th>Historial</th>
-                        </tr>
-                    </thead>
+            <div class="containerBtnForm">
+                <a asp-action="ListarVehiculo" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
 
-                    <tbody>
-                        <tr>
-                            <td>012757634215</td>
-                            <td>13/dic/2021</td>
-                            <td>12/dic/2022</td>
-                            <td class="nav"><a href="#">Ver</a></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
+
         </form>
     </div>
 </div>
