@@ -3,7 +3,7 @@
     ViewData["Title"] = "ListarMecanico";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
-<div>
+<div class="containerMainLista">
 
     <div class="TituloListarVehiculos">
         LISTADO GENERAL DE Mecanicos
@@ -37,7 +37,6 @@
                         <td>@item.Direccion</td>
                         <td>@item.NivelEducacion</td>
                         <td>@item.Telefono</td>
-                        <td><a asp-action="ObtenerMecanico" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Persona="@item.id_Persona">Ver</a></td>
                         <td><a asp-action="EditarMecanico" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Persona="@item.id_Persona">Editar</a></td>
                         <td><a asp-action="EliminarMecanico" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Persona="@item.id_Persona">Eliminar</a></td>
                     </tr>
