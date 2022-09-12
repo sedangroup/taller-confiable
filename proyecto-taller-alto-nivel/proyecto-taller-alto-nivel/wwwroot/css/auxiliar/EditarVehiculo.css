@@ -66,31 +66,33 @@
     margin-left: 40px;
 }
 .btnEditarVeh {
-    width: 90px;
-    background: #090623;
+    background-color: #090623;
+    border: none;
     color: white;
+    padding: 5px 40px;
     text-align: center;
-    padding: 5px 19px;
-    font-size: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    min-width: 40px;
+    
 }
 
-    .btnEditarVeh:hover {
-        cursor: pointer;
-        font-weight: bold;
-    }
 
 .btnEliminarVeh {
-    width: 90px;
-    background: #f80c4c;
+    background-color: #f80c4c;
+    border: none;
     color: white;
+    padding: 5px 40px;
     text-align: center;
-    padding: 5px 15px;
-    font-size: 10px;
-    margin-left:10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    min-width: 40px;
+    margin-left: 10px;
 }
 
-    .btnEliminarVeh:hover {
-        cursor: pointer;
-        font-weight: bold;
-    }
+
 
