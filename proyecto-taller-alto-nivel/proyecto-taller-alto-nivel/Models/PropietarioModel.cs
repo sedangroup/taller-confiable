@@ -5,11 +5,17 @@ namespace proyecto_taller_alto_nivel.Models
     public class PropietarioModel
     {
         public int id_Persona { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Identificacion { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Nombre { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Apellido { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Nacimiento { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Ciudad { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Correo { get; set; }
 
     }

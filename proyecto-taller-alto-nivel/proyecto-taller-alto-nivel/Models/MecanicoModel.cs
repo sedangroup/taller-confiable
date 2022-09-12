@@ -16,7 +16,10 @@ namespace proyecto_taller_alto_nivel.Models
         public string? Nacimiento { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Direccion { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? NivelEducacion { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Telefono { get; set; }
+    
     }
 }
