@@ -2,41 +2,93 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     padding: 5px;
     margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 25px;
 }
 
-.containerAsignacion {
+.containerInputPlaca {
     height: 100%;
     display: flex;
-    flex-direction: column;
-    background: white;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 25px;
 }
 
-.containerPropietario {
+.containerInputsBuscarPlaca {
+    font-family: inherit;
+    padding: 6px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #d4d4d4;
+    border: none;
+    margin-left: 40px;
+}
+
+.btnBuscarPlaca {
+    background-color: #f80c4c;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    min-width: 40px;
+}
+
+.containerBotones {
     height: 100%;
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 5px;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
-    margin-left: 0px;
 }
 
-.containerAsignacion {
-    height: 100%;
+.containerInputsPlaca {
+    font-family: sans-serif;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background: #d4d4d4;
+    border: none;
+    margin-right: 0px;
+
+}
+
+.containerDatosVehiculo {
     display: flex;
-    flex-direction: column;
-    background: white;
+    grid-template-columns: repeat(3,33.4%);
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 20px;
-    margin-top: 20px;
 }
 
-.botonBuscar {
+.btnEditarVeh {
+    background-color: #090623;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    min-width: 40px;
+    margin-left: 10px;
+}
+
+
+.btnEliminarVeh {
     background-color: #f80c4c;
     border: none;
     color: white;
@@ -46,96 +98,9 @@
     display: inline-block;
     font-size: 12px;
     margin-top: 10px;
+    min-width: 40px;
+    margin-left: 10px;
 }
 
-.botonGuardar {
-    background-color: #f80c4c;
-    border: none;
-    color: white;
-    padding: 5px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-.cajaTexto {
-    font-family: sans-serif;
-    padding: 5px 40px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #ebf0f4;
-    border: 0px;
-    margin-right: 40px;
-}
-
-.cajaTexto2 {
-    font-family: sans-serif;
-    padding: 5px 40px;
-    font-size: 12px;
-    font-weight: 400;
-    background: #A5A5A5;
-    border: 0px;
-    margin-left: 50px;
-}
-
-.tablaVehiculo {
-    border-collapse: separate;
-    
-    margin-top: 60px;
-    font-size: 1em;
-    font-family: sans-serif;
-    min-width: 450px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-    .tablaVehiculo thead tr {
-        background-color: #090623;
-        color: #ffffff;
-        text-align: center;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
 
 
-    .tablaVehiculo th, .styled-table td {
-        padding: 12px 50px;
-    }
-
-    .tablaVehiculo tbody tr {
-        border-bottom: 1px solid #dddddd;
-        text-align: center;
-    }
-
-        .tablaVehiculo tbody tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }
-
-.tablaSoat {
-    border-collapse: separate;
-    margin: 100px 0;
-    font-size: 1em;
-    font-family: sans-serif;
-    min-width: 450px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-    .tablaSoat thead tr {
-        background-color: #090623;
-        color: #ffffff;
-        text-align: center;
-    }
-
-    .tablaSoat th, .styled-table td {
-        padding: 8px 30px;
-    }
-
-    .tablaSoat tbody tr {
-        border-bottom: 1px solid #dddddd;
-        text-align: center;
-    }
-
-        .tablaSoat tbody tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }

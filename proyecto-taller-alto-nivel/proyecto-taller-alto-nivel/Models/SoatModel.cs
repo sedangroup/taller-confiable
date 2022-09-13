@@ -1,20 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace proyecto_taller_alto_nivel.Models
 {
-    public class AuxiliarModel
+    public class SoatModel
     {
-        public int id_Persona { get; set; }
-
+        public int id_Soat { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Identificacion { get; set; }
+        public int id_Vehiculo { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Nombre { get; set; }
+        public int id_Propietario { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Apellido { get; set; }
+        public string? FechaInicio { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Nacimiento { get; set; }
+        public string? FechaFin { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Telefono { get; set; }
+        public string? NumeroPoliza { get; set; }
     }
 }

@@ -1,0 +1,50 @@
+﻿@model List<MecanicoModel>
+@{
+    ViewData["Title"] = "ListarMecanico";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+<div class="containerMainLista">
+
+    <div class="TituloListarVehiculos">
+        LISTADO GENERAL DE Mecanicos
+    </div>
+
+    <div class="card-body containerTable">
+
+        <table class="listaVehiculos2">
+            <thead>
+                <tr>
+                    <th>Identificacion</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Nacimiento</th>
+                    <th>Direccion</th>
+                    <th>Nivel de educacion</th>
+                    <th>Telefono</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Identificacion</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Apellido</td>
+                        <td>@item.Nacimiento</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.NivelEducacion</td>
+                        <td>@item.Telefono</td>
+                        <td><a asp-action="EditarMecanico" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Persona="@item.id_Persona">Editar</a></td>
+                        <td><a asp-action="EliminarMecanico" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Persona="@item.id_Persona">Eliminar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-action="GuardarMecanico" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
+    </div>
+
+</div>
+

@@ -4,18 +4,25 @@ namespace proyecto_taller_alto_nivel.Models
 {
     public class VehiculoModel
     {
-        public int Id_Vehicle { get; set; }
-        public int Id_Owner { get; set; }
-
+        public int id_Vehiculo { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? License { get; set; }
+        public int id_Propietario { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? Licencia { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Tipo { get; set; }
-        public string? Brand { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? Marca { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Modelo { get; set; }
-        public string? Capacity { get; set; }
-        public string? Displacement { get; set; }
-        public string? OriginCountry { get; set; }
-        public string? Description { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? Capacidad { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? Cilindraje { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? PaisOrigen { get; set; }
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string? Descripcion { get; set; }
     }
 }
 

@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "ListarServicio";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+<div class="containerMainLista">
+
+    <div class="TituloListarVehiculos">
+        LISTADO DEL SERVICIO
+    </div>
+
+    <div class="card-body containerTable">
+
+        <table class="listaVehiculos2">
+            <thead>
+                <tr>
+                    <th>Propietario</th>
+                    <th>Mecanico</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Nivel aceite</th>
+                    <th>Nivel liquido frenos</th>
+                    <th>Nivel refrigerante</th>
+                    <th>Nivel liquido direccion</th>
+                    <th>Nro Poliza Soat</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+             
+                    <tr>
+                        <td>Juan carlos</td>
+                        <td>juan manuel</td>
+                        <td>mazda</td>
+                        <td>focus 3</td>
+                        <td>10</td>
+                        <td>100</td>
+                        <td>400</td>
+                        <td>140</td>
+                        <td>39194391</td>
+                        <td>20/05/2022</td>
+                        <td>9:00 .a.m.</td>
+                        <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="">Editar</a></td>
+                        <td><a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Vehiculo="">Eliminar</a></td>
+                    </tr>
+               
+            </tbody>
+        </table>
+        <a asp-action="GuardarVehiculo" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO SERVICIO</a>
+    </div>
+
+</div>
+

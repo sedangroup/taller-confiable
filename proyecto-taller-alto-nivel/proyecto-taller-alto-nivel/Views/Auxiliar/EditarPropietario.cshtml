@@ -1,8 +1,10 @@
 ﻿@model PropietarioModel
 @{
-    ViewData["Title"] = "Nuevo Propietario";
+    ViewData["Title"] = "EditarPropietario";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
+
+
 
 
 <div class="containerPropietario">
@@ -11,12 +13,14 @@
         <p>Crear Nuevo Propietario</p>
     </div>
 
-    <form class="formVPropietario" asp-action="GuardarPropietario" asp-controller="Auxiliar" method="post">
+    <form class="formPropietario" asp-action="EditarPropietario" asp-controller="Auxiliar" method="post">
+        <input asp-for="id_Persona" type="hidden" class="form-control">
         <div class="containerInputsPropietario">
 
-            <div class="containerChildInputsPropietario">
+            <div class="containerInputsPropietario">
+                <input asp-for="id_Persona" hidden />
 
-                <label>Identificacion</label>
+                <<label>Identificacion</label>
                 <input asp-for="Identificacion" />
                 <span asp-validation-for="Identificacion" style="color:red"></span>
 
@@ -26,7 +30,7 @@
 
             </div>
 
-            <div class="containerChildInputsPropietario">
+            <div class="containerInputsPropietario">
 
                 <label>Nombre</label>
                 <input asp-for="Nombre" />
@@ -35,10 +39,9 @@
                 <label>Ciudad</label>
                 <input asp-for="Ciudad" />
                 <span asp-validation-for="Ciudad" style="color:red"></span>
-
             </div>
 
-            <div class="containerChildInputsPropietario">
+            <div class="containerInputsPropietario">
 
                 <label>Apellido</label>
                 <input asp-for="Apellido" />
@@ -53,9 +56,11 @@
         </div>
 
         <div class="containerBtnForm">
-            <button class="btnGuardarPropietario" type="submit">CREAR</button>
+            <button class="btnGuardarMecanico" type="submit">GUARDAR</button>
         </div>
 
     </form>
 
 </div>
+
+

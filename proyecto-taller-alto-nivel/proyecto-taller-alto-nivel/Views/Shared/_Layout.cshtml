@@ -15,17 +15,107 @@
            <a asp-action="Index" asp-controller="Home"> <img src="../img/auxiliar/logo.png" class="imgLogo" /></a>
         </div>
         <div class="containerBtns">
-            <a asp-action="Login" asp-controller="Home" class="btnLogin">Inicia Sesión</a>
-            <a asp-action="Registro" asp-controller="Home" class="btnRegistro">Registrate aquí</a>
+            <a id="myBtn" class="btnLogin">Inicia Sesión</a>
+            <a id="myBtn2" class="btnRegistro">Registrate aquí</a>
         </div>
     </div>
+
+
+    <div id="myModal" class="modal">
+        <div class="containerChildModal">
+            <div class="containerClose">
+                <button type="button" class="close">
+                    <span class="visually-hidden">X</span>
+                </button>
+            </div>
+            
+            <div class="modal-content">
+                <h2>INICIAR SESIÓN</h2>
+                <div class="containerInputs">
+                    <input type="text" placeholder="Usuario" class="input"/>
+                    <input type="text" placeholder="Contraseña" class="input"/>
+                    <a asp-action="GuardarMecanico" asp-controller="Auxiliar" class="btnLogin2">
+                        INGRESAR
+                    </a>
+                    <p class="subMsg">¿Eres nuevo? Registrate</p>
+                </div>           
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="myModal2" class="modal">
+        <div class="containerChildModal">
+            <div class="containerClose">
+                <button type="button" class="close2">
+                    <span class="visually-hidden">X</span>
+                </button>
+            </div>
+
+            <div class="modal-content">
+                <h2>CREAR CUENTA</h2>
+                <div class="containerInputs">
+                    <input type="text" placeholder="Nombre" class="input" />
+                    <input type="text" placeholder="Apellido" class="input" />
+                    <input type="text" placeholder="Telefono" class="input" />
+                    <input type="text" placeholder="Correo" class="input" />
+                    <a asp-action="Index" asp-controller="Home" class="btnLogin2">
+                        Registrarse
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+
+ 
+        var btn = document.getElementById("myBtn");
+        var btn2 = document.getElementById("myBtn2");
+
+     
+        var span = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("close2")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        }
+        btn2.onclick = function () {
+            modal2.style.display = "flex";
+        }
+
+   
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        span2.onclick = function () {
+            modal2.style.display = "none";
+        }
+   
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        window.onclick = function (event) {
+            if (event.target == modal2) {
+                moda2l.style.display = "none";
+            }
+        }
+    </script>
+
 
     <div class="containerMain">
         @RenderBody()
     </div>
 
     <div class="footer">
-       Aqui iria el footer
+       Derechos reservados Taller Alto Nivel 2022
     </div>
  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

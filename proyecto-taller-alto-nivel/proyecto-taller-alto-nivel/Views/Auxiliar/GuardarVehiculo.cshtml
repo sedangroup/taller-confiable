@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Nuevo Vehiculo";
+﻿@model VehiculoModel
+
+@{
+    ViewData["Title"] = "NuevoVehiculo";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
 
@@ -10,53 +12,63 @@
         <p>Guardar Vehiculo</p>
     </div>
 
-    <form class="formVehiculo">
+    <form class="formVehiculo" asp-action="GuardarVehiculo" asp-controller="Auxiliar" method="post">
+
         <div class="containerInputsVehiculo">
 
             <div class="containerChildInputsVehiculo">
+              
+                <label>Id propietario</label>
+                <input asp-for="id_Propietario" />
+                <span asp-validation-for="id_Propietario" style="color:red"></span>
 
                 <label>Placa</label>
-                <input />
-
-                <label>Pais de origen</label>
-                <input />
+                <input asp-for="Licencia"/>
+                <span asp-validation-for="Licencia" style="color:red"></span>
 
                 <label>Tipo</label>
-                <select>
-                    <option>Volvo</option>
-                    <option>Saab</option>
-                    <option>Opel</option>
-                    <option>Audi</option>
-                </select>
+                <input asp-for="Tipo" />
+                <span asp-validation-for="Tipo" style="color:red"></span>
 
             </div>
 
             <div class="containerChildInputsVehiculo">
 
                 <label>Marca</label>
-                <input />
+                <input asp-for="Marca"/>
+                <span asp-validation-for="Marca" style="color:red"></span>
 
-                <label>Año de fabricacion</label>
-                <input />
+                <label>Modelo</label>
+                <input asp-for="Modelo" />
+                <span asp-validation-for="Modelo" style="color:red"></span>
+
+                <label>Capacidad de pasajeros</label>
+                <input asp-for="Capacidad" />
+                <span asp-validation-for="Capacidad" style="color:red"></span>
+                
 
             </div>
 
             <div class="containerChildInputsVehiculo">
 
-                <label>Modelo</label>
-                <input />
+                <label>Cilindraje</label>
+                <input asp-for="Cilindraje" />
+                <span asp-validation-for="Cilindraje" style="color:red"></span>
 
-                <label>Capacidad de pasajeros</label>
-                <input />
+                <label>Pais de origen</label>
+                <input asp-for="PaisOrigen" />
+                <span asp-validation-for="PaisOrigen" style="color:red"></span>
+
+                <label>Descripcion</label>
+                <input asp-for="Descripcion"/>
+                <span asp-validation-for="Descripcion" style="color:red"></span>
 
             </div>
 
         </div>
 
         <div class="containerBtnForm">
-            <a class="btnGuardarVehiculo">CREAR</a>
+            <button class="btnGuardarVehiculo" type="submit">CREAR</button>
         </div>
-
      </form>
-
 </div>
