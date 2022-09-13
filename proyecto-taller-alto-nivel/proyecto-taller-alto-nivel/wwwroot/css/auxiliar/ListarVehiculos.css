@@ -1,8 +1,15 @@
 ﻿.TituloListarVehiculos {
     font-size: 15px;
     margin-right: 56%;
+<<<<<<< HEAD
+    min-height: 1%;
+}
+.listaVehiculos{   
+    min-height:10%;
+=======
     min-height: 10%;
     font-weight: bold;
+>>>>>>> 4fb9d7e7ac3cee1b5f0c9e57ca4387c025ea545e
 }
 
 .listaVehiculos2 {
