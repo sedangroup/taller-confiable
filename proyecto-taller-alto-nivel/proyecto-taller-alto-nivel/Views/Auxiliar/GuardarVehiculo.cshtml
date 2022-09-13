@@ -1,7 +1,7 @@
 ﻿@model VehiculoModel
 
 @{
-    ViewData["Title"] = "Nuevo Vehiculo";
+    ViewData["Title"] = "NuevoVehiculo";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
 
@@ -13,6 +13,7 @@
     </div>
 
     <form class="formVehiculo" asp-action="GuardarVehiculo" asp-controller="Auxiliar" method="post">
+
         <div class="containerInputsVehiculo">
 
             <div class="containerChildInputsVehiculo">
@@ -50,9 +51,9 @@
 
             <div class="containerChildInputsVehiculo">
 
-                <label>Desplazamiento</label>
-                <input asp-for="Desplazamiento" />
-                <span asp-validation-for="Desplazamiento" style="color:red"></span>
+                <label>Cilindraje</label>
+                <input asp-for="Cilindraje" />
+                <span asp-validation-for="Cilindraje" style="color:red"></span>
 
                 <label>Pais de origen</label>
                 <input asp-for="PaisOrigen" />

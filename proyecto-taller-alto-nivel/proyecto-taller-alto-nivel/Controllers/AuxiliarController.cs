@@ -144,6 +144,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             var innerQuey = Vehiculo_Datos.Listar();
             return View(innerQuey);
         }
+
         public IActionResult GuardarVehiculo()
         {
             return View();

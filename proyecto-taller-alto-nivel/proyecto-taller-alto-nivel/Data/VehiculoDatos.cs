@@ -33,7 +33,7 @@ namespace proyecto_taller_alto_nivel.Data
                             Marca = dr["Marca"].ToString(),
                             Modelo = dr["Modelo"].ToString(),
                             Capacidad = dr["Capacidad"].ToString(),
-                            Desplazamiento = dr["Desplazamiento"].ToString(),
+                            Cilindraje = dr["Cilindraje"].ToString(),
                             PaisOrigen = dr["PaisOrigen"].ToString(),
                             Descripcion = dr["Descripcion"].ToString()
                         });
@@ -67,7 +67,7 @@ namespace proyecto_taller_alto_nivel.Data
                         oVehiculo.Marca = dr["Marca"].ToString();
                         oVehiculo.Modelo = dr["Modelo"].ToString();
                         oVehiculo.Capacidad = dr["Capacidad"].ToString();
-                        oVehiculo.Desplazamiento = dr["Desplazamiento"].ToString();
+                        oVehiculo.Cilindraje = dr["Cilindraje"].ToString();
                         oVehiculo.PaisOrigen = dr["PaisOrigen"].ToString();
                         oVehiculo.Descripcion = dr["Descripcion"].ToString();
                     }
@@ -100,7 +100,7 @@ namespace proyecto_taller_alto_nivel.Data
                         oVehiculo.Marca = dr["Marca"].ToString();
                         oVehiculo.Modelo = dr["Modelo"].ToString();
                         oVehiculo.Capacidad = dr["Capacidad"].ToString();
-                        oVehiculo.Desplazamiento = dr["Desplazamiento"].ToString();
+                        oVehiculo.Cilindraje = dr["Cilindraje"].ToString();
                         oVehiculo.PaisOrigen = dr["PaisOrigen"].ToString();
                         oVehiculo.Descripcion = dr["Descripcion"].ToString();
                     }
@@ -128,7 +128,7 @@ namespace proyecto_taller_alto_nivel.Data
                     cmd.Parameters.AddWithValue("Marca", oVehiculo.Marca);
                     cmd.Parameters.AddWithValue("Modelo", oVehiculo.Modelo);
                     cmd.Parameters.AddWithValue("Capacidad", oVehiculo.Capacidad);
-                    cmd.Parameters.AddWithValue("Desplazamiento", oVehiculo.Desplazamiento);
+                    cmd.Parameters.AddWithValue("Cilindraje", oVehiculo.Cilindraje);
                     cmd.Parameters.AddWithValue("PaisOrigen", oVehiculo.PaisOrigen);
                     cmd.Parameters.AddWithValue("Descripcion", oVehiculo.Descripcion);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -162,7 +162,7 @@ namespace proyecto_taller_alto_nivel.Data
                     cmd.Parameters.AddWithValue("Marca", oVehiculo.Marca);
                     cmd.Parameters.AddWithValue("Modelo", oVehiculo.Modelo);
                     cmd.Parameters.AddWithValue("Capacidad", oVehiculo.Capacidad);
-                    cmd.Parameters.AddWithValue("Desplazamiento", oVehiculo.Desplazamiento);
+                    cmd.Parameters.AddWithValue("Cilindraje", oVehiculo.Cilindraje);
                     cmd.Parameters.AddWithValue("PaisOrigen", oVehiculo.PaisOrigen);
                     cmd.Parameters.AddWithValue("Descripcion", oVehiculo.Descripcion);
                     cmd.CommandType = CommandType.StoredProcedure;

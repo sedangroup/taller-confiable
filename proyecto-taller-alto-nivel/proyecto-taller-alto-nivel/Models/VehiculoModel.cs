@@ -18,7 +18,7 @@ namespace proyecto_taller_alto_nivel.Models
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Capacidad { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string? Desplazamiento { get; set; }
+        public string? Cilindraje { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? PaisOrigen { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
