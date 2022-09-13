@@ -56,6 +56,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
+       
 
         public IActionResult EliminarPropietario(int id_Persona)
         {
@@ -73,6 +74,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
+
         /// -----------------------------------------------------
         public IActionResult ListarMecanico()
         {

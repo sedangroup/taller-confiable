@@ -67,6 +67,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oPropietario;
         }
+       
         public bool Guardar(PropietarioModel oPropietario)
         {
             bool rpta;
