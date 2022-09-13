@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - proyecto_taller_alto_nivel</title>
+    <link rel="stylesheet" href="~/css/auxiliar/estilos.css" type="text/css"/>
+
+</head>
+<body>
+   <div class="header-auxiliar">
+        <div>
+            <img src="../img/auxiliar/logo.png" class="imgLogo" />
+        </div> 
+            <a asp-action="Index" asp-controller="Home" as class="btnClose">Cerrar Sesion</a>
+    </div>
+
+    <div class="container-main">
+        <div class="menu-lateral">
+
+            <div class="containerUserInfo">
+                <div>
+                   <h2><img src="../img/auxiliar/userIcon.png" class="imgUser" />EDWIN OLAYA</h2>
+                    <p>Perfil: ADMINISTRADOR</p>
+                    <p>Fecha actual: 31/08/2022</p>
+                    <p>Ultimo ingreso: 31/08/2022</p>
+                </div>
+            </div>
+
+            <div class="containerMenu">
+   
+
+                <ul class="singleMenu">
+                    <input type="checkbox" id="collapse"  class="inputCollap"/>
+                    <label for="collapse" class="labelCollap">Nuevo</label>
+                    <li><a asp-action="GuardarMecanico" asp-controller="Auxiliar">Mecanico</a></li>
+                    <li><a asp-action="GuardarVehiculo" asp-controller="Auxiliar">Vehiculo</a></li>
+                    <li><a asp-action="GuardarPropietario" asp-controller="Auxiliar">Propietario</a></li>
+                </ul>
+
+                
+            </div>
+
+        </div>
+
+        <div class="contenedor">
+            @RenderBody()
+         </div>
+    </div>
+
+    <div class="footer">
+        <span><img src="../img/auxiliar/Icon_cel.png" class="imgContacto" />32019310</span>
+        <span><img src="../img/auxiliar/icon_ubicacion.png" class="imgContacto" />Costa de marfil</span>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
