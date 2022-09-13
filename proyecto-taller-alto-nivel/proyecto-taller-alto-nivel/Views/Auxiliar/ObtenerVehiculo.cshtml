@@ -9,11 +9,17 @@
     <div class="ContainerDatosVehiculo">
         <form class="formEditarVehiculo" asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
             
+            <div class="ContainerInputPlaca">
+                Realizar busqueda:
+                <input asp-for="Licencia" type="Search" class="containerInputsBuscarPlaca">
+                <input type="submit" value="Buscar" class="btnBuscarPlaca">
+            </div>
+
             <div class="containerBuscarPlaca">
                 <p>Detalle del Vehiculo</p>
                 
             </div>
-            <div class="containerInputsVehiculo">
+            <div class="containerDatosVehiculo">
                 <div class=containerChildInputsVehiculo>
 
                     <label>Id vehiculo</label>
@@ -51,20 +57,14 @@
                     <input asp-for="Descripcion" type="text" class="form-control" />
 
                 </div>
+            </div>
+            <div class="containerBotones">
+                <a asp-action="ListarSoat" asp-controller="Auxiliar" class="btnEditarVeh" asp-route-id_Vehiculo="id_Vehiculo">SOAT</a>
+                <a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVeh" asp-route-id_Vehiculo="id_Vehiculo">Editar</a>
+                <a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVeh" asp-route-id_Vehiculo="id_Vehiculo">Eliminar</a>
+
+            </div>
             
-                <div class="containerBuscarPlaca">
-
-                    <a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVeh" asp-route-id_Vehiculo="id_Vehiculo">Editar</a>
-                    <a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVeh" asp-route-id_Vehiculo="id_Vehiculo">Eliminar</a>
-
-                </div>
-            </div>
-
-            <div class="ContainerInputPlaca">
-                Realizar otra busqueda:
-                <input asp-for="Licencia" type="Search" class="containerInputsBuscarPlaca">
-                <input type="submit" value="Buscar" class="btnBuscarPlaca">
-            </div>
 
             <div class="containerBtnForm">
                 <a asp-action="ListarVehiculo" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>

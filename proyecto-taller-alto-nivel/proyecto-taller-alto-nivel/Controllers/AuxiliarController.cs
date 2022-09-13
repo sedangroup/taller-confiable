@@ -173,6 +173,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(oLicencia);
         }
 
+
         public IActionResult EditarVehiculo(int id_Vehiculo)
         {
             var oVehiculo = Vehiculo_Datos.Obtener(id_Vehiculo);
