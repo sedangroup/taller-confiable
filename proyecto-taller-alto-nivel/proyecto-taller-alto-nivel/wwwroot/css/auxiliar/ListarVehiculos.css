@@ -22,7 +22,7 @@
 
 
 .listaVehiculos2 th, .styled-table td {
-     padding: 12px 26px;
+     padding: 12px 15px;
 
  }
 
@@ -32,7 +32,7 @@
 
     }
 
-        .listaVehiculos tbody tr:nth-of-type(even) {
+        .listaVehiculos2 tbody tr:nth-of-type(even) {
             background-color: #f3f3f3;
         }
 
@@ -43,6 +43,7 @@
     text-align: center;
     padding: 5px 19px;
     font-size: 10px;
+    text-decoration: none;
 }
 
     .btnEditarVehiculo:hover {
@@ -55,8 +56,9 @@
     background: #f80c4c;
     color: white;
     text-align: center;
-    padding: 5px 15px;
+    padding: 5px 13px;
     font-size: 10px;
+    text-decoration:none;
 }
 
     .btnEliminarVehiculo:hover {
@@ -79,3 +81,18 @@
     margin-top: 40px;
 }
 
+.containerMainLista{
+    width:95%;
+    padding:30px;
+    overflow:scroll;
+}
+
+.containerMainLista::-webkit-scrollbar{
+    height:6px;
+    width:6px;
+}
+
+    .containerMainLista::-webkit-scrollbar-thumb {
+        background: #f80c4c;
+        border-radius: 10px;
+    }

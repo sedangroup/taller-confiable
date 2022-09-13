@@ -28,13 +28,13 @@ namespace proyecto_taller_alto_nivel.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-        var respuesta = Propietario_Datos.Guardar(oPropietario);
+            var respuesta = Propietario_Datos.Guardar(oPropietario);
 
             if (respuesta)
                 return RedirectToAction("ListarPropietario");
             else
                 return View();
-    }
+        }
 
         public IActionResult EditarPropietario(int id_Persona)
         {
@@ -67,7 +67,7 @@ namespace proyecto_taller_alto_nivel.Controllers
         public IActionResult EliminarPropietario(PropietarioModel oPropietario)
         {
             var respuesta = Propietario_Datos.Eliminar(oPropietario.id_Persona);
-            
+
             if (respuesta)
                 return RedirectToAction("ListarPropietario");
             else
@@ -168,7 +168,7 @@ namespace proyecto_taller_alto_nivel.Controllers
         }
 
         public IActionResult ObtenerPlaca(int id_Vehiculo)
-        { 
+        {
             var oLicencia = Vehiculo_Datos.Obtener(id_Vehiculo);
             return View(oLicencia);
         }
@@ -212,7 +212,17 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
-            /// -----------------------------------------------------
-        
+        /// -----------------------------------------------------
+
+        public IActionResult ListarServicio()
+        {
+            return View();
+        }
+
+        public IActionResult ListarServicios()
+        {
+            return View();
+        }
+
     }
 }
