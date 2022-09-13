@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - proyecto_taller_alto_nivel</title>
+    <link rel="stylesheet" href="~/css/propietario/layout.css" asp-append-version="true" />
+ 
+
+</head>
+<body>
+   <div class="header-auxiliar">
+        <div>
+            <img src="../img/auxiliar/logo.png" class="imgLogo" />
+        </div> 
+            <a asp-action="Index" asp-controller="Home" as class="btnClose">Cerrar Sesion</a>
+    </div>
+
+
+
+        <div class="containerMain">
+            @RenderBody()
+         </div>
+
+
+    <div class="footer">
+        <span><img src="../img/auxiliar/Icon_cel.png" class="imgContacto" />32019310</span>
+        <span><img src="../img/auxiliar/icon_ubicacion.png" class="imgContacto" />Costa de marfil</span>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
