@@ -7,9 +7,9 @@
 
 
 
-<div class="containerPropietario">
+<div class="containerVehiculo">
 
-    <div class="containerTitlePropietario">
+    <div class="containerTitleVehiculo">
         <p>Crear Nuevo Propietario</p>
     </div>
 
@@ -17,10 +17,10 @@
         <input asp-for="id_Persona" type="hidden" class="form-control">
         <div class="containerInputsPropietario">
 
-            <div class="containerInputsPropietario">
+            <div class="containerChildInputsPropietario">
                 <input asp-for="id_Persona" hidden />
 
-                <<label>Identificacion</label>
+                <label>Identificacion</label>
                 <input asp-for="Identificacion" />
                 <span asp-validation-for="Identificacion" style="color:red"></span>
 
@@ -30,7 +30,7 @@
 
             </div>
 
-            <div class="containerInputsPropietario">
+            <div class="containerChildInputsPropietario">
 
                 <label>Nombre</label>
                 <input asp-for="Nombre" />
@@ -41,7 +41,7 @@
                 <span asp-validation-for="Ciudad" style="color:red"></span>
             </div>
 
-            <div class="containerInputsPropietario">
+            <div class="containerChildInputsPropietario">
 
                 <label>Apellido</label>
                 <input asp-for="Apellido" />
