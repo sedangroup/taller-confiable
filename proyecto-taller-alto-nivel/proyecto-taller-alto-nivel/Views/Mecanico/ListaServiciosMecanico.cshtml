@@ -6,10 +6,11 @@
 }
 <div class="containerMainLista">
 
-    <div class="TituloListarVehiculos">
+    <div class="TituloListarServicios">
         <h1>LISTADO DE SERVICIOS</h1>
+        <a class="btnNew"asp-action="GuardarServicio" asp-controller="Mecanico">Agregar Servicio</a>
     </div>
-
+    
     <div class="card-body containerTable">
 
         <table class="listaVehiculos2">
@@ -27,6 +28,8 @@
                     <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
+                    <th>Agregar Revision</th>
+                    <th>Agregar Repuestos</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -47,13 +50,17 @@
                         <td>@item.SoatPoliza</td>
                         <td>@item.Fecha</td>
                         <td>@item.Hora</td>
-                        <td><a>Editar</a></td>
-                        <td><a>Eliminar</a></td>
+                        <td><a class="btnNew">Agregar</a></td>
+                        <td><a class="btnNew">Agregar</a></td>
+                        <td><a class="btnEdit">Editar</a></td>
+                        <td><a class="btnDelete">Eliminar</a></td>
                     </tr>
                 }
             </tbody>
         </table>
+        
     </div>
+
 
 </div>
 
