@@ -26,7 +26,7 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new SoatModel()
                         {
-                            id_Soat = Convert.ToInt32(dr["id_Soat"]),
+                            Licencia = Convert.ToInt32(dr["Licencia"]),
                             id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
                             id_Propietario = Convert.ToInt32(dr["id_Propietario"]),                           
                             FechaInicio = dr["FechaInicio"].ToString(),
@@ -59,9 +59,7 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     while (dr.Read())
                     {
-                        oSoat.id_Soat = Convert.ToInt32(dr["id_Soat"]);
-                        oSoat.id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]);
-                        oSoat.id_Propietario = Convert.ToInt32(dr["id_Propietario"]);
+                        oSoat.Licencia = Convert.ToInt32(dr["Licencia"]);                     
                         oSoat.FechaInicio= dr["FechaInicio"].ToString();
                         oSoat.FechaFin = dr["FechaFin"].ToString();
                         oSoat.NumeroPoliza = dr["NumeroPoliza"].ToString();                        
@@ -86,6 +84,7 @@ namespace proyecto_taller_alto_nivel.Data
                     SqlCommand cmd = new SqlCommand("sp_GuardarSoat", conexion);
                     cmd.Parameters.AddWithValue("id_Vehiculo", oSoat.id_Propietario);
                     cmd.Parameters.AddWithValue("id_propietario", oSoat.id_Propietario);
+                    cmd.Parameters.AddWithValue("Licencia", oSoat.Licencia);
                     cmd.Parameters.AddWithValue("FechaInicio", oSoat.FechaInicio);
                     cmd.Parameters.AddWithValue("FechaFin", oSoat.FechaFin);
                     cmd.Parameters.AddWithValue("NumeroPoliza", oSoat.NumeroPoliza);                                      
@@ -114,7 +113,9 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_EditarSoat", conexion);
-                    cmd.Parameters.AddWithValue("id_Soat", oSoat.id_Soat);
+                    cmd.Parameters.AddWithValue("id_Vehiculo", oSoat.id_Vehiculo);
+                    cmd.Parameters.AddWithValue("id_Propietario", oSoat.id_Propietario);
+                    cmd.Parameters.AddWithValue("Licencia", oSoat.Licencia);
                     cmd.Parameters.AddWithValue("FechaInicio", oSoat.FechaInicio);
                     cmd.Parameters.AddWithValue("FechaFin", oSoat.FechaFin);
                     cmd.Parameters.AddWithValue("NumeroPoliza", oSoat.NumeroPoliza);                                    

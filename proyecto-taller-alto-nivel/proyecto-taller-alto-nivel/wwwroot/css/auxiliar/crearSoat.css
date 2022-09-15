@@ -1,0 +1,96 @@
+﻿.containerSoat {
+    width: 65%;
+    height: auto;
+    min-height: 70%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerTitleSoat {
+    background: #f80c4c;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-weight: 400;
+    height: 55px;
+    font-size: 1.6rem;
+}
+
+.formVSoat {
+    background: transparent;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.containerInputsSoat {
+    display: grid;
+    grid-template-columns: repeat(2,50.0%);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.containerChildInputsSoat {
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+    .containerChildInputsSoat label {
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 15px;
+    }
+
+    .containerChildInputsSoat input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f0ecec;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+    }
+
+    .containerChildInputsSoat select {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f0ecec;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+    }
+
+
+    .containerChildInputsSoat input:focus {
+        outline: none;
+        background-color: #f0eeee;
+    }
+
+.containerBtnForm {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnGuardarSoat {
+    width: 90px;
+    background: #090623;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+
+.btnGuardarPropietario:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
