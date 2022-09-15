@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - proyecto_taller_alto_nivel</title>
     <link rel="stylesheet" href="~/css/auxiliar/estilos.css" type="text/css"/>
+    <link rel="stylesheet" href="~/css/auxiliar/crearMecanico.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearVehiculo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/EditarVehiculo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearPropietario.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/ListarVehiculos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearSoat.css" asp-append-version="true" />  
 
 </head>
 <body>
@@ -33,7 +39,7 @@
                 <ul class="singleMenu">
                     <input type="checkbox" id="collapse"  class="inputCollap"/>
                     <label for="collapse" class="labelCollap">Actividades</label>
-                    <li><a>Ver Servicios</a></li>
+                    <li><a asp-action="ObtenerServicioDocumento" asp-controller="Mecanico">Ver Servicios</a></li>
                     <li><a>Otra cosa</a></li>
                 </ul>
 
