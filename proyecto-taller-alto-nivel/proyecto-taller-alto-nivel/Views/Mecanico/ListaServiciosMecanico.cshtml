@@ -13,7 +13,7 @@
     
     <div class="card-body containerTable">
 
-        <table class="listaVehiculos2">
+        <table class="listaVehiculos2" id="tableId">
 
             <thead>
                 <tr>
@@ -38,7 +38,7 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr id="result">
                         <td>@item.Propietario</td>
                         <td>@item.Mecanico</td>
                         <td>@item.Vehiculo</td>
@@ -57,9 +57,20 @@
                     </tr>
                 }
             </tbody>
+            <span id="message" class="message"></span>
         </table>
         
     </div>
+
+    <script>
+        const tableResult = document.getElementById('tableId');
+        const msg = document.getElementById('message');
+        if(tableResult.rows.length<=1){
+           msg.innerHTML = "No hay resultados";
+
+           alert('No hay resultados')
+        }
+    </script>
 
 
 </div>

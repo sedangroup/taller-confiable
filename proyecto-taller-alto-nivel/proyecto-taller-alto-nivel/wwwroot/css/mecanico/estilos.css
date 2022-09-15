@@ -33,3 +33,8 @@
     text-decoration: none;
     border-radius: 8px;
 }
+
+.message{
+    color:red;
+    font-weight:1.4rem;
+}
