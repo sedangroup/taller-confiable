@@ -10,6 +10,7 @@ namespace proyecto_taller_alto_nivel.Controllers
         VehiculoDatos Vehiculo_Datos = new VehiculoDatos();
         MecanicoDatos Mecanico_Datos = new MecanicoDatos();
         ServicioDatos Servicio_Datos = new ServicioDatos();
+        SoatDatos Soat_Datos = new SoatDatos();
 
 
         public IActionResult ListarPropietario()
@@ -231,6 +232,71 @@ namespace proyecto_taller_alto_nivel.Controllers
         public IActionResult ObtenerPlacaServicio()
         {
             return View();
+        }
+        /// -----------------------------------------------------
+        public IActionResult ListarSoat()
+        {
+            var innerQuey = Soat_Datos.Listar();
+            return View(innerQuey);
+        }
+
+        public IActionResult GuardarSoat()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GuardarSoat(SoatModel Soat)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = Soat_Datos.Guardar(Soat);
+
+            if (respuesta)
+                return RedirectToAction("ListarSoat");
+            else
+                return View();
+        }
+
+
+        public IActionResult EditarSoat(int id_Soat)
+        {
+            var oSoat = Soat_Datos.Obtener(id_Soat);
+            return View(oSoat);
+        }
+
+        [HttpPost]
+        public IActionResult EditarSoat(SoatModel oSoat)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+
+            var respuesta = Soat_Datos.Editar(oSoat);
+
+            if (respuesta)
+                return RedirectToAction("ListarSoat");
+            else
+                return View();
+        }
+
+        public IActionResult EliminarSoat(int id_Soat)
+        {
+
+            var oSoat = Soat_Datos.Obtener(id_Soat);
+            return View(oSoat);
+        }
+
+        [HttpPost]
+        public IActionResult EliminarSoat(SoatModel oSoat)
+        {
+            var respuesta = Soat_Datos.Eliminar(oSoat.id_Soat);
+
+            if (respuesta)
+                return RedirectToAction("ListarSoat");
+            else
+                return View();
         }
 
     }

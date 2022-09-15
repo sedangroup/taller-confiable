@@ -1,0 +1,37 @@
+﻿@model List<SoatModel>
+@{
+    ViewData["Title"] = "ListarSoat";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+<div class="containerMainLista">
+
+    <div class="TituloListarSoat">
+        Lista de Soat del vehiculo
+    </div>
+
+    <div class="card-body containerTable">
+
+        <table class="listaSoat">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>FechaIncio</th>
+                    <th>FechaFin</th>                   
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    
+                }
+            </tbody>
+        </table>
+        <a asp-action="GuardarMecanico" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
+    </div>
+
+</div>
+
+

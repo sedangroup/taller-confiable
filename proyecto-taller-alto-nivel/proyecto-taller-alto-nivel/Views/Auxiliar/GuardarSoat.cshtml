@@ -1,0 +1,52 @@
+﻿@model SoatModel
+@{
+    ViewData["Title"] = "Nuevo Soat";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+
+<div class="containerSoat">
+
+    <div class="containerTitleSoat">
+        <p>Crear Nuevo Soat</p>
+    </div>
+
+    <form class="formVSoat" asp-action="GuardarSoat" asp-controller="Auxiliar" method="post">
+        <div class="containerInputsSoat">
+
+            <div class="containerChildInputsSoat">
+
+                <label>Placa</label>
+                <input asp-for="Licencia" />
+                <span asp-validation-for="Licencia" style="color:red"></span>
+
+                <label>Fecha de Compra</label>
+                <input asp-for="FechaInicio" />
+                <span asp-validation-for="FechaInicio" style="color:red"></span>
+
+            </div>
+
+            <div class="containerChildInputsSoat">
+
+                <label>Numero de Poliza</label>
+                <input asp-for="NumeroPoliza" />
+                <span asp-validation-for="NumeroPoliza" style="color:red"></span>
+
+                <label>Fecha de Vencimiento</label>
+                <input asp-for="FechaFin" />
+                <span asp-validation-for="FechaFin" style="color:red"></span>
+
+            </div>
+          
+
+        </div>
+
+        <div class="containerBtnForm">
+            <button class="btnGuardarSoat" type="submit">CREAR</button>
+        </div>
+
+    </form>
+
+</div>
+
+
