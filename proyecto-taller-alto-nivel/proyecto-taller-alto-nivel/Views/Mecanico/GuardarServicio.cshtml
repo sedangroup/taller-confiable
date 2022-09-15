@@ -1,0 +1,64 @@
+﻿@model ServicioModel
+
+@{
+    ViewData["Title"] = "Nuevo Mecanico";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+
+<div class="containerVehiculo">
+
+    <div class="containerTitleVehiculo">
+        <p>Guardar Mecánico</p>
+    </div>
+
+    <form class="formVehiculo" asp-action="GuardarServicio" asp-controller="Mecanico" method="post">
+        <div class="containerInputsMecanico">
+
+            <div class="containerChildInputsMecanico">
+
+                <label>Propietario</label>
+                <input asp-for="Id_Propietario" />
+                <span asp-validation-for="Id_Propietario" style="color:red"></span>
+
+                <label>Mecanico</label>
+                <input asp-for="Id_mecanico" />
+                <span asp-validation-for="Id_mecanico" style="color:red"></span>
+
+                <label>Vehiculo</label>
+                <input asp-for="Id_Vehiculo" />
+                <span asp-validation-for="Id_Vehiculo" style="color:red"></span>
+
+                <label>Revision</label>
+                <input asp-for="Id_Revision" />
+                <span asp-validation-for="Id_Revision" style="color:red"></span>
+
+
+            </div>
+
+            <div class="containerChildInputsMecanico">
+
+                <label>Soat</label>
+                <input asp-for="Id_Soat" />
+                <span asp-validation-for="Id_Soat" style="color:red"></span>
+
+                <label>Fecha</label>
+                <input asp-for="Fecha" type="date"/>
+                <span asp-validation-for="Fecha" style="color:red"></span>
+
+                <label>Hora</label>
+                <input asp-for="Hora" type="time"/>
+                <span asp-validation-for="Hora" style="color:red"></span>
+
+            </div>
+
+
+        </div>
+
+        <div class="containerBtnForm">
+            <button class="btnGuardarMecanico" type="submit">CREAR</button>
+        </div>
+
+    </form>
+
+</div>

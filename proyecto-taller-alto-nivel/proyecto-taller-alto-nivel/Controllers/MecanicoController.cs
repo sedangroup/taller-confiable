@@ -26,5 +26,16 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
 
+        public ActionResult GuardarServicio()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult GuardarServicio(ServicioModel servico)
+        {
+            return View();
+        }
+
     }
 }

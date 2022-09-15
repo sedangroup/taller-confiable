@@ -5,6 +5,7 @@
         public int Id_Servicio { get; set; }
         public int Id_Propietario { get; set; }
         public int Id_mecanico { get; set; }
+        public int Id_Vehiculo { get; set; }
         public int Id_Revision { get; set; }
         public int Id_Soat { get; set; }
         public string? Fecha { get; set; }
