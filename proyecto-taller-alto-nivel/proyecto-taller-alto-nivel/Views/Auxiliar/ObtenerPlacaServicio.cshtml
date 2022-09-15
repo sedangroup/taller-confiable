@@ -1,0 +1,24 @@
+﻿@model VehiculoModel
+@{
+    ViewData["Title"] = "ObtenerPlacaServicio";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+
+
+
+<div class="ContainerInputPlaca">
+    <h1>Buscar servicios por placa</h1>
+
+    <div class="formEditarVehiculo">
+
+        <form class="ContainerInputPlaca" asp-action="ListarServicios" asp-controller="Auxiliar" >
+            Buscar Placa:
+            <input asp-for="Licencia" type="Search" class="containerInputsBuscarPlaca" id="StudentName">
+            <span asp-validation-for="Licencia" style="color:red"></span>
+            <button   class="btnBuscarPlaca" type="submit">Buscar </button>
+        </form>
+    </div>
+</div>
+
+

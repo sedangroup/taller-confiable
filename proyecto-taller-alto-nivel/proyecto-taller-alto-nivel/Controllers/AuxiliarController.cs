@@ -56,7 +56,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
-       
+
 
         public IActionResult EliminarPropietario(int id_Persona)
         {
@@ -222,7 +222,13 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
 
-        public IActionResult ListarServicios()
+        public IActionResult ListarServicios(VehiculoModel oVehiculo)
+        {
+            var list = Servicio_Datos.Listar(oVehiculo);
+            return View(list);
+        }
+
+        public IActionResult ObtenerPlacaServicio()
         {
             return View();
         }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<ServicioInnerJoinModel>
+
+@{
     ViewData["Title"] = "ListarServicio";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
@@ -11,80 +13,40 @@
     <div class="card-body containerTable">
 
         <table class="listaVehiculos2">
+            
             <thead>
                 <tr>
                     <th>Propietario</th>
                     <th>Mecanico</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
+                    <th>Vehiculo</th>
+                    <th>Placa</th>
                     <th>Nivel aceite</th>
+                    <th>Nivel liquido direccion</th>
                     <th>Nivel liquido frenos</th>
                     <th>Nivel refrigerante</th>
-                    <th>Nivel liquido direccion</th>
-                    <th>Nro Poliza Soat</th>
+                    <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
                 </tr>
             </thead>
 
             <tbody>
-
+                @foreach (var item in Model)
+                {
                 <tr>
-                    <td>Juan carlos</td>
-                    <td>juan manuel</td>
-                    <td>mazda</td>
-                    <td>focus 3</td>
-                    <td>10</td>
-                    <td>100</td>
-                    <td>400</td>
-                    <td>140</td>
-                    <td>39194391</td>
-                    <td>20/05/2022</td>
-                    <td>9:00 .a.m.</td>
+                    <td>@item.Propietario</td>
+                    <td>@item.Mecanico</td>
+                    <td>@item.Vehiculo</td>
+                    <td>@item.Licencia</td>
+                    <td>@item.NivelAceite</td>
+                    <td>@item.NivelLiquidoDireccion</td>
+                    <td>@item.NivelLiquidoFrenos</td>
+                    <td>@item.NivelRefrigerante</td>
+                    <td>@item.SoatPoliza</td>
+                    <td>@item.Fecha</td>
+                    <td>@item.Hora</td>
                 </tr>
-
-                <tr>
-                    <td>Juan carlos</td>
-                    <td>otoniel </td>
-                    <td>ferrari</td>
-                    <td>ga</td>
-                    <td>10</td>
-                    <td>100</td>
-                    <td>400</td>
-                    <td>140</td>
-                    <td>12315</td>
-                    <td>20/05/2020</td>
-                    <td>10:00 .a.m.</td>
-                </tr>
-
-                <tr>
-                    <td>sofia mengala</td>
-                    <td>camilo aguilar</td>
-                    <td>tesla</td>
-                    <td>roaster</td>
-                    <td>10</td>
-                    <td>100</td>
-                    <td>400</td>
-                    <td>140</td>
-                    <td>39194391</td>
-                    <td>20/05/2022</td>
-                    <td>9:00 .a.m.</td>
-                </tr>
-
-                <tr>
-                    <td>camila torafo</td>
-                    <td>arnulfo comellan</td>
-                    <td>lotus</td>
-                    <td>aero</td>
-                    <td>10</td>
-                    <td>4</td>
-                    <td>13</td>
-                    <td>140</td>
-                    <td>9391838</td>
-                    <td>20/05/2021</td>
-                    <td>10:08 .p.m.</td>
-                </tr>
-
+                }
             </tbody>
         </table>
     </div>
