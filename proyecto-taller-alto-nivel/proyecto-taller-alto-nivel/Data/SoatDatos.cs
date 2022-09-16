@@ -88,7 +88,8 @@ namespace proyecto_taller_alto_nivel.Data
                     cmd.Parameters.AddWithValue("Licencia", oSoat.Licencia);
                     cmd.Parameters.AddWithValue("FechaInicio", oSoat.FechaInicio);
                     cmd.Parameters.AddWithValue("FechaFin", oSoat.FechaFin);
-                    cmd.Parameters.AddWithValue("NumeroPoliza", oSoat.NumeroPoliza);                                      
+                    cmd.Parameters.AddWithValue("NumeroPoliza", oSoat.NumeroPoliza);
+                    
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

@@ -14,8 +14,9 @@
         <table class="ListaSoat">
             <thead>
                 <tr>
+                    <th>Numero de Propietario</th>
                     <th>Placa</th>
-                    <th>Fecha de Compara</th>
+                    <th>Fecha de Compra</th>
                     <th>Fecha de Vencimiento</th>                   
                     <th>Numero de Poliza</th>
                     <th></th>
@@ -26,10 +27,12 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>""</td>
-                        <td>""</td>
-                        <td>""</td>
-                        <td>""</td>
+                        <td>@item.id_Propietario</td>
+                        <td>@item.id_Vehiculo</td>
+
+                        <td>@item.FechaInicio</td>
+                        <td>@item.FechaFin</td>
+                        <td>@item.NumeroPoliza</td>
                         <td></td>
                     </tr>
                     
