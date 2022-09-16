@@ -56,7 +56,8 @@ namespace proyecto_taller_alto_nivel.Data
                 cmd.Parameters.AddWithValue("Licencia", Licencia);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                using (var dr = cmd.ExecuteReader())
+                using (
+                    var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {

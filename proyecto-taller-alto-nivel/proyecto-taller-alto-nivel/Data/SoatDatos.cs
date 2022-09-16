@@ -26,9 +26,10 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new SoatModel()
                         {
-                            Licencia = Convert.ToInt32(dr["Licencia"]),
+                            
                             id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
-                            id_Propietario = Convert.ToInt32(dr["id_Propietario"]),                           
+                            id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
+                            
                             FechaInicio = dr["FechaInicio"].ToString(),
                             FechaFin = dr["FechaFin"].ToString(),
                             NumeroPoliza = dr["NumeroPoliza"].ToString(),
@@ -59,7 +60,7 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     while (dr.Read())
                     {
-                        oSoat.Licencia = Convert.ToInt32(dr["Licencia"]);                     
+                        oSoat.Licencia = dr["Licencia"].ToString();                     
                         oSoat.FechaInicio= dr["FechaInicio"].ToString();
                         oSoat.FechaFin = dr["FechaFin"].ToString();
                         oSoat.NumeroPoliza = dr["NumeroPoliza"].ToString();                        
