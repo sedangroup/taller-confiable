@@ -29,8 +29,8 @@
                 <div>
                    <h2><img src="../img/auxiliar/userIcon.png" class="imgUser" />EDWIN OLAYA</h2>
                     <p>Perfil: ADMINISTRADOR</p>
-                    <p>Fecha actual: 31/08/2022</p>
-                    <p>Ultimo ingreso: 31/08/2022</p>
+                    <p>Fecha actual: <span id="actualDate"></span></p>
+                    <p>Ultimo ingreso:<span id="lastDate"></span></p>
                 </div>
             </div>
 
@@ -87,6 +87,16 @@
         <span><img src="../img/auxiliar/Icon_cel.png" class="imgContacto" />32019310</span>
         <span><img src="../img/auxiliar/icon_ubicacion.png" class="imgContacto" />Costa de marfil</span>
     </div>
+
+
+    <script>
+        let today = new Date();
+        let current = document.getElementById('actualDate');
+        let last = document.getElementById('lastDate');
+
+        current.innerHTML = today;
+        last.innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    </script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

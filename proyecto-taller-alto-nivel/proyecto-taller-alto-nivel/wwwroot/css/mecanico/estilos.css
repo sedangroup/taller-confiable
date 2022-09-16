@@ -1,0 +1,40 @@
+﻿.btnNew {
+    background: #1D8348;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+.TituloListarServicios {
+    display: grid;
+    grid-template-columns: repeat(1,100%)
+}
+
+.btnEdit {
+    background: #2874A6;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btnDelete {
+    background: #CB4335;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.message{
+    color:red;
+    font-weight:1.4rem;
+}

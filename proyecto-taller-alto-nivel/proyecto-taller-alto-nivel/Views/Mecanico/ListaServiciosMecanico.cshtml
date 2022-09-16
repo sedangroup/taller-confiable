@@ -6,13 +6,14 @@
 }
 <div class="containerMainLista">
 
-    <div class="TituloListarVehiculos">
+    <div class="TituloListarServicios">
         <h1>LISTADO DE SERVICIOS</h1>
+        <a class="btnNew"asp-action="GuardarServicio" asp-controller="Mecanico">Agregar Servicio</a>
     </div>
-
+    
     <div class="card-body containerTable">
 
-        <table class="listaVehiculos2">
+        <table class="listaVehiculos2" id="tableId">
 
             <thead>
                 <tr>
@@ -27,6 +28,8 @@
                     <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
+                    <th>Agregar Revision</th>
+                    <th>Agregar Repuestos</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -35,7 +38,7 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr id="result">
                         <td>@item.Propietario</td>
                         <td>@item.Mecanico</td>
                         <td>@item.Vehiculo</td>
@@ -47,13 +50,28 @@
                         <td>@item.SoatPoliza</td>
                         <td>@item.Fecha</td>
                         <td>@item.Hora</td>
-                        <td><a>Editar</a></td>
-                        <td><a>Eliminar</a></td>
+                        <td><a class="btnNew">Agregar</a></td>
+                        <td><a class="btnNew">Agregar</a></td>
+                        <td><a class="btnEdit">Editar</a></td>
+                        <td><a class="btnDelete">Eliminar</a></td>
                     </tr>
                 }
             </tbody>
+            <span id="message" class="message"></span>
         </table>
+        
     </div>
+
+    <script>
+        const tableResult = document.getElementById('tableId');
+        const msg = document.getElementById('message');
+        if(tableResult.rows.length<=1){
+           msg.innerHTML = "No hay resultados";
+
+           alert('No hay resultados')
+        }
+    </script>
+
 
 </div>
 

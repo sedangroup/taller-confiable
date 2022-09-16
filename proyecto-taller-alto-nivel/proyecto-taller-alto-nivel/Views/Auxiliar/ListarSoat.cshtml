@@ -3,21 +3,21 @@
     ViewData["Title"] = "ListarSoat";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
-<div class="containerMainLista">
+<div class="containerEditar">
 
     <div class="TituloListarSoat">
         Lista de Soat del vehiculo
     </div>
 
-    <div class="card-body containerTable">
+    <div class="containerTable">
 
-        <table class="listaSoat">
+        <table class="ListaSoat">
             <thead>
                 <tr>
                     <th>Placa</th>
-                    <th>FechaIncio</th>
-                    <th>FechaFin</th>                   
-                    <th></th>
+                    <th>Fecha de Compara</th>
+                    <th>Fecha de Vencimiento</th>                   
+                    <th>Numero de Poliza</th>
                     <th></th>
                 </tr>
             </thead>
@@ -25,11 +25,18 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                    <tr>
+                        <td>""</td>
+                        <td>""</td>
+                        <td>""</td>
+                        <td>""</td>
+                        <td></td>
+                    </tr>
                     
                 }
             </tbody>
         </table>
-        <a asp-action="GuardarMecanico" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
+        <a asp-action="GuardarSoat" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
     </div>
 
 </div>
