@@ -224,9 +224,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(list);
         }
 
-        public IActionResult ListarServicios(VehiculoModel oVehiculo)
+        public IActionResult ListarServicios()
         {
-            var list = Servicio_Datos.Listar(oVehiculo);
+            var list = Servicio_Datos.Listar();
             return View(list);
         }
 

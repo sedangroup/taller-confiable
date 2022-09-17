@@ -6,7 +6,7 @@ namespace proyecto_taller_alto_nivel.Data
 {
     public class ServicioDatos
     {
-        public List<ServicioInnerJoinModel> Listar(VehiculoModel oVehiculo)
+        public List<ServicioInnerJoinModel> Listar()
         {
             var oLista = new List<ServicioInnerJoinModel>();
 
@@ -15,8 +15,7 @@ namespace proyecto_taller_alto_nivel.Data
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerServicioPorPlaca", conexion);
-                cmd.Parameters.AddWithValue("Placa", oVehiculo.Licencia);
+                SqlCommand cmd = new SqlCommand("sp_ListarServicios", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())

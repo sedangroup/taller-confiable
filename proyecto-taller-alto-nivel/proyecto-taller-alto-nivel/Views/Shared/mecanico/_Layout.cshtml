@@ -40,8 +40,7 @@
                 <ul class="singleMenu">
                     <input type="checkbox" id="collapse"  class="inputCollap"/>
                     <label for="collapse" class="labelCollap">Actividades</label>
-                    <li><a asp-action="ObtenerServicioDocumento" asp-controller="Mecanico">Ver Servicios</a></li>
-                    <li><a asp-action="GuardarServicio" asp-controller="Mecanico">Nuevo Servicio</a></li>
+                    <li><a asp-action="ListaServiciosMecanico" asp-controller="Mecanico">Ver Servicios</a></li>
                 </ul>
 
                 
@@ -67,6 +66,7 @@
         current.innerHTML = today;
         last.innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
     </script>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

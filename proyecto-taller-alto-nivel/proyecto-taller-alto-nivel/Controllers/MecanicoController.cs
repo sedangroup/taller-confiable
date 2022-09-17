@@ -16,9 +16,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
 
-        public ActionResult ListaServiciosMecanico(MecanicoModel mecanico)
+        public ActionResult ListaServiciosMecanico()
         {
-            var list = Servicio_Datos.ListarByDocumento(mecanico);
+            var list = Servicio_Datos.Listar();
             return View(list);
         }
 

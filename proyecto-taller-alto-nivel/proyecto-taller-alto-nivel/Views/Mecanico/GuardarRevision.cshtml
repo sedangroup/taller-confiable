@@ -18,7 +18,7 @@
             <div class="containerChildInputsMecanico">
 
                 <label>Id Servicio</label>
-                <input asp-for="id_Servicio" />
+                <input asp-for="id_Servicio" value="@Context.Request.Query["idServicio"]" readonly/>
                 <span asp-validation-for="id_Servicio" style="color:red"></span>             
 
 

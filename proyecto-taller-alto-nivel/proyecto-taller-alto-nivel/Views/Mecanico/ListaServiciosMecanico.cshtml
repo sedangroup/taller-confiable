@@ -8,7 +8,6 @@
 
     <div class="TituloListarServicios">
         <h1>LISTADO DE SERVICIOS</h1>
-        <a class="btnNew"asp-action="GuardarServicio" asp-controller="Mecanico">Agregar Servicio</a>
     </div>
     
     <div class="card-body containerTable">
@@ -50,7 +49,7 @@
                         <td>@item.SoatPoliza</td>
                         <td>@item.Fecha</td>
                         <td>@item.Hora</td>
-                        <td><a class="btnNew">Agregar</a></td>
+                        <td><a asp-action="GuardarRevision" asp-controller="Mecanico" asp-route-idServicio="@item.Id_Servicio" class="btnNew">Agregar</a></td>
                         <td><a class="btnNew">Agregar</a></td>
                         <td><a class="btnEdit">Editar</a></td>
                         <td><a class="btnDelete">Eliminar</a></td>
@@ -63,15 +62,18 @@
     </div>
 
     <script>
+    
+
         const tableResult = document.getElementById('tableId');
         const msg = document.getElementById('message');
         if(tableResult.rows.length<=1){
-           msg.innerHTML = "No hay resultados";
+           msg.innerHTML = "No hay Ningun Servicio";
 
-           alert('No hay resultados')
+           alert('No hay Servicios')
         }
+        
     </script>
-
+    
 
 </div>
 
