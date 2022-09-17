@@ -300,5 +300,25 @@ namespace proyecto_taller_alto_nivel.Controllers
                 return View();
         }
 
+        public IActionResult GuardarServicio()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GuardarServicio(ServicioInnerJoinModel servicio)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = Servicio_Datos.Guardar(servicio);
+
+            if (respuesta)
+                return RedirectToAction("ListarServicios");
+            else
+                return View();
+        }
+
+
     }
 }

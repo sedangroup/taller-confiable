@@ -28,16 +28,6 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
 
-        public ActionResult GuardarServicio()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult GuardarServicio(ServicioModel servico)
-        {
-            return View();
-        }
         public ActionResult GuardarRevision()
         {
             return View();
@@ -52,7 +42,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             var respuesta = Revision_Datos.Guardar(Revision);
 
             if (respuesta)
-                return RedirectToAction("ListarPropietario");
+                return RedirectToAction("ListaServiciosMecanico");
             else
                 return View();
             

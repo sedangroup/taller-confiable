@@ -54,12 +54,12 @@
                     <li><a asp-action="GuardarVehiculo" asp-controller="Auxiliar">Vehiculo</a></li>
                     <li><a asp-action="GuardarPropietario" asp-controller="Auxiliar">Propietario</a></li>
                     <li><a asp-action="GuardarSoat" asp-controller="Auxiliar">Soat</a></li>
+                    <li><a asp-action="GuardarServicio" asp-controller="Auxiliar">Servicio</a></li>
                 </ul>
 
                 <ul class="singleMenu">
                     <input type="checkbox" id="collapse2" class="inputCollap" />
                     <label for="collapse2" class="labelCollap">Buscar</label>
-                    <li><a asp-action="ObtenerPlacaServicio" asp-controller="Auxiliar">Servicios</a></li>
                     <li><a href="#">Mecanico</a></li>
                     <li><a asp-action="ObtenerPlaca" asp-controller="Auxiliar">Vehiculo</a></li>                    
                     <li><a asp-action="ObtenerIdentificacion" asp-controller="Auxiliar">Propietario</a></li>
@@ -68,10 +68,11 @@
                 <ul class="singleMenu">
                     <input type="checkbox" id="collapse3" class="inputCollap" />
                     <label for="collapse3" class="labelCollap">Gestion De</label>
+                    <li><a asp-action="ListarServicios" asp-controller="Auxiliar">Lista Servicios</a></li>
                     <li><a asp-action="ListarMecanico" asp-controller="Auxiliar">Lista Mecanicos</a></li>
                     <li><a asp-action="ListarVehiculo" asp-controller="Auxiliar">Lista Vehiculos</a></li>
                     <li><a asp-action="ListarPropietario" asp-controller="Auxiliar">Lista Propietario</a></li>
-
+                   
                 </ul>
                 
             </div>

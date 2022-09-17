@@ -122,6 +122,40 @@ namespace proyecto_taller_alto_nivel.Data
         }
 
 
+        public bool Guardar(ServicioInnerJoinModel servicio)
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_GuardarServicio", conexion);
+                    cmd.Parameters.AddWithValue("DocumentoPropietario", servicio.DocumentoPropietario);
+                    cmd.Parameters.AddWithValue("DocumentoMecanico", servicio.DocumentoMecanico);
+                    cmd.Parameters.AddWithValue("Licencia", servicio.Licencia);
+                    cmd.Parameters.AddWithValue("NumeroPoliza", servicio.SoatPoliza);
+                    cmd.Parameters.AddWithValue("Fecha", servicio.Fecha);
+                    cmd.Parameters.AddWithValue("Hora", servicio.Hora);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rpta = false;
+            }
+            return rpta;
+        }
+
+
+
+
 
     }
 }
