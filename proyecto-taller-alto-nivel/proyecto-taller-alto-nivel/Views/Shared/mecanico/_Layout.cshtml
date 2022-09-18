@@ -27,7 +27,7 @@
 
             <div class="containerUserInfo">
                 <div>
-                   <h2><img src="../img/auxiliar/userIcon.png" class="imgUser" />EDWIN OLAYA</h2>
+                    <h2><img src="../img/auxiliar/userIcon.png" class="imgUser" /><span id="userId"></span></h2>
                     <p>Perfil: MECANICO</p>
                     <p>Fecha actual: <span id="actualDate"></span></p>
                     <p>Ultimo ingreso:<span id="lastDate"></span></p>
@@ -61,10 +61,21 @@
     <script>
         let today = new Date();
         let current = document.getElementById('actualDate');
+        let userName = document.getElementById('userId');
         let last = document.getElementById('lastDate');
 
         current.innerHTML = today;
         last.innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+
+        let users = ['NATALIA MEZA', 'EDWIN OLAYA', 'SANTIAGO GOD', 'DANIELITO', 'Elliot Alderson'];
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        }
+        userName.innerHTML = users[getRandomInt(0, 4)];
+
     </script>
 
 
