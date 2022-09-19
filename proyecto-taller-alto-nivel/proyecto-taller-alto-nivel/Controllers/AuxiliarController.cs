@@ -319,6 +319,25 @@ namespace proyecto_taller_alto_nivel.Controllers
                 return View();
         }
 
+        public IActionResult EditarServicio(int idServicio)
+        {
+            var oSoat = Servicio_Datos.Obtener(idServicio);
+            return View(oSoat);
+        }
+
+        [HttpPost]
+        public IActionResult EditarServicio(ServicioInnerJoinModel servicio)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var respuesta = Servicio_Datos.Editar(servicio);
+
+            if (respuesta)
+                return RedirectToAction("ListarServicios");
+            else
+                return View();
+        }
 
     }
 }

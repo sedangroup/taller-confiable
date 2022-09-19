@@ -1,0 +1,60 @@
+﻿@model ServicioInnerJoinModel
+
+@{
+    ViewData["Title"] = "Editar Servicio";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+
+<div class="containerVehiculo">
+
+    <div class="containerTitleVehiculo">
+        <p>Editar Servicio</p>
+    </div>
+
+    <form class="formVSoat" asp-action="EditarServicio" asp-controller="Auxiliar" method="post">
+        <div class="containerInputsSoat">
+
+            <div class="containerChildInputsMecanico">
+                <input asp-for="Id_Servicio"   />
+                <label>Documento Propietario</label>
+                <input asp-for="DocumentoPropietario" />
+                <span asp-validation-for="DocumentoPropietario" style="color:red"></span>
+
+                <label>Documento Mecanico</label>
+                <input asp-for="DocumentoMecanico" />
+                <span asp-validation-for="DocumentoMecanico" style="color:red"></span>
+
+                <label>Licencia Vehiculo</label>
+                <input asp-for="Licencia" />
+                <span asp-validation-for="Licencia" style="color:red"></span>
+
+
+            </div>
+
+            <div class="containerChildInputsMecanico">
+
+                <label>Soat Poliza</label>
+                <input asp-for="SoatPoliza" />
+                <span asp-validation-for="SoatPoliza" style="color:red"></span>
+
+                <label>Fecha</label>
+                <input asp-for="Fecha"  type="date" value="@Model.Fecha" />
+                <span asp-validation-for="Fecha" style="color:red"></span>
+
+                <label>Hora</label>
+                <input asp-for="Hora" type="time" />
+                <span asp-validation-for="Hora" style="color:red"></span>
+
+            </div>
+
+
+        </div>
+
+        <div class="containerBtnForm">
+            <button class="btnGuardarMecanico" type="submit">Editar</button>
+        </div>
+
+    </form>
+
+</div>
