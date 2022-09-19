@@ -29,7 +29,6 @@
                     <th>Hora</th>
                     <th>Agregar Revision</th>
                     <th>Agregar Repuestos</th>
-                    <th></th>
                 </tr>
             </thead>
 
@@ -50,12 +49,13 @@
                         <td>@item.Hora</td>
                         <td><a asp-action="GuardarRevision" asp-controller="Mecanico" asp-route-idServicio="@item.Id_Servicio" class="btnNewServicioMecanico">Agregar</a></td>
                         <td><a class="btnNewServicioMecanico" href="#">Agregar</a></td>
-                        <td><a class="btnEditServicioMecanico" href="#">Editar</a></td>
                     </tr>
                 }
             </tbody>
             
         </table>
+        <br>
+        <a class="btnEditServicioMecanico" asp-action="ListarRevisiones" asp-controller="Mecanico">Historial Revisiones</a>
         <span id="message" class="message"></span>
     </div>
 

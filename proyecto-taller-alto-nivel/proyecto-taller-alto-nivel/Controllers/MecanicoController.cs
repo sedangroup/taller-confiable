@@ -5,7 +5,7 @@ using proyecto_taller_alto_nivel.Models;
 
 namespace proyecto_taller_alto_nivel.Controllers
 {
-  
+
     public class MecanicoController : Controller
     {
         RevisionDatos Revision_Datos = new RevisionDatos();
@@ -24,7 +24,7 @@ namespace proyecto_taller_alto_nivel.Controllers
 
         public ActionResult ObtenerServicioDocumento()
         {
-            
+
             return View();
         }
 
@@ -45,7 +45,13 @@ namespace proyecto_taller_alto_nivel.Controllers
                 return RedirectToAction("ListaServiciosMecanico");
             else
                 return View();
-            
+
+        }
+
+        public ActionResult ListarRevisiones()
+        {
+            var list = Revision_Datos.Listar();
+            return View(list);
         }
 
     }
