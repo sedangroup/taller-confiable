@@ -22,7 +22,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(list);
         }
 
-        public ActionResult ObtenerServicioDocumento()
+        public ActionResult ObtenerServicioPlaca()
         {
 
             return View();
@@ -51,6 +51,12 @@ namespace proyecto_taller_alto_nivel.Controllers
         public ActionResult ListarRevisiones()
         {
             var list = Revision_Datos.Listar();
+            return View(list);
+        }
+
+        public IActionResult ListarServicio(VehiculoModel vehiculo)
+        {
+            var list = Servicio_Datos.ListarByLicencia(vehiculo);
             return View(list);
         }
 

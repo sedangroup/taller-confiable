@@ -218,9 +218,9 @@ namespace proyecto_taller_alto_nivel.Controllers
         }
         /// -----------------------------------------------------
 
-        public IActionResult ListarServicio(string placa)
+        public IActionResult ListarServicio(VehiculoModel vehiculo)
         {
-            var list = Servicio_Datos.ListarByLicencia(placa);
+            var list = Servicio_Datos.ListarByLicencia(vehiculo);
             return View(list);
         }
 

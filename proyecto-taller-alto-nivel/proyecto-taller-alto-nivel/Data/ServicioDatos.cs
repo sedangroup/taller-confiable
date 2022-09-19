@@ -44,7 +44,7 @@ namespace proyecto_taller_alto_nivel.Data
         }
 
 
-        public List<ServicioInnerJoinModel> ListarByLicencia(string placa)
+        public List<ServicioInnerJoinModel> ListarByLicencia(VehiculoModel vehiculo)
         {
             var oLista = new List<ServicioInnerJoinModel>();
 
@@ -54,7 +54,7 @@ namespace proyecto_taller_alto_nivel.Data
             {
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand("sp_ObtenerServicioPorPlaca", conexion);
-                cmd.Parameters.AddWithValue("Placa", placa);
+                cmd.Parameters.AddWithValue("Placa", vehiculo.Licencia);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
