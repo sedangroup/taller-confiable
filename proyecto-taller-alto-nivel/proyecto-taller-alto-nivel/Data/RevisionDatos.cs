@@ -97,7 +97,35 @@ namespace proyecto_taller_alto_nivel.Data
             return revision;
         }
 
+        public bool Editar(RevisionModel revision)
+        {
+            bool rpta;
 
+            try
+            {
+                var cn = new Conexion();
+                var sql = "UPDATE Tbl_Revision set NivelAceite=@NivelAceite , NivelLiquidoDireccion=@NivelLiquidoDireccion , NivelLiquidoFrenos=@NivelLiquidoFrenos , NivelRefrigerante=@NivelRefrigerante where id_Revision=@id_Revision";
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(sql, conexion);
+                    cmd.Parameters.AddWithValue("@id_Revision", revision.id_Revision);
+                    cmd.Parameters.AddWithValue("@NivelAceite", revision.NivelAceite);
+                    cmd.Parameters.AddWithValue("@NivelLiquidoDireccion", revision.NivelLiquidoDireccion);
+                    cmd.Parameters.AddWithValue("@NivelLiquidoFrenos", revision.NivelLiquidoFrenos);
+                    cmd.Parameters.AddWithValue("@NivelRefrigerante", revision.NivelRefrigerante);
+
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                rpta = false;
+            }
+            return rpta;
+        }
 
 
     }

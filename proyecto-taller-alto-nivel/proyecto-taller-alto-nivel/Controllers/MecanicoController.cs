@@ -66,5 +66,20 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(result);
         }
 
+        [HttpPost]
+        public IActionResult EditarRevision(RevisionModel revision)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+
+            var respuesta = Revision_Datos.Editar(revision);
+
+            if (respuesta)
+                return RedirectToAction("ListarRevisiones");
+            else
+                return View();
+        }
+
     }
 }
