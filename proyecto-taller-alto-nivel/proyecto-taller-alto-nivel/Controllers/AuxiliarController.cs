@@ -249,6 +249,12 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(list);
         }
 
+        public IActionResult ListarServicioDetail(string placa)
+        {
+            var list = Servicio_Datos.ListarByLicenciaDetail(placa);
+            return View(list);
+        }
+
         public IActionResult ListarServicios()
         {
             var list = Servicio_Datos.Listar();
