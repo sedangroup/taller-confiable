@@ -28,6 +28,7 @@
                     <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -46,6 +47,7 @@
                     <td>@item.SoatPoliza</td>
                     <td>@item.Fecha</td>
                     <td>@item.Hora</td>
+                    <td><a class="btnEditServicio" asp-action="EditarServicio" asp-controller="Auxiliar" asp-route-idServicio="@item.Id_Servicio">Editar</a></td>
                 </tr>
                 }
             </tbody>
