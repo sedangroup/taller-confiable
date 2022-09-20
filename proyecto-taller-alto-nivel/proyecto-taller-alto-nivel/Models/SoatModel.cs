@@ -16,5 +16,5 @@ namespace proyecto_taller_alto_nivel.Models
         public string? FechaFin { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? NumeroPoliza { get; set; }
-    }
+        
 }

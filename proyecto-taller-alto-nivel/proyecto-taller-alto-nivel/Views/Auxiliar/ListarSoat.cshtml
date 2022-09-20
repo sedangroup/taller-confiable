@@ -4,22 +4,23 @@
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
 <div class="containerEditar">
-
+   
     <div class="TituloListarSoat">
-        Lista de Soat del vehiculo
+        SOAT
     </div>
 
     <div class="containerTable">
-
         <table class="ListaSoat">
+
+        </table>
+        <table class="ListaSoat">
+
             <thead>
                 <tr>
                     <th>Numero de Propietario</th>
-                    <th>Placa</th>
                     <th>Fecha de Compra</th>
                     <th>Fecha de Vencimiento</th>                   
                     <th>Numero de Poliza</th>
-                    <th></th>
                 </tr>
             </thead>
 
@@ -28,12 +29,9 @@
                 {
                     <tr>
                         <td>@item.id_Propietario</td>
-                        <td>@item.id_Vehiculo</td>
-
                         <td>@item.FechaInicio</td>
                         <td>@item.FechaFin</td>
                         <td>@item.NumeroPoliza</td>
-                        <td></td>
                     </tr>
                     
                 }

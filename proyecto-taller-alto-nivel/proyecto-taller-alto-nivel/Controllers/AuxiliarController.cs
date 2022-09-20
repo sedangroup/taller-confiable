@@ -261,9 +261,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
         /// -----------------------------------------------------
-        public IActionResult ListarSoat()
+        public IActionResult ListarSoat(int id_Vehiculo)
         {
-            var innerQuey = Soat_Datos.Listar();
+            var innerQuey = Soat_Datos.Listar(id_Vehiculo);
             return View(innerQuey);
         }
 
