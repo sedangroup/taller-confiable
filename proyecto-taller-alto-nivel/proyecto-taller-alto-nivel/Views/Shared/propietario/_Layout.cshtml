@@ -4,35 +4,83 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - proyecto_taller_alto_nivel</title>
-    <link rel="stylesheet" href="~/css/propietario/layout.css" asp-append-version="true" />
- 
+    <link rel="stylesheet" href="~/css/auxiliar/estilos.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearMecanico.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearVehiculo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/EditarVehiculo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearPropietario.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/ListarVehiculos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auxiliar/crearSoat.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/mecanico/estilos.css" asp-append-version="true" />
 
 </head>
 <body>
-   <div class="header-auxiliar">
+    <div class="header-auxiliar">
         <div>
             <img src="../img/auxiliar/logo.png" class="imgLogo" />
         </div>
-        <ul class="menu">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Mis Servicios</a></li>
-            <li><a asp-controller="Home" asp-action="Index">Salir</a></li>
-        </ul>
-
-            
+        <a asp-action="Index" asp-controller="Home" as class="btnClose">Cerrar Sesion</a>
     </div>
 
+    <div class="container-main">
+        <div class="menu-lateral">
+
+            <div class="containerUserInfo">
+                <div>
+                    <h2><img src="../img/auxiliar/userIcon.png" class="imgUser" /><span id="userId"></span></h2>
+                    <p>Perfil: PROPIETARIO</p>
+                    <p>Fecha actual: <span id="actualDate"></span></p>
+                    <p>Ultimo ingreso:<span id="lastDate"></span></p>
+                </div>
+            </div>
+
+            <div class="containerMenu">
 
 
-        <div class="containerMain">
+                <ul class="singleMenu">
+                    <input type="checkbox" id="collapse" class="inputCollap" />
+                    <label for="collapse" class="labelCollap">Actividades</label>
+
+                    <li><a asp-action="GuardarSoat" asp-controller="Propietario">Comprar SOAT</a></li>
+                    <li><a asp-action="ObtenerSoat" asp-controller="Propietario">Ver Historial SOAT</a></li>
+                    <li><a asp-action="ObtenerServicioPlaca" asp-controller="Propietario">Ver Servicios</a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+        <div class="contenedor">
             @RenderBody()
-         </div>
-
+        </div>
+    </div>
 
     <div class="footer">
         <span><img src="../img/auxiliar/Icon_cel.png" class="imgContacto" />32019310</span>
         <span><img src="../img/auxiliar/icon_ubicacion.png" class="imgContacto" />Costa de marfil</span>
     </div>
+
+    <script>
+        let today = new Date();
+        let current = document.getElementById('actualDate');
+        let userName = document.getElementById('userId');
+        let last = document.getElementById('lastDate');
+
+        current.innerHTML = today;
+        last.innerHTML = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+
+        let users = ['NATALIA MEZA', 'EDWIN OLAYA', 'SANTIAGO GOD', 'DANIELITO', 'Elliot Alderson'];
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        }
+        userName.innerHTML = users[getRandomInt(0, 5)];
+
+    </script>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

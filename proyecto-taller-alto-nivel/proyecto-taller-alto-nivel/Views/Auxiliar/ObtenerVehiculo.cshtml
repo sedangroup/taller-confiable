@@ -1,69 +1,61 @@
-﻿@model VehiculoModel
+﻿@model List<VehiculoModel>
 @{
-    ViewData["Title"] = "ObtenerVehiculo";
+    ViewData["Title"] = "ListarVehiculo";
     Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
 }
+<div class="containerMainLista">
 
-<div class="containerEditar">
+    <div class="TituloListarVehiculos">
+       DETALLE DEL VEHICULO
+    </div>
 
-    <div class="ContainerDatosVehiculo">
-        <form class="formEditarVehiculo" asp-action="ObtenerVehiculo" asp-controller="Auxiliar" method="post">
-            
-            <div class="ContainerInputPlaca">
-                Realizar busqueda:
-                <input asp-for="Licencia" type="Search" class="containerInputsBuscarPlaca">
-                <input type="submit" value="Buscar" class="btnBuscarPlaca">
-            </div>
+    <div class="card-body containerTable">
 
-            <div class="containerBuscarPlaca">
-                <p>Detalle del Vehiculo</p>
-                
-            </div>
-            <div class="containerDatosVehiculo">
-                <div class=containerChildInputsVehiculo>
+        <table class="listaVehiculos2">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ID Propietario</th>
+                    <th>Identificacion</th>
+                    <th>Placa</th>
+                    <th>Tipo</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Capacidad</th>
+                    <th>Cilindraje</th>
+                    <th>Pais de Origen</th>
+                    <th>Descripcion</th>
+                    <th>SOAT</th>
+                    <th>Servicios</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
 
-                    <label>Id vehiculo</label>
-                    <input asp-for="id_Vehiculo" type="text" class="form-control" />
-
-                    <label>Placa</label>
-                    <input asp-for="Licencia" type="text" class="form-control" />
-
-                    <label>Tipo</label>
-                    <input asp-for="Tipo" type="text" class="form-control" />
-
-                </div>
-
-                <div class=containerChildInputsVehiculo>
-
-                    <label>Marca</label>
-                    <input asp-for="Marca" type="text" class="form-control" />
-
-                    <label>Modelo</label>
-                    <input asp-for="Modelo" type="text" class="form-control" />
-
-                    <label>Capacidad</label>
-                    <input asp-for="Capacidad" type="text" class="form-control" />
-
-                </div>
-                <div class=containerChildInputsVehiculo>
-
-                    <label>Cilindraje</label>
-                    <input asp-for="Cilindraje" type="text" class="form-control" />
-
-                    <label>Pais de Origen</label>
-                    <input asp-for="PaisOrigen" type="text" class="form-control" />
-
-                    <label>Descripcion</label>
-                    <input asp-for="Descripcion" type="text" class="form-control" />
-
-                </div>
-            </div>
-           
-            <div class="containerBtnForm">
-                <a asp-action="ListarVehiculo" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
-
-            </div>
-
-        </form>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.id_Vehiculo</td>
+                        <td>@item.id_Propietario</td>
+                        <td>@item.Identificacion</td>
+                        <td>@item.Licencia</td>
+                        <td>@item.Tipo</td>
+                        <td>@item.Marca</td>
+                        <td>@item.Modelo</td>
+                        <td>@item.Capacidad</td>
+                        <td>@item.Cilindraje</td>
+                        <td>@item.PaisOrigen</td>
+                        <td>@item.Descripcion</td>
+                        <td><a asp-action="ListarSoat" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">SOAT</a></td>
+                        <td><a asp-action="ListarServicio" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-placa="@item.Licencia">Ver</a></td>
+                        <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Editar</a></td>
+                        <td><a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Eliminar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-action="GuardarVehiculo" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
     </div>
 </div>
+

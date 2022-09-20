@@ -43,39 +43,42 @@ namespace proyecto_taller_alto_nivel.Data
             return oLista;
         }
 
-        public VehiculoModel ObtenerPlaca(string Licencia)
+        public List<VehiculoModel> ObtenerPlaca(string Licencia)
         {
-            var oVehiculo = new VehiculoModel();
+            var oLista = new List<VehiculoModel>();
 
             var cn = new Conexion();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerPlaca", conexion);          
+                SqlCommand cmd = new SqlCommand("sp_ObtenerPlaca", conexion);
                 cmd.Parameters.AddWithValue("Licencia", Licencia);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                using (
-                    var dr = cmd.ExecuteReader())
+                using (var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        oVehiculo.id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]);
-                        oVehiculo.id_Propietario = Convert.ToInt32(dr["id_Propietario"]);
-                        oVehiculo.Licencia = dr["Licencia"].ToString();
-                        oVehiculo.Tipo = dr["Tipo"].ToString();
-                        oVehiculo.Marca = dr["Marca"].ToString();
-                        oVehiculo.Modelo = dr["Modelo"].ToString();
-                        oVehiculo.Capacidad = dr["Capacidad"].ToString();
-                        oVehiculo.Cilindraje = dr["Cilindraje"].ToString();
-                        oVehiculo.PaisOrigen = dr["PaisOrigen"].ToString();
-                        oVehiculo.Descripcion = dr["Descripcion"].ToString();
+                        oLista.Add(new VehiculoModel()
+                        {
+                            id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
+                            id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
+                            Licencia = dr["Licencia"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Modelo = dr["Modelo"].ToString(),
+                            Capacidad = dr["Capacidad"].ToString(),
+                            Cilindraje = dr["Cilindraje"].ToString(),
+                            PaisOrigen = dr["PaisOrigen"].ToString(),
+                            Descripcion = dr["Descripcion"].ToString()
+                        });
                     }
                 }
             }
-            return oVehiculo;
+            return oLista;
         }
+        
 
         public VehiculoModel Obtener(int id_Vehiculo)
         {

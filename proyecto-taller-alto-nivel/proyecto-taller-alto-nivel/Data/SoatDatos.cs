@@ -29,7 +29,6 @@ namespace proyecto_taller_alto_nivel.Data
                         {
                             id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
                             id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
-                            Licencia = dr["Licencia"].ToString(),
                             FechaInicio = dr["FechaInicio"].ToString(),
                             FechaFin = dr["FechaFin"].ToString(),
                             NumeroPoliza = dr["NumeroPoliza"].ToString(),
@@ -41,7 +40,38 @@ namespace proyecto_taller_alto_nivel.Data
             return oLista;
         }
 
-        
+        public List<SoatModel> ObtenerSoatPlaca(string Licencia)
+        { 
+            var oLista = new List<SoatModel>();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("sp_ObtenerSoatPlaca", conexion);
+                cmd.Parameters.AddWithValue("Licencia", Licencia);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oLista.Add(new SoatModel()
+                        {
+                            id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]),
+                            id_Propietario = Convert.ToInt32(dr["id_Propietario"]),
+                            FechaInicio = dr["FechaInicio"].ToString(),
+                            FechaFin = dr["FechaFin"].ToString(),
+                            NumeroPoliza = dr["NumeroPoliza"].ToString(),
+
+                        });
+                    }
+                }
+            }
+            return oLista;
+        }
+
 
         public SoatModel Obtener(int id_Soat)
         {
@@ -52,7 +82,7 @@ namespace proyecto_taller_alto_nivel.Data
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerSoat", conexion);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerSoatPlaca", conexion);
                 cmd.Parameters.AddWithValue("id_Soat", id_Soat);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -60,34 +90,8 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     while (dr.Read())
                     {
-                        oSoat.Licencia = dr["Licencia"].ToString();                     
-                        oSoat.FechaInicio= dr["FechaInicio"].ToString();
-                        oSoat.FechaFin = dr["FechaFin"].ToString();
-                        oSoat.NumeroPoliza = dr["NumeroPoliza"].ToString();                        
-                    }
-                }
-            }
-            return oSoat;
-        }
-
-        public SoatModel ObtenerSoatPlaca(string Licencia)
-        {
-            var oSoat = new SoatModel();
-
-            var cn = new Conexion();
-
-            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
-            {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_ObtenerSoat", conexion);
-                cmd.Parameters.AddWithValue("Licencia", Licencia);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                using (var dr = cmd.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        oSoat.Licencia = dr["Licencia"].ToString();
+                        oSoat.id_Vehiculo = Convert.ToInt32(dr["id_Vehiculo"]);
+                        oSoat.id_Propietario = Convert.ToInt32(dr["id_Propietario"]);
                         oSoat.FechaInicio = dr["FechaInicio"].ToString();
                         oSoat.FechaFin = dr["FechaFin"].ToString();
                         oSoat.NumeroPoliza = dr["NumeroPoliza"].ToString();
@@ -96,6 +100,7 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oSoat;
         }
+
         public bool Guardar(SoatModel oSoat)
         {
             bool rpta;

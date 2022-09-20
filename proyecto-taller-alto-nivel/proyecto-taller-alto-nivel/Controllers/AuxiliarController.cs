@@ -197,10 +197,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(oLicencia);
         }
 
-        public IActionResult ObtenerPlaca(int id_Vehiculo)
+        public IActionResult ObtenerPlaca()
         {
-            var oLicencia = Vehiculo_Datos.Obtener(id_Vehiculo);
-            return View(oLicencia);
+            return View();
         }
 
 

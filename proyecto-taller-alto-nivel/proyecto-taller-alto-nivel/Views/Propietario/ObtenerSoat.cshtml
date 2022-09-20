@@ -1,0 +1,19 @@
+﻿@model SoatModel
+@{
+    ViewData["Title"] = "ObtenerSoat";
+    Layout = "~/Views/Shared/propietario/_Layout.cshtml";
+}
+
+<div class="ContainerInputPlaca">
+    <h1>Ver Historial SOAT</h1>
+
+    <div class="formEditarVehiculo">
+
+        <form class="ContainerInputPlaca" asp-action="ListarSoat" asp-controller="Propietario">
+            Buscar:
+            <input asp-for="Licencia" type="Search" class="containerInputsBuscarPlaca" id="StudentName">
+            <span asp-validation-for="Licencia" style="color:red"></span>
+            <button class="btnBuscarPlaca" type="submit">Buscar </button>
+        </form>
+    </div>
+</div>

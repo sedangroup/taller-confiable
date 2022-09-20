@@ -1,17 +1,17 @@
 ﻿@model List<SoatModel>
 @{
     ViewData["Title"] = "ListarSoat";
-    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+    Layout = "~/Views/Shared/propietario/_Layout.cshtml";
 }
+
 <div class="containerEditar">
-   
+
     <div class="TituloListarVehiculos">
         SOAT
     </div>
 
     <div class="containerTable">
         <table class="ListaSoat">
-
         </table>
         <table class="ListaSoat">
 
@@ -19,7 +19,7 @@
                 <tr>
                     <th>Numero de Propietario</th>
                     <th>Fecha de Compra</th>
-                    <th>Fecha de Vencimiento</th>                   
+                    <th>Fecha de Vencimiento</th>
                     <th>Numero de Poliza</th>
                 </tr>
             </thead>
@@ -33,11 +33,11 @@
                         <td>@item.FechaFin</td>
                         <td>@item.NumeroPoliza</td>
                     </tr>
-                    
+
                 }
             </tbody>
         </table>
-        <a asp-action="GuardarSoat" asp-controller="Auxiliar" class="btnCrearNuevo">CREAR NUEVO</a>
+        <a asp-action="GuardarSoat" asp-controller="Propietario" class="btnCrearNuevo">CREAR NUEVO</a>
     </div>
 
 </div>
