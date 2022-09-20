@@ -33,6 +33,8 @@ namespace proyecto_taller_alto_nivel.Data
                             NivelLiquidoDireccion = dr["NivelLiquidoDireccion"].ToString(),
                             NivelLiquidoFrenos = dr["NivelLiquidoFrenos"].ToString(),
                             NivelRefrigerante = dr["NivelRefrigerante"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
                             SoatPoliza = dr["soat_poliza"].ToString(),
                             Fecha = dr["fecha"].ToString(),
                             Hora = dr["Hora"].ToString()
@@ -43,8 +45,9 @@ namespace proyecto_taller_alto_nivel.Data
             return oLista;
         }
 
-
-        public List<ServicioInnerJoinModel> ListarByLicencia(VehiculoModel vehiculo)
+       
+        
+            public List<ServicioInnerJoinModel> ListarByLicencia(VehiculoModel vehiculo)
         {
             var oLista = new List<ServicioInnerJoinModel>();
 
@@ -72,6 +75,8 @@ namespace proyecto_taller_alto_nivel.Data
                             NivelLiquidoDireccion = dr["NivelLiquidoDireccion"].ToString(),
                             NivelLiquidoFrenos = dr["NivelLiquidoFrenos"].ToString(),
                             NivelRefrigerante = dr["NivelRefrigerante"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
                             SoatPoliza = dr["soat_poliza"].ToString(),
                             Fecha = dr["fecha"].ToString(),
                             Hora = dr["Hora"].ToString()
@@ -110,6 +115,8 @@ namespace proyecto_taller_alto_nivel.Data
                             NivelLiquidoDireccion = dr["NivelLiquidoDireccion"].ToString(),
                             NivelLiquidoFrenos = dr["NivelLiquidoFrenos"].ToString(),
                             NivelRefrigerante = dr["NivelRefrigerante"].ToString(),
+                            Marca = dr["Marca"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
                             SoatPoliza = dr["soat_poliza"].ToString(),
                             Fecha = dr["fecha"].ToString(),
                             Hora = dr["Hora"].ToString()

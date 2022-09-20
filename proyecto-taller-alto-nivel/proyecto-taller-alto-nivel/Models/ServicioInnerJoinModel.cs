@@ -13,6 +13,9 @@
         public string? NivelLiquidoDireccion { get; set; }
         public string? NivelLiquidoFrenos { get; set; }
         public string? NivelRefrigerante { get; set; }
+        public string? Marca { get; set; }
+        
+        public string? Tipo { get; set; }
         public string? SoatPoliza { get; set; }
         public string? Fecha { set; get; }
         public string? Hora { set; get; }
