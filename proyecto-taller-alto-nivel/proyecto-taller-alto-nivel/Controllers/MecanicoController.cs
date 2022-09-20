@@ -60,5 +60,11 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(list);
         }
 
+        public IActionResult EditarRevision(int idRevision)
+        {
+            var result = Revision_Datos.Obtener(idRevision);
+            return View(result);
+        }
+
     }
 }

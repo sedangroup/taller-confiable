@@ -42,7 +42,7 @@ namespace proyecto_taller_alto_nivel.Data
 
             var cn = new Conexion();
 
-            var sql = "select  NivelAceite,NivelLiquidoDireccion,NivelLiquidoFrenos,NivelRefrigerante from Tbl_Revision as re LEFT JOIN Tbl_Servicio as ser on ser.id_Revision = re.id_Revision";
+            var sql = "select*from Tbl_Revision";
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
@@ -57,6 +57,7 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new RevisionModel()
                         {
+                            id_Revision = Convert.ToInt32(dr["id_Revision"]),
                             NivelAceite = dr["NivelAceite"].ToString(),
                             NivelLiquidoDireccion = dr["NivelLiquidoDireccion"].ToString(),
                             NivelLiquidoFrenos = dr["NivelLiquidoFrenos"].ToString(),
@@ -67,5 +68,37 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oLista;
         }
+
+        public RevisionModel Obtener(int idRevision)
+        {
+            var revision = new RevisionModel();
+
+            var cn = new Conexion();
+            var sql = "SELECT*from Tbl_Revision where id_Revision = @Revision";
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("@Revision", idRevision);
+
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        revision.id_Revision = Convert.ToInt32(dr["id_Revision"]);
+                        revision.NivelAceite = dr["NivelAceite"].ToString();
+                        revision.NivelLiquidoFrenos = dr["NivelLiquidoFrenos"].ToString();
+                        revision.NivelRefrigerante = dr["NivelRefrigerante"].ToString();
+                        revision.NivelLiquidoDireccion = dr["NivelLiquidoDireccion"].ToString();
+                    }
+                }
+            }
+            return revision;
+        }
+
+
+
+
     }
 }

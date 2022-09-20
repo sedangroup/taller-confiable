@@ -1,0 +1,61 @@
+﻿@model RevisionModel
+@{
+    ViewData["Title"] = "EditarRevision";
+    Layout = "~/Views/Shared/mecanico/_Layout.cshtml";
+}
+
+
+
+<div class="containerVehiculo">
+
+    <div class="containerTitleVehiculo">
+        <p>Editar Niveles</p>
+    </div>
+
+    <form class="formVSoat" asp-action="EditarRevision" asp-controller="Mecanico" method="post">
+        <div class="containerInputsSoat">
+
+          
+
+            <div class="containerChildInputsMecanico">
+
+                <label>Nivel de Aceite</label>
+                <input asp-for="NivelAceite" />
+                <span asp-validation-for="NivelAceite" style="color:red"></span>
+
+
+            </div>
+            <div class="containerChildInputsMecanico">
+
+                <label>Nivel de Liquido Frenos</label>
+                <input asp-for="NivelLiquidoFrenos" />
+                <span asp-validation-for="NivelLiquidoFrenos" style="color:red"></span>
+
+
+            </div>
+            <div class="containerChildInputsMecanico">
+
+                <label>Nivel Refrigerante</label>
+                <input asp-for="NivelRefrigerante" />
+                <span asp-validation-for="NivelRefrigerante" style="color:red"></span>
+
+            </div>
+            <div class="containerChildInputsMecanico">
+
+                <label>Nivel Liquido Dirección</label>
+                <input asp-for="NivelLiquidoDireccion" />
+                <span asp-validation-for="NivelLiquidoDireccion" style="color:red"></span>
+
+                <input asp-for="id_Revision" readonly hidden />
+            </div>
+
+
+        </div>
+
+        <div class="containerBtnForm">
+            <button class="btnGuardarMecanico" type="submit">EDITAR</button>
+        </div>
+
+    </form>
+
+</div>
