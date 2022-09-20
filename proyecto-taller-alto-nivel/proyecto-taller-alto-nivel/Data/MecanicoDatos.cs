@@ -26,6 +26,7 @@ namespace proyecto_taller_alto_nivel.Data
                         oLista.Add(new MecanicoModel()
                         {
                             id_Persona = Convert.ToInt32(dr["id_Persona"]),
+                            id_Mecanico = Convert.ToInt32(dr["id_Mecanico"]),
                             Identificacion = dr["Identificacion"].ToString(),
                             Nombre = dr["Nombre"].ToString(),
                             Apellido = dr["Apellido"].ToString(),
@@ -57,6 +58,39 @@ namespace proyecto_taller_alto_nivel.Data
                     while (dr.Read())
                     {
                         oMecanico.id_Persona = Convert.ToInt32(dr["id_Persona"]);
+                        oMecanico.id_Mecanico = Convert.ToInt32(dr["id_Mecanico"]);
+                        oMecanico.Identificacion = dr["Identificacion"].ToString();
+                        oMecanico.Nombre = dr["Nombre"].ToString();
+                        oMecanico.Apellido = dr["Apellido"].ToString();
+                        oMecanico.Nacimiento = dr["Nacimiento"].ToString();
+                        oMecanico.Direccion = dr["Direccion"].ToString();
+                        oMecanico.NivelEducacion = dr["NivelEducacion"].ToString();
+                        oMecanico.Telefono = dr["Telefono"].ToString();
+                    }
+                }
+            }
+            return oMecanico;
+        }
+
+        public MecanicoModel ObtenerIdMecanico(int id_Mecanico)
+        {
+            var oMecanico = new MecanicoModel();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("sp_ObtenerIdMecanico", conexion);
+                cmd.Parameters.AddWithValue("id_Mecanico", id_Mecanico);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oMecanico.id_Persona = Convert.ToInt32(dr["id_Persona"]);
+                        oMecanico.id_Mecanico = Convert.ToInt32(dr["id_Mecanico"]);
                         oMecanico.Identificacion = dr["Identificacion"].ToString();
                         oMecanico.Nombre = dr["Nombre"].ToString();
                         oMecanico.Apellido = dr["Apellido"].ToString();

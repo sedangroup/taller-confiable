@@ -5,7 +5,7 @@ namespace proyecto_taller_alto_nivel.Models
     public class MecanicoModel
     { 
         public int id_Persona { get; set; }
-
+        public int id_Mecanico { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string? Identificacion { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]

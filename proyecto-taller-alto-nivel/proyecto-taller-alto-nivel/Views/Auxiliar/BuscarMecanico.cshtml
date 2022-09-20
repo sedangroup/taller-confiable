@@ -1,0 +1,60 @@
+﻿@model MecanicoModel
+@{
+    ViewData["Title"] = "BuscarMecanico";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="containerEditar">
+
+    <div class="ContainerDatosVehiculo">
+        <form class="formEditarVehiculo" asp-action="BuscarMecanico" asp-controller="Auxiliar" method="post">
+
+            <div class="ContainerInputPlaca">
+                Realizar busqueda:
+                <input asp-for="id_Mecanico" type="Search" class="containerInputsBuscarPlaca">
+                <input type="submit" value="Buscar" class="btnBuscarPlaca">
+            </div>
+
+            <div class="containerBuscarPlaca">
+                <p>Datos del Propietario</p>
+
+            </div>
+            <div class="containerDatosVehiculo">
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Nombre</label>
+                    <input asp-for="Nombre" type="text" class="form-control" />
+
+                    <label>Fecha de Nacimiento</label>
+                    <input asp-for="Nacimiento" type="text" class="form-control" />
+
+                </div>
+
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Apellido</label>
+                    <input asp-for="Apellido" type="text" class="form-control" />
+
+                    <label>Estudios</label>
+                    <input asp-for="NivelEducacion" type="text" class="form-control" />
+
+                </div>
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Direccion</label>
+                    <input asp-for="Direccion" type="text" class="form-control" />
+
+                    <label>Telefono</label>
+                    <input asp-for="Telefono" type="text" class="form-control" />
+
+                </div>
+            </div>
+
+            <div class="containerBtnForm">
+                <a asp-action="ListarMecanico" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
+
+            </div>
+
+        </form>
+    </div>
+</div>

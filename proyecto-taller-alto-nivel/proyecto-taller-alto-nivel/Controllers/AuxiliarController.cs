@@ -75,8 +75,20 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
+        /// ----------------------------------------------------------------------------------
+        public IActionResult BuscarCedula(string Identificacion)
+        {
+            var oCedula = Propietario_Datos.ObtenerCedula(Identificacion);
+            return View(oCedula);
+        }
 
-        /// -----------------------------------------------------
+        public IActionResult BuscarPropietario(int id_Persona)
+        {
+            var oCedula = Propietario_Datos.Obtener(id_Persona);
+            return View(oCedula);
+        }
+
+        /// -----------------------------------------------------------------------------------------
         public IActionResult ListarMecanico()
         {
             var oLista = Mecanico_Datos.Listar();
@@ -139,7 +151,21 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
-        /// -----------------------------------------------------
+
+
+        /// -------------------------------------------------------------------------------------
+        public IActionResult BuscarMecanico(int id_Mecanico)
+        {
+            var oMecanico = Mecanico_Datos.ObtenerIdMecanico(id_Mecanico);
+            return View(oMecanico);
+        }
+
+        public IActionResult BuscarIdMecanico(int id_Persona)
+        {
+            var oCedula = Mecanico_Datos.Obtener(id_Persona);
+            return View(oCedula);
+        }
+        /// ----------------------------------------------------------------------------------------
         public IActionResult ListarVehiculo()
         {
             var innerQuey = Vehiculo_Datos.Listar();
@@ -318,6 +344,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             else
                 return View();
         }
+
 
 
     }

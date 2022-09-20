@@ -14,6 +14,7 @@
         <table class="listaVehiculos2">
             <thead>
                 <tr>
+                    <th>ID Mecanico</th>
                     <th>Identificacion</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
@@ -21,8 +22,8 @@
                     <th>Direccion</th>
                     <th>Nivel de educacion</th>
                     <th>Telefono</th>
-                    <th></th>
-                    <th></th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
 
@@ -30,6 +31,7 @@
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td>@item.id_Mecanico</td>
                         <td>@item.Identificacion</td>
                         <td>@item.Nombre</td>
                         <td>@item.Apellido</td>

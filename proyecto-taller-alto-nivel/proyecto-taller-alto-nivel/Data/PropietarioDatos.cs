@@ -67,7 +67,37 @@ namespace proyecto_taller_alto_nivel.Data
             }
             return oPropietario;
         }
-       
+
+        public PropietarioModel ObtenerCedula(string Identificacion)
+        {
+            var oPropietario = new PropietarioModel();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("sp_ObtenerCedula", conexion);
+                cmd.Parameters.AddWithValue("Identificacion", Identificacion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oPropietario.id_Persona = Convert.ToInt32(dr["id_Persona"]);
+                        oPropietario.Identificacion = dr["Identificacion"].ToString();
+                        oPropietario.Nombre = dr["Nombre"].ToString();
+                        oPropietario.Apellido = dr["Apellido"].ToString();
+                        oPropietario.Nacimiento = dr["Nacimiento"].ToString();
+                        oPropietario.Ciudad = dr["Ciudad"].ToString();
+                        oPropietario.Correo = dr["Correo"].ToString();
+                    }
+                }
+            }
+            return oPropietario;
+        }
+
         public bool Guardar(PropietarioModel oPropietario)
         {
             bool rpta;

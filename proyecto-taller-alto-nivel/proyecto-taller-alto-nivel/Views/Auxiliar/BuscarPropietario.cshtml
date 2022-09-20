@@ -1,0 +1,20 @@
+﻿@model PropietarioModel
+@{
+    ViewData["Title"] = "BuscarPropietario";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="ContainerInputPlaca">
+    <h1>Buscar Propietario por Numero de Identificacion</h1>
+    <br>
+
+    <form class="formEditarVehiculo" asp-action="BuscarCedula" asp-controller="Auxiliar" method="post">
+
+        <div class="ContainerInputPlaca">
+            Buscar Numero:
+            <input asp-for="Identificacion" type="Search" class="containerInputsBuscarPlaca">
+            <span asp-validation-for="Identificacion" style="color:red"></span>
+            <input type="submit" value="Buscar" class="btnBuscarPlaca">
+        </div>
+    </form>
+</div>

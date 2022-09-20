@@ -1,0 +1,60 @@
+﻿@model PropietarioModel
+@{
+    ViewData["Title"] = "BuscarCedula";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+
+<div class="containerEditar">
+
+    <div class="ContainerDatosVehiculo">
+        <form class="formEditarVehiculo" asp-action="BuscarCedula" asp-controller="Auxiliar" method="post">
+
+            <div class="ContainerInputPlaca">
+                Realizar busqueda:
+                <input asp-for="Identificacion" type="Search" class="containerInputsBuscarPlaca">
+                <input type="submit" value="Buscar" class="btnBuscarPlaca">
+            </div>
+
+            <div class="containerBuscarPlaca">
+                <p>Datos del Propietario</p>
+
+            </div>
+            <div class="containerDatosVehiculo">
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Id Identificacion</label>
+                    <input asp-for="Identificacion" type="text" class="form-control" />
+
+                    <label>Fecha de Nacimiento</label>
+                    <input asp-for="Nacimiento" type="text" class="form-control" />
+
+                </div>
+
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Nombre</label>
+                    <input asp-for="Nombre" type="text" class="form-control" />
+
+                    <label>Ciudad</label>
+                    <input asp-for="Ciudad" type="text" class="form-control" />
+
+                </div>
+                <div class=containerChildInputsVehiculo>
+
+                    <label>Apellido</label>
+                    <input asp-for="Apellido" type="text" class="form-control" />
+
+                    <label>Correo</label>
+                    <input asp-for="Correo" type="text" class="form-control" />
+
+                </div>
+            </div>
+
+            <div class="containerBtnForm">
+                <a asp-action="ListarPropietario" asp-controller="Auxiliar" class="btn btn-warning">Volver a la lista</a>
+
+            </div>
+
+        </form>
+    </div>
+</div>
