@@ -1,0 +1,70 @@
+﻿@model List<ServicioInnerJoinModel>
+
+@{
+    ViewData["Title"] = "ListarServicio";
+    Layout = "~/Views/Shared/auxiliar/_Layout.cshtml";
+}
+<div class="containerMainLista">
+
+    <div class="TituloListarVehiculos">
+        <h1>LISTADO DE SERVICIOS</h1>
+    </div>
+
+    <div class="card-body containerTable">
+
+        <table class="listaVehiculos2" id="tableId">
+
+            <thead>
+                <tr>
+                    <th>Propietario</th>
+                    <th>Mecanico</th>
+                    <th>Vehiculo</th>
+                    <th>Placa</th>
+                    <th>Nivel aceite</th>
+                    <th>Nivel liquido direccion</th>
+                    <th>Nivel liquido frenos</th>
+                    <th>Nivel refrigerante</th>
+                    <th>Soat Poliza</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Propietario</td>
+                        <td>@item.Mecanico</td>
+                        <td>@item.Vehiculo</td>
+                        <td>@item.Licencia</td>
+                        <td>@item.NivelAceite</td>
+                        <td>@item.NivelLiquidoDireccion</td>
+                        <td>@item.NivelLiquidoFrenos</td>
+                        <td>@item.NivelRefrigerante</td>
+                        <td>@item.SoatPoliza</td>
+                        <td>@item.Fecha</td>
+                        <td>@item.Hora</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <span id="message" class="message"></span>
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+    const tableResult = document.getElementById('tableId');
+    const msg = document.getElementById('message');
+    if (tableResult.rows.length <= 1) {
+        msg.innerHTML = "No hay Ningun Servicio";
+
+        alert('No hay Servicios con esa placa')
+    }
+
+</script>

@@ -48,7 +48,7 @@
                         <td>@item.PaisOrigen</td>
                         <td>@item.Descripcion</td>
                         <td><a asp-action="ListarSoat" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">SOAT</a></td>
-                        <td><a asp-action="ListarServicio" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-placa="@item.Licencia">Ver</a></td>
+                        <td><a asp-action="ListarServicioDetail" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-placa="@item.Licencia">Ver</a></td>
                         <td><a asp-action="EditarVehiculo" asp-controller="Auxiliar" class="btnEditarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Editar</a></td>
                         <td><a asp-action="EliminarVehiculo" asp-controller="Auxiliar" class="btnEliminarVehiculo" asp-route-id_Vehiculo="@item.id_Vehiculo">Eliminar</a></td>
                     </tr>
