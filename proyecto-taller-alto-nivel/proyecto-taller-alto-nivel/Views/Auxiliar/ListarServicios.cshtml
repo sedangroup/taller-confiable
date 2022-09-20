@@ -6,9 +6,8 @@
 }
 <div class="containerMainLista">
 
-    <div class="containerTitleServicios">
-        <h1>LISTADO DE SERVICIOS</h1>
-        <a asp-action="GuardarServicio" class="btnNewServicio">Nuevo Servicio</a>
+    <div class="TituloListarVehiculos">
+        <h2>LISTADO DE SERVICIOS</h2>
     </div>
 
     <div class="card-body containerTable">
@@ -54,7 +53,10 @@
         </table>
         <span id="message" class="message"></span>
     </div>
-
+    <div>
+        
+        <a asp-action="GuardarServicio" class="btnCrearNuevo">Nuevo Servicio</a>
+    </div>
 </div>
 
 <script>
