@@ -1,4 +1,4 @@
-﻿@model List<RevisionModel>
+﻿@model List<RepuestosModel>
 
 @{
     ViewData["Title"] = "ListarServicio";
@@ -7,7 +7,7 @@
 <div class="containerMainLista">
 
     <div class="TituloListarServicios">
-        <h2>HISTORICO DE REVISIONES</h2>
+        <h2>HISTORICO DE REPUESTOS</h2>
     </div>
 
     <div class="card-body containerTable">
@@ -16,10 +16,9 @@
 
             <thead>
                 <tr>
-                    <th>Nivel aceite</th>
-                    <th>Nivel liquido direccion</th>
-                    <th>Nivel liquido frenos</th>
-                    <th>Nivel refrigerante</th>
+                    <th>Marca</th>
+                    <th>Tipo</th>
+                    
                     <th></th>
                 </tr>
             </thead>
@@ -28,18 +27,17 @@
                 @foreach (var item in Model)
                 {
                     <tr id="result">
-                        <td>@item.NivelAceite</td>
-                        <td>@item.NivelLiquidoDireccion</td>
-                        <td>@item.NivelLiquidoFrenos</td>
-                        <td>@item.NivelRefrigerante</td>
-                        <td><a class="btnEditServicioMecanico" asp-action="EditarRevision" asp-controller="Mecanico" asp-route-idRevision="@item.id_Revision">Editar</a></td>
+                        <td>@item.Marca</td>
+                        <td>@item.Tipo</td>
+
+                        <td><a class="btnEditServicioMecanico" asp-action="EditarRepuesto" asp-controller="Mecanico" asp-route-Repuesto="@item.id_Partes">Editar</a></td>
                     </tr>
                 }
             </tbody>
 
         </table>
         <br />
-        <a class="btnEditServicioMecanico" asp-action="ListaServiciosMecanico" asp-controller="Mecanico">Volver</a>        
+        <a class="btnEditServicioMecanico" asp-action="ListaServiciosMecanico" asp-controller="Mecanico">Volver</a>
         <span id="message" class="message"></span>
     </div>
 

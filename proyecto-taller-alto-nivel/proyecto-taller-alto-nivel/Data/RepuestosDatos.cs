@@ -17,7 +17,7 @@ namespace proyecto_taller_alto_nivel.Data
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GuardarRepuestos", conexion);                    
+                    SqlCommand cmd = new SqlCommand("sp_GuardarRepuesto", conexion);                    
                     cmd.Parameters.AddWithValue("id_Servicio", oMecanico.id_Servicio);                   
                     cmd.Parameters.AddWithValue("Marca", oMecanico.Marca);
                     cmd.Parameters.AddWithValue("Tipo", oMecanico.Tipo);                   
@@ -55,9 +55,9 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         oLista.Add(new RepuestosModel()
                         {
-                            id_Partes = Convert.ToInt32(dr["id_Revision"]),
-                            Marca = dr["NivelAceite"].ToString(),
-                            Tipo = dr["NivelLiquidoDireccion"].ToString(),
+                            id_Partes = Convert.ToInt32(dr["id_Partes"]),
+                            Marca = dr["Marca"].ToString(),
+                            Tipo = dr["Tipo"].ToString(),
                             
                             
                         });
@@ -86,8 +86,8 @@ namespace proyecto_taller_alto_nivel.Data
                     {
                         revision.id_Partes = Convert.ToInt32(dr["id_Partes"]);
                         revision.id_Servicio = Convert.ToInt32(dr["id_Servicio"]);
-                        revision.Marca = dr["NivelLiquidoFrenos"].ToString();
-                        revision.Tipo = dr["NivelRefrigerante"].ToString();
+                        revision.Marca = dr["Marca"].ToString();
+                        revision.Tipo = dr["Tipo"].ToString();
                        
                     }
                 }

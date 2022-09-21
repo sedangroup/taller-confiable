@@ -1,0 +1,49 @@
+﻿@model RepuestosModel
+@{
+    ViewData["Title"] = "EditarRepuesto";
+    Layout = "~/Views/Shared/mecanico/_Layout.cshtml";
+}
+
+
+
+<div class="containerVehiculo">
+
+    <div class="containerTitleVehiculo">
+        <p>Editar Repuestos</p>
+    </div>
+
+    <form class="formVSoat" asp-action="EditarRepuesto" asp-controller="Mecanico" method="post">
+        <div class="containerInputsSoat">
+
+
+
+            <div class="containerChildInputsMecanico">
+
+                <label>Marca</label>
+                <input asp-for="Marca" />
+                <span asp-validation-for="Marca" style="color:red"></span>
+
+
+            </div>
+            <div class="containerChildInputsMecanico">
+
+                <label>Tipo</label>
+                <input asp-for="Tipo" />
+                <span asp-validation-for="Tipo" style="color:red"></span>
+
+                <input asp-for="id_Partes" readonly hidden />
+
+            </div>
+            
+
+
+        </div>
+
+        <div class="containerBtnForm">
+            <button class="btnGuardarMecanico" type="submit">EDITAR</button>
+        </div>
+
+    </form>
+
+</div>
+
