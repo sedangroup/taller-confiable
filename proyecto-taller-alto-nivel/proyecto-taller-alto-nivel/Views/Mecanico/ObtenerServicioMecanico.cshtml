@@ -1,0 +1,20 @@
+﻿@model MecanicoModel
+@{
+    ViewData["Title"] = "ObtenerServicioMecanico";
+    Layout = "~/Views/Shared/propietario/_Layout.cshtml";
+}
+
+<div class="ContainerInputPlaca">
+    <h1>Buscar servicios por ID Mecanico</h1>
+
+    <div class="formEditarVehiculo">
+
+        <form class="ContainerInputPlaca" asp-action="ListarServicio" asp-controller="Mecanico">
+            Buscar ID:
+            <input asp-for="id_Mecanico" type="Search" class="containerInputsBuscarPlaca" id="StudentName">
+            <span asp-validation-for="id_Mecanico" style="color:red"></span>
+            <button class="btnBuscarPlaca" type="submit">Buscar </button>
+        </form>
+    </div>
+</div>
+

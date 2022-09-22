@@ -20,12 +20,10 @@
                     <th>Mecanico</th>
                     <th>Vehiculo</th>
                     <th>Placa</th>
-                    <th>Nivel aceite</th>
-                    <th>Nivel liquido direccion</th>
-                    <th>Nivel liquido frenos</th>
-                    <th>Nivel refrigerante</th>
-                    <th>Marca del respuesto</th>
-                    <th>Tipo del respuesto</th>
+
+                    <th>Revisiones</th>
+                    <th>Repuestos</th>
+
                     <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
@@ -42,12 +40,10 @@
                         <td>@item.Mecanico</td>
                         <td>@item.Vehiculo</td>
                         <td>@item.Licencia</td>
-                        <td>@item.NivelAceite</td>
-                        <td>@item.NivelLiquidoDireccion</td>
-                        <td>@item.NivelLiquidoFrenos</td>
-                        <td>@item.NivelRefrigerante</td>
-                        <td>@item.Marca</td>
-                        <td>@item.Tipo</td>
+
+                        <td><a class="btnEditServicioMecanico" asp-action="ListarRevisiones" asp-controller="Mecanico">Registro</a></td>
+                        <td><a class="btnEditServicioMecanico" asp-action="ListarRepuestos" asp-controller="Mecanico">Registro</a></td>
+                        
                         <td>@item.SoatPoliza</td>
                         <td>@item.Fecha</td>
                         <td>@item.Hora</td>
@@ -59,8 +55,7 @@
             
         </table>
         <br>
-        <a class="btnEditServicioMecanico" asp-action="ListarRevisiones" asp-controller="Mecanico">Historial Revisiones</a>
-        <a class="btnEditServicioMecanico" asp-action="ListarRepuestos" asp-controller="Mecanico">Historial Repuestos</a>
+       
         <span id="message" class="message"></span>
     </div>
 
