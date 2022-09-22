@@ -8,7 +8,7 @@ namespace proyecto_taller_alto_nivel.Data
 {
     public class SoatDatos
     {
-        public List<SoatModel> Listar(int id_Vehiculo)
+        public List<SoatModel> Listar(int licencia)
         {
             var oLista = new List<SoatModel>();
 
@@ -18,7 +18,7 @@ namespace proyecto_taller_alto_nivel.Data
             {
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand("sp_ObtenerSoat", conexion);
-                cmd.Parameters.AddWithValue("id_Vehiculo", id_Vehiculo);
+                cmd.Parameters.AddWithValue("Licencia", licencia.ToString());
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())

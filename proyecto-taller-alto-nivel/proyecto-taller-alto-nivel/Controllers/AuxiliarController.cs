@@ -266,9 +266,9 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
         /// -----------------------------------------------------
-        public IActionResult ListarSoat(int id_Vehiculo)
+        public IActionResult ListarSoat(int licencia)
         {
-            var innerQuey = Soat_Datos.Listar(id_Vehiculo);
+            var innerQuey = Soat_Datos.Listar(licencia);
             return View(innerQuey);
         }
 
@@ -286,7 +286,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             var respuesta = Soat_Datos.Guardar(Soat);
 
             if (respuesta)
-                return RedirectToAction("ListarSoat");
+                return RedirectToAction("ListarSoat", new { licencia = Soat.Licencia });
             else
                 return View();
         }
