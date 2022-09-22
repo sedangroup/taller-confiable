@@ -8,7 +8,7 @@ namespace proyecto_taller_alto_nivel.Data
 {
     public class SoatDatos
     {
-        public List<SoatModel> Listar(int licencia)
+        public List<SoatModel> Listar(string licencia)
         {
             var oLista = new List<SoatModel>();
 
@@ -113,13 +113,10 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_GuardarSoat", conexion);
-                    cmd.Parameters.AddWithValue("id_Vehiculo", oSoat.id_Propietario);
-                    cmd.Parameters.AddWithValue("id_propietario", oSoat.id_Propietario);
-                    cmd.Parameters.AddWithValue("Licencia", oSoat.Licencia);
                     cmd.Parameters.AddWithValue("FechaInicio", oSoat.FechaInicio);
                     cmd.Parameters.AddWithValue("FechaFin", oSoat.FechaFin);
                     cmd.Parameters.AddWithValue("NumeroPoliza", oSoat.NumeroPoliza);
-                    
+                    cmd.Parameters.AddWithValue("Licencia", oSoat.Licencia);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

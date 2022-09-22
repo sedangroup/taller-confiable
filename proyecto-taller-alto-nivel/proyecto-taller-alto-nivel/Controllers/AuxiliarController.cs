@@ -266,7 +266,7 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View();
         }
         /// -----------------------------------------------------
-        public IActionResult ListarSoat(int licencia)
+        public IActionResult ListarSoat(string licencia)
         {
             var innerQuey = Soat_Datos.Listar(licencia);
             return View(innerQuey);
