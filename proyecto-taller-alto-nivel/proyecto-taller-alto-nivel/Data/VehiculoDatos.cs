@@ -126,7 +126,6 @@ namespace proyecto_taller_alto_nivel.Data
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_GuardarVehiculo", conexion);
-                    cmd.Parameters.AddWithValue("id_propietario", oVehiculo.id_Propietario);
                     cmd.Parameters.AddWithValue("Identificacion", oVehiculo.Identificacion);
                     cmd.Parameters.AddWithValue("Licencia", oVehiculo.Licencia);
                     cmd.Parameters.AddWithValue("Tipo", oVehiculo.Tipo);
