@@ -6,7 +6,7 @@
 }
 <div class="containerMainLista">
 
-    <div class="TituloListarVehiculos">
+    <div class="TituloListarServicios">
         <h2>LISTADO DE SERVICIOS</h2>
     </div>
 
@@ -20,55 +20,58 @@
                     <th>Mecanico</th>
                     <th>Vehiculo</th>
                     <th>Placa</th>
-                    <th>Nivel aceite</th>
-                    <th>Nivel liquido direccion</th>
-                    <th>Nivel liquido frenos</th>
-                    <th>Nivel refrigerante</th>
-                    <th>Marca</th>
-                    <th>Tipo</th>
+
+                    <th>Revisiones</th>
+                    <th>Repuestos</th>
+
                     <th>Soat Poliza</th>
                     <th>Fecha</th>
                     <th>Hora</th>
+                    <th>Agregar Revision</th>
+                    <th>Agregar Repuestos</th>
                 </tr>
             </thead>
 
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr id="result">
                         <td>@item.Propietario</td>
                         <td>@item.Mecanico</td>
                         <td>@item.Vehiculo</td>
                         <td>@item.Licencia</td>
-                        <td>@item.NivelAceite</td>
-                        <td>@item.NivelLiquidoDireccion</td>
-                        <td>@item.NivelLiquidoFrenos</td>
-                        <td>@item.NivelRefrigerante</td>
-                        <td>@item.Marca</td>
-                        <td>@item.Tipo</td>
+
+                        <td><a class="btnEditServicioMecanico" asp-action="ListarRevisiones" asp-controller="Mecanico">Registro</a></td>
+                        <td><a class="btnEditServicioMecanico" asp-action="ListarRepuestos" asp-controller="Mecanico">Registro</a></td>
+
                         <td>@item.SoatPoliza</td>
                         <td>@item.Fecha</td>
                         <td>@item.Hora</td>
+                        <td><a asp-action="GuardarRevision" asp-controller="Mecanico" asp-route-idServicio="@item.Id_Servicio" class="btnNewServicioMecanico">Agregar</a></td>
+                        <td><a asp-action="GuardarRepuesto" asp-controller="Mecanico" asp-route-idServicio="@item.Id_Servicio" class="btnNewServicioMecanico">Agregar</a></td>
                     </tr>
                 }
             </tbody>
+
         </table>
+        <br>
+
         <span id="message" class="message"></span>
     </div>
 
+    <script>
+
+
+        const tableResult = document.getElementById('tableId');
+        const msg = document.getElementById('message');
+        if (tableResult.rows.length <= 1) {
+            msg.innerHTML = "No hay Ningun Servicio";
+
+            alert('No hay Servicios')
+        }
+
+    </script>
+
+
 </div>
 
-
-
-<script>
-
-
-    const tableResult = document.getElementById('tableId');
-    const msg = document.getElementById('message');
-    if (tableResult.rows.length <= 1) {
-        msg.innerHTML = "No hay Ningun Servicio";
-
-        alert('No hay Servicios con esa placa')
-    }
-
-</script>
