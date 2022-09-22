@@ -23,7 +23,19 @@ namespace proyecto_taller_alto_nivel.Controllers
             return View(list);
         }
 
+        public ActionResult ListaServiciosId(MecanicoModel mecanico)
+        {
+            var list = Servicio_Datos.ListarById(mecanico);
+            return View(list);
+        }
+
         public ActionResult ObtenerServicioPlaca()
+        {
+
+            return View();
+        }
+
+        public ActionResult ObtenerServicioMecanico()
         {
 
             return View();

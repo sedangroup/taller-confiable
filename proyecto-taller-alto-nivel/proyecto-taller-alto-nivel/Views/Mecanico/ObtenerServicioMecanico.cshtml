@@ -1,7 +1,7 @@
 ﻿@model MecanicoModel
 @{
     ViewData["Title"] = "ObtenerServicioMecanico";
-    Layout = "~/Views/Shared/propietario/_Layout.cshtml";
+    Layout = "~/Views/Shared/mecanico/_Layout.cshtml";
 }
 
 <div class="ContainerInputPlaca">
@@ -9,7 +9,7 @@
 
     <div class="formEditarVehiculo">
 
-        <form class="ContainerInputPlaca" asp-action="ListarServicio" asp-controller="Mecanico">
+        <form class="ContainerInputPlaca" asp-action="ListaServiciosId" asp-controller="Mecanico">
             Buscar ID:
             <input asp-for="id_Mecanico" type="Search" class="containerInputsBuscarPlaca" id="StudentName">
             <span asp-validation-for="id_Mecanico" style="color:red"></span>
